@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://desk.sendbird.com"
   s.license      = "Commercial"
   s.author       = { "Jed Gyeong" => "jed.gyeong@sendbird.com" }
-  s.source       = { :git => "https://github.com/smilefam/SendBirdDesk-iOS-Framework.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/smilefam/SendBird-Desk-iOS-Framework.git", :tag => "v#{s.version}" }
   s.requires_arc = true
   s.platform = :ios, "8.0"
   s.documentation_url = 'https://docs.sendbird.com/'

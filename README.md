@@ -27,7 +27,7 @@ target 'YOUR_PROJECT' do
   use_frameworks!
 
   # Pods for SendBird Desk
-  pod 'SendBirdDesk', :git => 'https://github.com/smilefam/SendBirdDesk-iOS-Framework.git'
+  pod 'SendBirdDesk', :git => 'https://github.com/smilefam/SendBird-Desk-iOS-Framework.git'
 end
 ```
 2. Run `pod install`.
