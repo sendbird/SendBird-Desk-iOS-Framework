@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform = :ios, "8.0"
   s.documentation_url = 'https://docs.sendbird.com/'
   s.ios.vendored_frameworks = 'SendBirdDesk.framework'
-  s.ios.frameworks = ["UIKit", "AVFoundation", "AVKit"]
+  s.ios.frameworks = ["UIKit", "AVFoundation", "AVKit", "UserNotifications"]
 
   s.dependency 'SendBirdSDK', '>= 3.0.61'
   s.dependency 'AFNetworking', '>= 3.1.0'
