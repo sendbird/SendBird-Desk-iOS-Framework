@@ -3,6 +3,7 @@ SendBird Desk SDK Integration Guide for iOS
 SendBird Desk is the Zendesk-integrated chat customer service platform built on SendBird SDK and API.
 
 Desk iOS SDK provides customer-side integration on your own application, so you can easily implement customers' **chat inquiry, inquiries inbox with UI theming**. 
+
 Desk iOS SDK requires devices running **iOS 8.0 or higher** and **SendBird iOS SDK 3.0.61 or higher**.
 
 ## Table of Contents
