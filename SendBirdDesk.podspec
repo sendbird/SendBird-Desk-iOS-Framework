@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SendBirdDesk"
-  s.version      = "0.9.9"
+  s.version      = "1.0.0-zendesk"
   s.summary      = "SendBird Desk iOS Framework"
   s.description  = "Integrate SendBird into Zendesk and support your customers live."
   s.homepage     = "https://desk.sendbird.com"
@@ -13,10 +13,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'SendBirdDesk.framework'
   s.ios.frameworks = ["UIKit", "AVFoundation", "AVKit", "UserNotifications"]
 
-  s.dependency 'SendBirdSDK', '>= 3.0.61'
-  s.dependency 'AFNetworking', '>= 3.1.0'
-  s.dependency 'FLAnimatedImage', '>= 1.0.12'
-  s.dependency 'NYTPhotoViewer', '>= 1.2.0'
-  s.dependency 'TOCropViewController', '>= 2.0.12'
-  s.dependency 'HTMLKit', '>= 2.0.6'
+  s.dependency 'SendBirdSDK'
 end
