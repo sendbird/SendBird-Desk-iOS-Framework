@@ -1,13 +1,13 @@
 //
-//  SBDSKTypes.h
+//  SBDSKLogLevel.h
 //  SendBirdDesk
 //
-//  Created by Jed Gyeong on 4/17/17.
-//  Copyright © 2017 SendBird. All rights reserved.
+//  Created by SendBird on 11/21/17.
+//  Copyright © 2018 SendBird All rights reserved.
 //
 
-#ifndef SBDSKTypes_h
-#define SBDSKTypes_h
+#ifndef SBDSKLogLevel_h
+#define SBDSKLogLevel_h
 
 typedef NS_ENUM(NSInteger, SBDSKLogLevel) {
     SBDSKLogLevelNone = 0,
@@ -17,4 +17,4 @@ typedef NS_ENUM(NSInteger, SBDSKLogLevel) {
     SBDSKLogLevelDebug = 4
 };
 
-#endif /* SBDSKTypes_h */
+#endif /* SBDSKLogLevel_h */
