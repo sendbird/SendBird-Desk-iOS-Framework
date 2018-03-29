@@ -1,6 +1,6 @@
 //
 //  SBDSKMain.h
-//  SendBirdDesk
+//  SendBird Desk
 //
 //  Created by SendBird on 11/21/17.
 //  Copyright © 2018 SendBird All rights reserved.
@@ -9,33 +9,29 @@
 #import <Foundation/Foundation.h>
 #import <SendBirdSDK/SendBirdSDK.h>
 
-#import "SBDSKTypes.h"
 #import "SBDSKTicket.h"
-#import "SBDSKAdminMessage.h"
 
 /**
- This class is a main class of SendBirdDesk.
+ This class is a main class of SendBird Desk.
  */
 @interface SBDSKMain : NSObject<SBDChannelDelegate>
 
+/**
+ Initializes SendBird Desk. 
+
+ @return If YES, the initialization is successful. This method has to be called after [initializing SendBird SDK](https://docs.sendbird.com/ref/ios/Classes/SBDMain.html#//api/name/initWithApplicationId:).
+ */
 + (BOOL)initializeDesk;
 
 /**
- Returns the version of SendBirdDesk.
+ Returns the version of SendBird Desk.
 
- @return The version of SendBirdDesk.
+ @return The version of SendBird Desk.
  */
 + (nullable NSString *)getSdkVersion;
 
 /**
- Sets the log level.
-
- @param logLevel The log level.
- */
-+ (void)setLogLevel:(SBDSKLogLevel)logLevel;
-
-/**
- Sets a dispatch queue for every completion handler in SendBirdDesk.
+ Sets a dispatch queue for every completion handler in SendBird Desk.
 
  @param queue A dispatch queue that will be used for every completion handler.
  */

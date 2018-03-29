@@ -1,6 +1,6 @@
 //
 //  SBDSKTicket.h
-//  SendBirdDesk
+//  SendBird Desk
 //
 //  Created by SendBird on 4/17/17.
 //  Copyright © 2017 SendBird. All rights reserved.
@@ -11,7 +11,7 @@
 #import "SBDSKAgent.h"
 
 /**
- This class represents a ticket that identifies a chat between an agent and a customer.
+ This class represents a ticket that identifies a chat between an <span>agent</span> and a customer.
  */
 @interface SBDSKTicket : NSObject
 
@@ -36,7 +36,7 @@
 @property (strong, nonatomic, nullable, readonly) SBDSKAgent *agent;
 
 /**
- The channel where the agent and the customer are chatting.
+ The channel where the <span>agent</span> and the customer are chatting.
  */
 @property (strong, nonatomic, nullable, readonly) SBDGroupChannel *channel;
 
@@ -59,7 +59,7 @@
 /**
  Creates a new ticket with information.
 
- @param title The title of a new ticket.
+ @param title The <span>title</span> of a new ticket.
  @param userName The customer's name.
  @param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
  */
@@ -89,9 +89,9 @@
 + (void)getClosedListWithOffset:(long)offset completionHandler:(nullable void (^)(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error))completionHandler;
 
 /**
- Gets a ticket by the group channel URL.
+ Gets a ticket by the group <span>channel</span> URL.
 
- @param channelUrl The group channel URL that is connected with a ticket.
+ @param channelUrl The group <span>channel</span> URL that is connected with a ticket.
  @param completionHandler The handler block to execute. If the method gets a ticket successfully, the `error` will be nil.
  */
 + (void)getByChannelUrl:(NSString * _Nonnull)channelUrl completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
