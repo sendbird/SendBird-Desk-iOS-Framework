@@ -35,7 +35,7 @@
 
  @param queue A dispatch queue that will be used for every completion handler.
  */
-+ (void)setCompletionHandlerDelegateQueue:(dispatch_queue_t _Nonnull)queue;
++ (void)setCompletionHandlerDelegateQueue:(nonnull dispatch_queue_t)queue;
 
 
 /**
@@ -45,7 +45,9 @@
  @param accessToken Access Token
  @param completionHandler The handler block to execute. If the method updates this ticket successfully, the `error` will be nil.
  */
-+ (void)authenticateWithUserId:(NSString * _Nonnull)userId accessToken:(NSString * _Nullable)accessToken completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
++ (void)authenticateWithUserId:(nonnull NSString *)userId
+                   accessToken:(nullable NSString *)accessToken
+             completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
 
 /**
  Checks whether the `channel` is a desk channel or not.
@@ -53,6 +55,6 @@
  @param channel The channel instance that is necessary to check.
  @return If YES, the `channel` is a desk channel.
  */
-+ (BOOL)isDeskChannel:(SBDBaseChannel * _Nonnull)channel;
++ (BOOL)isDeskChannel:(nonnull SBDBaseChannel *)channel;
 
 @end

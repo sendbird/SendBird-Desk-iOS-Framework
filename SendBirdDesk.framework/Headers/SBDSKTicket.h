@@ -54,7 +54,9 @@
  @param confirm The value that a customer uses in order to represent the confirmation of this ticket.
  @param completionHandler The handler block to execute. If the method confirms the end of this ticket, the `error` will be nil.
  */
-+ (void)confirmEndOfChatWithMessage:(SBDUserMessage * _Nonnull)message confirm:(BOOL)confirm completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
++ (void)confirmEndOfChatWithMessage:(nonnull SBDUserMessage *)message
+                            confirm:(BOOL)confirm
+                  completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
 
 /**
  Creates a new ticket with information.
@@ -63,7 +65,26 @@
  @param userName The customer's name.
  @param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
  */
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
++ (void)createTicketWithTitle:(nullable NSString *)title
+                     userName:(nullable NSString *)userName
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
+/**
+ Creates a new ticket with information.
+ 
+ @param title The <span>title</span> of a new ticket.
+ @param userName The customer's name.
+ @param groupKey The agent group key.
+ @param customField The custom field that the admin already sets on dashboard.
+ @param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
+ 
+ @since 1.0.3
+ */
++ (void)createTicketWithTitle:(nullable NSString *)title
+                     userName:(nullable NSString *)userName
+                     groupKey:(nullable NSString *)groupKey
+                  customField:(nullable NSDictionary<NSString *, NSString *> *)customField
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
 
 /**
  Gets the count of the opened tickets.
@@ -78,7 +99,21 @@
  @param offset The offset that represents the position of the full list. It must be 0 in order to get the latest list.
  @param completionHandler The handler block to execute. The `tickets` is the array of the opened tickets. The array can be empty, but it doesn't mean that there is an error. If there is the next page of the list, the `hasNext` will be YES. If the method gets the list successfully, the `error` will be nil.
  */
-+ (void)getOpenedListWithOffset:(long)offset completionHandler:(nullable void (^)(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error))completionHandler;
++ (void)getOpenedListWithOffset:(long)offset
+              completionHandler:(nullable void (^)(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error))completionHandler;
+
+/**
+ Gets the list of the opened tickets with the offset and custom data filter.
+
+ @param offset The offset that represents the position of the full list. It must be 0 in order to get the latest list.
+ @param customFieldFilter The custom field filter.
+ @param completionHandler The handler block to execute. The `tickets` is the array of the opened tickets. The array can be empty, but it doesn't mean that there is an error. If there is the next page of the list, the `hasNext` will be YES. If the method gets the list
+ 
+ @since 1.0.3
+ */
++ (void)getOpenedListWithOffset:(long)offset
+              customFieldFilter:(nullable NSDictionary<NSString *, NSString *> *)customFieldFilter
+              completionHandler:(nullable void (^)(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error))completionHandler;
 
 /**
  Gets the list of the closed tickets with the offset.
@@ -86,7 +121,21 @@
  @param offset The offset that represents the position of the full list.
  @param completionHandler The handler block to execute. The `tickets` is the array of the closed tickets. The array can be empty, but it doesn't mean that there is an error. If there is the next page of the list, the `hasNext` will be YES. If the method gets the list successfully, the `error` will be nil.
  */
-+ (void)getClosedListWithOffset:(long)offset completionHandler:(nullable void (^)(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error))completionHandler;
++ (void)getClosedListWithOffset:(long)offset
+              completionHandler:(nullable void (^)(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error))completionHandler;
+
+/**
+ Gets the list of the closed tickets with the offset and custom data filter.
+
+ @param offset The offset that represents the position of the full list.
+ @param customFieldFilter The custom field filter.
+ @param completionHandler The handler block to execute. The `tickets` is the array of the closed tickets. The array can be empty, but it doesn't mean that there is an error. If there is the next page of the list, the `hasNext` will be YES. If the method gets the list successfully, the `error` will be nil.
+ 
+ @since 1.0.3
+ */
++ (void)getClosedListWithOffset:(long)offset
+              customFieldFilter:(nullable NSDictionary<NSString *, NSString *> *)customFieldFilter
+              completionHandler:(nullable void (^)(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error))completionHandler;
 
 /**
  Gets a ticket by the group <span>channel</span> URL.
@@ -94,6 +143,17 @@
  @param channelUrl The group <span>channel</span> URL that is connected with a ticket.
  @param completionHandler The handler block to execute. If the method gets a ticket successfully, the `error` will be nil.
  */
-+ (void)getByChannelUrl:(NSString * _Nonnull)channelUrl completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
++ (void)getByChannelUrl:(nonnull NSString *)channelUrl
+      completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
+/**
+ Reopens the ticket.
+
+ @param completionHandler The handler block to execute. If the method gets a ticket successfully, the `error` will be nil.
+ 
+ @since 1.0.3
+ */
+- (void)reopenWithCompletionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
 
 @end
