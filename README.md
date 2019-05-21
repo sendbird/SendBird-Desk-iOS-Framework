@@ -124,6 +124,8 @@ Please notice that only after customers sending at least one message to the tick
 }
 ```
 
+> To create a ticket, you can use `createTicketWithTitle:userName:groupKey:customField:completionHandler:` method. The `groupKey` and `customField` could be evaluated when a ticket is created though it's used only in Dashboard currently. `groupKey` is the key of an agent group so that the ticket is assigned to the agents in that group. `customField` holds customizable data for the individual ticket.
+
 ## Count of opened tickets
 When you need to display opened ticket count somewhere on your application, `[SBDSKTicket getOpenCountWithCompletionHandler:]` is useful.
 ```obj-c
@@ -169,6 +171,8 @@ Open ticket list and closed ticket list can be loaded like below:
     }];
 }
 ```
+
+> To get opened ticket list or closed ticket list, you can use `getOpenedListWithOffset:customFieldFilter:completionHandler:` method or `getClosedListWithOffset:customFieldFilter:completionHandler:` method respectively. Once you set `customField` to tickets, you can put `customFieldFilter` to `getOpenedListWithOffset:customFieldFilter:completionHandler:` and `getClosedListWithOffset:customFieldFilter:completionHandler:` in order to filter the tickets by `customField` values.
 
 ## Confirming end of chat
 There are predefined rich messages on SendBird Desk and `Confirm end of chat` is one of them. For other rich messages, please refer to [Handling messages](#handling-messages).
