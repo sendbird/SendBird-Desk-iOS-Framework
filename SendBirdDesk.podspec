@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SendBirdDesk"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "SendBird Desk iOS Framework"
   s.description  = "SendBird Desk iOS Framework"
   s.homepage     = "https://desk.sendbird.com"

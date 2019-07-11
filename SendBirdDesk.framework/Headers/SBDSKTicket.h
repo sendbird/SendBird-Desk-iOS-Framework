@@ -3,7 +3,7 @@
 //  SendBird Desk
 //
 //  Created by SendBird on 4/17/17.
-//  Copyright © 2017 SendBird. All rights reserved.
+//  Copyright © 2019 SendBird. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -41,6 +41,11 @@
 @property (strong, nonatomic, nullable, readonly) SBDGroupChannel *channel;
 
 /**
+ *  A dictionary that contains information you want to deliver. The key and the value of the dictionary should be a type of `NSString`.
+ */
+@property (strong, nonatomic, nonnull, readonly) NSDictionary<NSString *, NSString *> *customFields;
+
+/**
  Refreshes this ticket. After invoking this method, this ticket is updated with the latest data.
 
  @param completionHandler The handler block to execute. If the method updates this ticket successfully, the `error` will be nil.
@@ -71,6 +76,23 @@
 
 /**
  Creates a new ticket with information.
+
+ @param title The <span>title</span> of a new ticket.
+ @param userName The customer's name.
+ @param groupKey The agent group key.
+ @param customFields The custom fields that the admin already sets on dashboard.
+ @param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
+ 
+ @since 1.0.4
+ */
++ (void)createTicketWithTitle:(nullable NSString *)title
+                     userName:(nullable NSString *)userName
+                     groupKey:(nullable NSString *)groupKey
+                 customFields:(nullable NSDictionary<NSString *, NSString *> *)customFields
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
+/**
+ Creates a new ticket with information.
  
  @param title The <span>title</span> of a new ticket.
  @param userName The customer's name.
@@ -78,13 +100,16 @@
  @param customField The custom field that the admin already sets on dashboard.
  @param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
  
+ @see use -createTicketWithTitle:userName:groupKey:customFields:completionHandler:
  @since 1.0.3
+ @deprecated 1.0.4
  */
 + (void)createTicketWithTitle:(nullable NSString *)title
                      userName:(nullable NSString *)userName
                      groupKey:(nullable NSString *)groupKey
                   customField:(nullable NSDictionary<NSString *, NSString *> *)customField
-            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler
+DEPRECATED_MSG_ATTRIBUTE("createTicketWithTitle:userName:groupKey:customFields:completionHandler:");
 
 /**
  Gets the count of the opened tickets.

@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.0.4 (Jul 11, 2019)
+* Added `customFields` in `SBDSKTicket`.
+
 ### v1.0.3(May 13, 2019)
 * Added `reopenWithCompletionHandler:` in `SBDSKTicket` class.
 * Added `createTicketWithTitle:userName:groupKey:customField:completionHandler:` in `SBDSKTicket` class.

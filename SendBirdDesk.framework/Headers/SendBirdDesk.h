@@ -3,7 +3,7 @@
 //  SendBird Desk
 //
 //  Created by SendBird on 11/21/17.
-//  Copyright © 2018 SendBird All rights reserved.
+//  Copyright © 2019 SendBird. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
