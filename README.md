@@ -37,7 +37,7 @@ target 'YourTarget' do
   use_frameworks!
 
   # Pods for YourTarget
-  pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.3'
+  pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.5'
 
 end
 ```
