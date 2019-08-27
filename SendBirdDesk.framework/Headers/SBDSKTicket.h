@@ -181,4 +181,19 @@ DEPRECATED_MSG_ATTRIBUTE("createTicketWithTitle:userName:groupKey:customFields:c
 - (void)reopenWithCompletionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
 
 
+/**
+ Submits the customer's feedback.
+
+ @param message The message object for the feedback.
+ @param score The score.
+ @param comment The comment.
+ @param completionHandler The handler block to execute. If the method submits the feedback, the `error` will be nil.
+ 
+ @since 1.0.5
+ */
++ (void)submitFeedbackWithMessage:(nonnull SBDUserMessage *)message
+                            score:(int)score
+                          comment:(nullable NSString *)comment
+                completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
 @end

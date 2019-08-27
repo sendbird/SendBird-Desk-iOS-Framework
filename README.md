@@ -10,10 +10,12 @@ Desk iOS SDK requires devices running **iOS 8.0 or higher** and **SendBird iOS S
   1. [Installation](#installation)
   1. [Initialization](#initialization)
   1. [Authentication](#authentication)
+  1. [Setting customer customFields](#setting-customer-customfields)
   1. [Creating a new ticket](#creating-a-new-ticket)
   1. [Count of opened tickets](#count-of-opened-tickets)
   1. [Loading ticket list](#loading-ticket-list)
   1. [Confirming end of chat](#confirming-end-of-chat)
+  1. [Ticket Feedback](#ticket-feedback)
   1. [Handling ticket event](#handling-ticket-event)
   1. [Rich messages](#rich-messages)
   
@@ -104,6 +106,25 @@ Below is an example for SendBird SDK connection and SendBird Desk SDK authentica
 ```
   
 Now your customers are ready to create chat tickets and start inquiry with your agents!
+
+## Setting customer customFields
+
+
+
+Customer information could be kept in `customFields`. `setCustomerCustomFields:completionHandler:` in `SBDSKMain` lets the SDK set the `customFields` of the current customer. The `customFields` columns should be defined in SendBird Dashboard beforehand. Otherwise, the setting would be ignored.
+```obj-c
+NSDictionary *customerCustomFields = @{
+                                       @"gender": @"male",
+                                       @"age": @"20",
+                                       };
+
+[SBDSKMain setCustomerCustomFields:customerCustomFields completionHandler:^(SBDError * _Nullable error) {
+    if (error != nil) {
+        // customer's customFields is rightly set
+        // (or a certain key could get ignored if the key is not defined yet)
+    }
+}];
+```
 
 ## Creating a new ticket
 
@@ -216,6 +237,49 @@ Each event has the following `AdminMessage.getData()`:
 You can check these messages from `channel:didReceiveMessage:` delegate of `SBDChannelDelegate` on SendBird SDK.
 SendBird Desk SDK internally tracks these events and update ticket status automatically. So when you see these events, you can directly get ticket object by `getByChannelUrl:completionHandler:` of `SBDSKTicket` and then use it for e.g. 
 rendering assigned agent's profile or moving ticket from open list to closed list.
+
+### Ticket Feedback
+
+If Desk satisfaction feature is on, a message would come after closing the ticket. The message is for getting customer feedback including score and comment. The data of satisfaction form message looks like below.
+
+```js
+{
+    "type": "SENDBIRD_DESK_CUSTOMER_SATISFACTION",
+    "body": {
+        "state": "WAITING" // also can have "CONFIRMED",
+        "customerSatisfactionScore": null, // or a number ranged in [1, 5]
+        "customerSatisfactionComment": null // or a string (optional)
+    }
+}
+```
+
+Once the customer inputs the score and the comment, the data could be submitted by calling `submitFeedbackWithMessage:score:comment:completionHandler:` in `SBDSKTicket`. Then updated message is going to be sent in `channel:didUpdateMessage:`.
+
+
+```obj-c
+[SBDSKTicket getByChannelUrl:sender.channelUrl completionHandler:^(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error) {
+    if (error != nil) {
+        return;
+    }
+    
+    NSDictionary *result = nil;
+    NSError *parsingError = nil;
+    @autoreleasepool {
+        result = [NSJSONSerialization JSONObjectWithData:[message.data dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&parsingError];
+    }
+    if (parsingError == nil) {
+        if ([result[@"type"] isEqualToString:@"SENDBIRD_DESK_CUSTOMER_SATISFACTION"]) {
+            NSString *state = result[@"body"][@"state"];
+            if ([state isEqualToString:@"WAITING"]) {
+                // do something on WAITING
+            }
+            else if ([state isEqualToString:@"CONFIRMED"]) {
+                // do something on CONFIRMED
+            }
+        }
+    }
+}];
+```
 
 ## Rich messages
 Besides, `Confirm end of chat` message, URL preview is available as one of rich messages. (We are adding more very fast.)

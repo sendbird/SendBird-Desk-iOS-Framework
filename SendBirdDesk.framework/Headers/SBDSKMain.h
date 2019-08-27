@@ -57,4 +57,15 @@
  */
 + (BOOL)isDeskChannel:(nonnull SBDBaseChannel *)channel;
 
+/**
+ Sets the current customer's custom fields. The custom fields has a key and a value in string type.
+
+ @param customFields The current customer's custom fields.
+ @param completionHandler The handler block to execute. If the method sets successfully, the `error` will be nil.
+ 
+ @since 1.0.5
+ */
++ (void)setCustomerCustomFields:(nonnull NSDictionary<NSString *, NSString *> *)customFields
+              completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
+
 @end

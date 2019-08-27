@@ -1,5 +1,9 @@
 # Change Log
 
+### v1.0.5 (Aug 27, 2019)
+* Added a method to set custom fields of the current customer.
+* Added a method to submit feedback.
+
 ### v1.0.4 (Jul 11, 2019)
 * Added `customFields` in `SBDSKTicket`.
 
