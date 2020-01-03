@@ -163,14 +163,14 @@ Please notice that only after customers sending at least one message to the tick
 > To create a ticket, you can use `createTicketWithTitle:userName:groupKey:customField:completionHandler:` method. The `groupKey` and `customField` could be evaluated when a ticket is created though it's used only in Dashboard currently. `groupKey` is the key of an agent group so that the ticket is assigned to the agents in that group. `customField` holds customizable data for the individual ticket.
 
 ## Setting Ticket customFields
-Ticket information could be kept in `customFields`. `setTicketWithTicketId:customFields:completionHandler:` in `SBDSKTicket` lets the SDK set the `customFields` of the current customer. The `customFields` columns should be defined in SendBird Dashboard beforehand. Otherwise, the setting would be ignored.
+Ticket information could be kept in `customFields`. `setCustomFields:completionHandler:` in `SBDSKTicket` lets the SDK set the `customFields` of the current customer. The `customFields` columns should be defined in SendBird Dashboard beforehand. Otherwise, the setting would be ignored.
 ```obj-c
-NSDictionary *customerCustomFields = @{
-                                       @"gender": @"male",
-                                       @"age": @"20",
-                                       };
+NSDictionary *ticketCustomFields = @{
+                                     @"gender": @"male",
+                                     @"age": @"20",
+                                     };
 
-[ticket setCustomFields:setCustomerCustomFields:customerCustomFields completionHandler:^(SBDError * _Nullable error) {
+[ticket setCustomFields:ticketCustomFields completionHandler:^(SBDError * _Nullable error) {
     if (error != nil) {
         // Error handling.
     }
