@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SendBirdSDK/SendBirdSDK.h>
 #import "SBDSKAgent.h"
+#import "SBDSKTypes.h"
 
 /**
  This class represents a ticket that identifies a chat between an <span>agent</span> and a customer.
@@ -46,6 +47,11 @@
 @property (strong, nonatomic, nonnull, readonly) NSDictionary<NSString *, NSString *> *customFields;
 
 /**
+ The priority of this ticket.
+*/
+@property (assign, nonatomic, readonly) SBDSKTicketPriority priority;
+
+/**
  Refreshes this ticket. After invoking this method, this ticket is updated with the latest data.
 
  @param completionHandler The handler block to execute. If the method updates this ticket successfully, the `error` will be nil.
@@ -79,6 +85,21 @@
 
  @param title The <span>title</span> of a new ticket.
  @param userName The customer's name.
+ @param priority The priority level of ticket.
+ @param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
+ 
+ @since 1.0.6
+*/
++ (void)createTicketWithTitle:(nullable NSString *)title
+                     userName:(nullable NSString *)userName
+                     priority:(SBDSKTicketPriority)priority
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
+/**
+ Creates a new ticket with information.
+
+ @param title The <span>title</span> of a new ticket.
+ @param userName The customer's name.
  @param groupKey The agent group key.
  @param customFields The custom fields that the admin already sets on dashboard.
  @param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
@@ -89,6 +110,25 @@
                      userName:(nullable NSString *)userName
                      groupKey:(nullable NSString *)groupKey
                  customFields:(nullable NSDictionary<NSString *, NSString *> *)customFields
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
+/**
+ Creates a new ticket with information.
+
+ @param title The <span>title</span> of a new ticket.
+ @param userName The customer's name.
+ @param groupKey The agent group key.
+ @param customFields The custom fields that the admin already sets on dashboard.
+ @param priority The priority level of ticket.
+ @param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
+ 
+ @since 1.0.6
+ */
++ (void)createTicketWithTitle:(nullable NSString *)title
+                     userName:(nullable NSString *)userName
+                     groupKey:(nullable NSString *)groupKey
+                 customFields:(nullable NSDictionary<NSString *, NSString *> *)customFields
+                     priority:(SBDSKTicketPriority)priority
             completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
 
 /**
@@ -195,5 +235,27 @@ DEPRECATED_MSG_ATTRIBUTE("createTicketWithTitle:userName:groupKey:customFields:c
                             score:(int)score
                           comment:(nullable NSString *)comment
                 completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
+/**
+ Sets the specific ticket's custom fields. The custom fields has a key and a value in string type.
+
+ @param customFields The specific ticket's custom fields.
+ @param completionHandler The handler block to execute. If the method sets successfully, the `error` will be nil.
+ 
+ @since 1.0.6
+ */
+- (void)setCustomFields:(nonnull NSDictionary<NSString *, NSString *> *)customFields
+      completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
+
+/**
+Sets the specific ticket's priority. The priority has a string type key and a `SBDSKTicketPriority` type value
+
+@param priority The specific ticket's priority.
+@param completionHandler The handler block to execute. If the method sets successfully, the `error` will be nil.
+
+@since 1.0.6
+*/
+- (void)setPriority:(SBDSKTicketPriority)priority
+  completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
 
 @end

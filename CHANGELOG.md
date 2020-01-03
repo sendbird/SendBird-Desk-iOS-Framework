@@ -1,5 +1,11 @@
 # Change Log
 
+### v1.0.6 (Jan 3, 2020)
+* Added `setTicketWithTicketId:CustomFields:completionHandler:` in `SBDSKTicket` class.
+* Added `priority` type in Ticket
+  * Added `createTicketWithTitle:userName:groupKey:customFields:priority:completionHandler:` in `SBDSKTicket` class.
+  * Added `setTicketWithTicketId:priority:completionHandler:` in `SBDSKTicket` class.
+
 ### v1.0.5 (Aug 27, 2019)
 * Added a method to set custom fields of the current customer.
 * Added a method to submit feedback.

@@ -37,7 +37,7 @@ target 'YourTarget' do
   use_frameworks!
 
   # Pods for YourTarget
-  pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.5'
+  pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.6'
 
 end
 ```
@@ -120,9 +120,11 @@ NSDictionary *customerCustomFields = @{
 
 [SBDSKMain setCustomerCustomFields:customerCustomFields completionHandler:^(SBDError * _Nullable error) {
     if (error != nil) {
-        // customer's customFields is rightly set
-        // (or a certain key could get ignored if the key is not defined yet)
+        // Error handling.
     }
+    
+    // customer's customFields is rightly set
+    // (or a certain key could get ignored if the key is not defined yet)
 }];
 ```
 
@@ -144,9 +146,55 @@ Please notice that only after customers sending at least one message to the tick
     }];  
 }
 ```
+> `createTicketWithTitle:userName:completionHandler:` of `SBDSKTicket` has a overloaded method with `Priority` parameters so you can set the priority of ticket as well.
+ ```obj-c
+- (void)createTicket {
+    [SBDSKTicket createTicketWithTitle:TICKET_TITLE userName:USER_NAME priority:priority completionHandler:^(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error) {
+        if (error != nil) {
+            // Error handling.
+            return;
+        }
+        
+        // Now you can send messages to the ticket by `[self.ticket.channel sendUserMessage:]` or `[self.ticket.channel sendFileMessage:]`.
+    }];  
+}
+```
 
 > To create a ticket, you can use `createTicketWithTitle:userName:groupKey:customField:completionHandler:` method. The `groupKey` and `customField` could be evaluated when a ticket is created though it's used only in Dashboard currently. `groupKey` is the key of an agent group so that the ticket is assigned to the agents in that group. `customField` holds customizable data for the individual ticket.
 
+## Setting Ticket customFields
+Ticket information could be kept in `customFields`. `setTicketWithTicketId:customFields:completionHandler:` in `SBDSKTicket` lets the SDK set the `customFields` of the current customer. The `customFields` columns should be defined in SendBird Dashboard beforehand. Otherwise, the setting would be ignored.
+```obj-c
+NSDictionary *customerCustomFields = @{
+                                       @"gender": @"male",
+                                       @"age": @"20",
+                                       };
+
+[ticket setCustomFields:setCustomerCustomFields:customerCustomFields completionHandler:^(SBDError * _Nullable error) {
+    if (error != nil) {
+        // Error handling.
+    }
+    
+    // ticket's customFields is rightly set
+    // (or a certain key could get ignored if the key is not defined yet)
+}];
+```
+
+## Setting Ticket priority
+
+ Ticket information could be kept in `Priority`. 
+ `setPriority:completionHandler:` in `SBDSKTicket` lets the SDK set the `Priority` of the current ticket. 
+ If you didn't set the Priority of ticket the default `Priority` has been set to `SBDSKTicketPriorityMedium`
+```obj-c
+[ticket setPriority:SBDSKTicketPriorityMedium completionHandler:^(SBDError * _Nullable error) {
+    if (error != nil) {
+        // Error handling.
+    }
+    
+    // ticket's priority is rightly set
+}];
+ ```
+ 
 ## Count of opened tickets
 When you need to display opened ticket count somewhere on your application, `[SBDSKTicket getOpenCountWithCompletionHandler:]` is useful.
 ```obj-c
