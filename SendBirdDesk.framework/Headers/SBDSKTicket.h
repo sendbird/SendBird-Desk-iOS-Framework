@@ -10,6 +10,7 @@
 #import <SendBirdSDK/SendBirdSDK.h>
 #import "SBDSKAgent.h"
 #import "SBDSKTypes.h"
+#import "SBDSKRelatedChannel.h"
 
 /**
  This class represents a ticket that identifies a chat between an <span>agent</span> and a customer.
@@ -50,6 +51,8 @@
  The priority of this ticket.
 */
 @property (assign, nonatomic, readonly) SBDSKTicketPriority priority;
+
+@property (strong, nonatomic, nonnull, readonly) NSArray<SBDSKRelatedChannel *> *relatedChannels;
 
 /**
  Refreshes this ticket. After invoking this method, this ticket is updated with the latest data.
@@ -131,6 +134,42 @@
                      priority:(SBDSKTicketPriority)priority
             completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
 
+/**
+Creates a new ticket with information.
+
+@param title The <span>title</span> of a new ticket.
+@param userName The customer's name.
+@param relatedChannels List of Urls of the channels related with the ticket.
+@param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
+
+@since 1.0.7
+ */
++ (void)createTicketWithTitle:(nullable NSString *)title
+                     userName:(nullable NSString *)userName
+              relatedChannels:(nullable NSArray<NSString *> *)relatedChannels
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
+/**
+Creates a new ticket with information.
+
+@param title The <span>title</span> of a new ticket.
+@param userName The customer's name.
+@param groupKey The agent group key.
+@param customFields The custom fields that the admin already sets on dashboard.
+@param priority The priority level of ticket.
+@param relatedChannels List of Urls of the channels related with the ticket.
+@param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
+
+@since 1.0.7
+*/
++ (void)createTicketWithTitle:(nullable NSString *)title
+                     userName:(nullable NSString *)userName
+                     groupKey:(nullable NSString *)groupKey
+                 customFields:(nullable NSDictionary<NSString *, NSString *> *)customFields
+                     priority:(SBDSKTicketPriority)priority
+              relatedChannels:(nullable NSArray<NSString *> *)relatedChannels
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+    
 /**
  Creates a new ticket with information.
  
@@ -257,5 +296,16 @@ Sets the specific ticket's priority. The priority has a string type key and a `S
 */
 - (void)setPriority:(SBDSKTicketPriority)priority
   completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
+
+/**
+Sets the specific ticket's related channels. The method accepts an array of string, and updates the `SBDSKRelatedChannel` array of the ticket.
+
+@param relatedChannels The specific ticket's related channels.
+@param completionHandler The handler block to execute. If the method sets successfully, the `error` will be nil.
+
+@since 1.0.7
+*/
+- (void)setRelatedChannels:(NSArray<NSString *> * _Nonnull)relatedChannels
+         completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
 
 @end

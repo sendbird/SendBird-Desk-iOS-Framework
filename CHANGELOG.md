@@ -1,5 +1,11 @@
 # Change Log
 
+### v1.0.7 (Apr 28, 2020)
+* Added `relatedChannels` in `SBDSKTicket`.
+    * Added `createTicketWithTitle:userName:relatedChannels:completionHandler:` and `createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:completionHandler:`. 
+* Added `SBDSKRelatedChannel` type.
+* Added `setRelatedChannels:completionHandler:` in `SBDSKTicket`.
+
 ### v1.0.6 (Jan 3, 2020)
 * Added `setCustomFields:completionHandler:` in `SBDSKTicket` class.
 * Added `priority` type in Ticket
