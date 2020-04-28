@@ -12,6 +12,7 @@ Desk iOS SDK requires devices running **iOS 8.0 or higher** and **SendBird iOS S
   1. [Authentication](#authentication)
   1. [Setting customer customFields](#setting-customer-customfields)
   1. [Creating a new ticket](#creating-a-new-ticket)
+  1. [Setting Related Channels](#related-channels)
   1. [Count of opened tickets](#count-of-opened-tickets)
   1. [Loading ticket list](#loading-ticket-list)
   1. [Confirming end of chat](#confirming-end-of-chat)
@@ -37,7 +38,7 @@ target 'YourTarget' do
   use_frameworks!
 
   # Pods for YourTarget
-  pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.6'
+  pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.7'
 
 end
 ```
@@ -194,6 +195,20 @@ NSDictionary *ticketCustomFields = @{
     // ticket's priority is rightly set
 }];
  ```
+ 
+## Related channels
+You can link certain channels to a ticket. Then the ticket would have relatedChannels property which contains the channelUrl and its name. In order to relate the channels to a ticket, use ticket.setRelatedChannelUrls() for the update, or set the relatedChannelUrls parameter at the time of ticket creation.
+
+```obj-c
+[SBDSKTicket createTicketWithTitle:title userName:name relatedChannels:relatedChannelUrls completionHandler:^(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error) {
+  // The created ticket will have `relatedChannels` property with the channel information that you provided. 
+}];
+
+[ticket setRelatedChannels:relatedChannelUrls completionHandler:^(SBDError * _Nullable error) {
+  // The `relatedChannels` of the `ticket` will be updated. 
+}];
+```
+
  
 ## Count of opened tickets
 When you need to display opened ticket count somewhere on your application, `[SBDSKTicket getOpenCountWithCompletionHandler:]` is useful.
