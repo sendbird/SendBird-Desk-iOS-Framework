@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.0.8 (Jul 13, 2020)
+* Fixed - Problems adding null pointers to an array object.
+
 ### v1.0.7 (Apr 28, 2020)
 * Added `relatedChannels` in `SBDSKTicket`.
     * Added `createTicketWithTitle:userName:relatedChannels:completionHandler:` and `createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:completionHandler:`. 
