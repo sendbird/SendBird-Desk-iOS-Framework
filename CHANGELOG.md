@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.0.10 (Oct 22, 2020)
+* Minor bugfix
+
 ### v1.0.9 (Aug 20, 2020)
 * Improved handling of error code and error messages on API failure.
 
