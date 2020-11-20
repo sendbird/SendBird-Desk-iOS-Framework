@@ -223,7 +223,7 @@ ticket.setCustomFields(customFields) { (error) in
 }
 ```
 
-> **Note**: Only custom fields registered in Settings > Ticket fields of your dashboard can be used as a key.
+> **Note**: Only custom fields registered in **Desk** > **Settings** > **Ticket fields** of your dashboard can be used as a key.
 
 ### Add custom information to a customer
 
@@ -244,7 +244,7 @@ SBDSKMain.setCustomerCustomFields(customFields) { (error) in
 // Some fields can be ignored if their keys aren't registered in the dashboard.
 ```
 
-> **Note**: Only custom fields registered in **Settings** > **Customer fields** of your dashboard can be used as a key.
+> **Note**: Only custom fields registered in **Desk** > **Settings** > **Customer fields** of your dashboard can be used as a key.
 
 ### Add related channels
 
