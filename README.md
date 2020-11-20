@@ -3,13 +3,12 @@
 ![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)
 ![Languages](https://img.shields.io/badge/language-Objective--C-orange.svg)
 
-## Table of Contents
+## Table of contents
 
   1. [Introduction](#introduction)
   1. [Before getting started](#before-getting-started)
   1. [Getting started](#getting-started)
   1. [Create your first ticket](#create-your-first-ticket)
-  
   
 <br />
 
@@ -36,7 +35,7 @@ These are a few of the main components of Desk SDK.
 ||Sender|Subtypes|
 |---|---|---|
 | User message| Agent or customer|Rich messages |
-| ADmin message |Sent from the Desk server without a specific sender |Notification messages and System messages |
+| Admin message |Sent from the Desk server without a specific sender |Notification messages and System messages |
 
 
 ### More about Sendbird Desk SDK for iOS
