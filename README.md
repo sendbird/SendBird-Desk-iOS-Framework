@@ -505,7 +505,7 @@ func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
 {
     "type": "SENDBIRD_DESK_CUSTOMER_SATISFACTION",
     "body": {
-        "state": "CONFIRMED"
+        "state": "CONFIRMED",
         "customerSatisfactionScore": 3,
         "customerSatisfactionComment": "It was really helpful :)"
     }
