@@ -343,7 +343,7 @@ In the `SBDChannelDelegate`s’ `channel(_ sender: SBDBaseChannel, didUpdate mes
 
 ### Receive system messages
 
-Admin messages are customizable messages that are sent by the system, and there are 2 types of admin messages. Notifications are messages that are sent and displayed to both customers and agents, such as welcome messages or delay messages. System messages are messages sent and displayed to agents in the Ticket details view when a ticket has some changes, such as changes in ticket status and assignee.
+Admin messages are customizable messages that are sent by the system, and there are 2 types of admin messages. **Notifications** are messages that are sent and displayed to both customers and agents, such as welcome messages or delay messages. **System messages** are messages sent and displayed to agents in the **Ticket details view** when a ticket has some changes, such as changes in ticket status and assignee.
 
 > **Note**: You can customize notifications in **Settings** > **Triggers**, and system messages in **Settings** > **System messages** in your dashboard.
 
@@ -389,7 +389,6 @@ While admins have permission to directly close a ticket, agents can either close
 |WAITING |Set when an agent sends a confirmation request message. |
 |CONFIRMED| Set when a customer agrees to close the ticket. (Default: **true**)|
 |DECLINED |Set when a customer declines to close the ticket. (Default: **false**)|
-
 
 When a customer replies to the message, the response true (agree) or false (decline) is sent to the Desk server as `CONFIRMED` or `DECLINED` by calling the `SBDSKTicket.confirmEndOfChat()` method.
 
@@ -451,7 +450,6 @@ func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
 
 You can send a message to customers right after closing a ticket to ask whether they are satisfied with the support provided through the ticket. When the **Customer satisfaction rating** feature is turned on in your dashboard, customers will get a message asking to give a score and leave a comment as feedback. The message can have 2 states as below.
 
-
 |State|Description|
 |---|---|
 |WAITING|Set when an agent sends a customer feedback request message.|
@@ -468,7 +466,7 @@ SBDSKTicket.submitFeedback(with: USER_MESSAGE, score: SCORE, comment: COMMENT) {
 }
 ```
 
-Sendbird server notifies the customer’s client app of updates through the `channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage)` delegate method of the `SBDChannelDelegate`.
+Sendbird Desk server notifies the customer’s client app of updates through the `channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage)` delegate method of the `SBDChannelDelegate`.
 
 ```swift
 func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
