@@ -199,11 +199,11 @@ SBDSKTicket.createTicket(withTitle: TICKET_TITLE, userName: USER_NAME, groupKey:
 
 <br />
 
-## Implmentation guide
+## Implementation guide
 
 This section details the procedure to handle and close a ticket from your client app. 
 
-### dd custom information to a ticket
+### Add custom information to a ticket
 
 Use the `ticket.setCustomFields()` method to add additional information about a ticket.
 
