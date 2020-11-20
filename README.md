@@ -345,7 +345,7 @@ In the `SBDChannelDelegate`s’ `channel(_ sender: SBDBaseChannel, didUpdate mes
 
 Admin messages are customizable messages that are sent by the system, and there are 2 types of admin messages. **Notifications** are messages that are sent and displayed to both customers and agents, such as welcome messages or delay messages. **System messages** are messages sent and displayed to agents in the **Ticket details view** when a ticket has some changes, such as changes in ticket status and assignee.
 
-> **Note**: You can customize notifications in **Settings** > **Triggers**, and system messages in **Settings** > **System messages** in your dashboard.
+> **Note**: You can customize notifications in **Desk** > **Settings** > **Triggers**, and system messages in **Desk** > **Settings** > **System messages** in your dashboard.
 
 When the client app receives the message through the `channel(_ sender:SBDBaseChannel, didReceive message: SBDBaseMessage)` method of the `SBDChannelDelegate`, system messages are distinguished from notification messages by the value of the `message.custom_type`, and their subtype is specified in the `message.data` as below.
 
