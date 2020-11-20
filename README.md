@@ -353,10 +353,8 @@ When the client app receives the message through the `channel(_ sender:SBDBaseCh
     "message_id": 40620745,
     "type": "ADMM",
     "custom_type": "SENDBIRD_DESK_ADMIN_MESSAGE_CUSTOM_TYPE",
-    ...
     "data": "{\"type\": \"SYSTEM_MESSAGE_TICKET_ASSIGNED_BY_SYSTEM\", \"ticket\": <Ticket Object>}",
-    "message": "The ticket is automatically assigned to Cindy.",
-    ...
+    "message": "The ticket is automatically assigned to Cindy."
 }
 ```
 
