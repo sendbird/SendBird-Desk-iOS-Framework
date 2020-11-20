@@ -357,6 +357,7 @@ When the client app receives the message through the `channel(_ sender:SBDBaseCh
     ...
     "message": "The ticket is automatically assigned to Cindy.",
     ...
+    
 }
 ```
 
