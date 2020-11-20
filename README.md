@@ -1,12 +1,11 @@
-SendBird Desk SDK Integration Guide for iOS
-===========
-SendBird Desk is a chat customer service platform built on SendBird SDK and API.
+# [Sendbird](https://sendbird.com) Desk SDK for iOS
 
-Desk iOS SDK provides customer-side integration on your own application, so you can easily implement **ticketing system with chat inquiry**.  
-Desk iOS SDK requires devices running **iOS 8.0 or higher** and **SendBird iOS SDK 3.0.90 or higher**.
+![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)
+![Languages](https://img.shields.io/badge/language-Objective--C-orange.svg)
 
 ## Table of Contents
 
+  1. [Introduction](#introduction)
   1. [Installation](#installation)
   1. [Initialization](#initialization)
   1. [Authentication](#authentication)
@@ -20,345 +19,187 @@ Desk iOS SDK requires devices running **iOS 8.0 or higher** and **SendBird iOS S
   1. [Handling ticket event](#handling-ticket-event)
   1. [Rich messages](#rich-messages)
   
-## Installation
+<br />
 
-First of all, you need SendBird App ID to start (It can be created on [SendBird Dashboard](https://dashboard.sendbird.com), but for Desk usage, you may need upgrade.),
-so please contact [desk@sendbird.com](mailto:desk@sendbird.com) if you want to try Desk.
+## Introduction
 
-Installing the Desk SDK is a straightforward process if you're familiar with using external libraries or SDKs in your projects.
-To install the Desk SDK using CocoaPods, add the following lines to your `Podfile` file.
+Sendbird Desk enables strong customer engagement through live, in-app support. The Desk SDK lets you easily initialize, configure, and build customer support-related functionality into your iOS applications.
 
-1. Create or edit your `Podfile`.
-```
+### How it works
+
+Sendbird Desk is a plugin of the [Sendbird Chat Platform](https://sendbird.com/docs/chat) for managing tickets, and thus Desk events are handled by event handlers through the [Chat SDK](https://github.com/sendbird/sendbird-ios-framework). 
+
+Every ticket is assigned appropriate agents and will be directed to a Sendbird SDK channel, which implements real-time messaging on tickets with Sendbird SDK. 
+
+### Concepts
+
+These are a few of the main components of Desk SDK. 
+
+- **Channels**: The various ways through which support can be requested e.g. in-app chats from different OS platforms or social media like Facebook and Instagram.
+- **Tickets**: A ticket is created when a customer and agent start a conversation and is seen as a unit of customer’s inquiry. There are five types of tickets.
+- **Agents**: An agent receives the requests and also handles the conversation in the [Sendbird Dashboard](https://dashboard.sendbird.com/auth/signin). 
+- **Admins**: Admins are agents who are granted the additional privileges of managing the overall dashboard settings and the tickets. 
+- **Messages**: Desk has two types of messages that fall into further subtypes. The following table shows the hierarchical structure of messages. 
+
+||Sender|Subtypes|
+|---|---|---|
+| User message| Agent or customer|Rich messages |
+| ADmin message |Sent from the Desk server without a specific sender |Notification messages and System messages |
+
+
+### More about Sendbird Desk SDK for iOS
+
+Find out more about Sendbird Desk SDK for iOS on [Desk SDK for iOS doc](https://sendbird.com/docs/desk/v1/ios/getting-started/about-desk-sdk). If you have any comments or questions regarding bugs and feature requests, visit [Sendbird community](https://community.sendbird.com).
+
+<br />
+
+## Before getting started
+
+This section shows the prerequisites you need to check to use Sendbird Desk SDK for iOS.
+
+### Requirements
+
+The requirements of Desk SDK for iOS are:
+
+- `iOS 8.0 or higher`
+- `Sendbird iOS SDK 3.0.90 or higher`
+
+<br />
+
+## Getting started
+
+This section gives you information you need to get started with Sendbird Desk SDK for iOS. 
+
+### Try the sample app
+
+Our sample app demonstrates the core features of Sendbird Desk SDK. Download the app from our GitHub repository to get an idea of what you can do with the actual SDK and to get started building your own project.
+ 
+- https://github.com/sendbird/quickstart-desk-ios
+
+### Step 1: Create a Sendbird application from your dashboard
+
+A Sendbird application comprises everything required in a chat service including users, message, and channels. To create an application:
+
+1. Go to the Sendbird Dashboard and enter your email and password, and create a new account. You can also sign up with a Google account.
+2. When prompted by the setup wizard, enter your organization information to manage Sendbird applications.
+3. Lastly, when your dashboard home appears after completing setup, click **Create +** at the top-right corner.
+
+Regardless of the platform, only one Sendbird application can be integrated per app; however, the application supports communication across all Sendbird’s provided platforms without any additional setup. 
+
+> **Note**: All the data is limited to the scope of a single application, thus users in different Sendbird applications are unable to chat with each other. 
+
+### Step 2: Download and install the Desk SDK
+
+Installing the Desk SDK is simple if you’re familiar with using external libraries or SDK’s in your projects. You can install Desk SDK using the two following methods: 
+
+1. Create or edit your `Podfile` file.
+```bash
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
 target 'YourTarget' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for YourTarget
-  pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.7'
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+    
+    # Pods for YourTarget
+    pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.7'
 
 end
 ```
 2. Run `pod install`.
 3. Open `YOUR_PROJECT.xcworkspace`.
 
-## Initialization
+Alternatively, you can download the latest Desk SDK for iOS. Copy the Desk SDK, which can be found in the Github Repository, into your project directory, and make sure you include the library in your working file as well.
 
-Invoke `initWithApplicationId:` of `SBDMain` with your SendBird App ID just like when you initialize SendBird SDK and then
-call `initializeDesk` of `SBDSKMain` to use SendBird Desk SDK's features. Please be sure to initialize SendBird SDK before SendBirdDesk SDK.
-```obj-c
-// AppDelegate.m
+<br />
 
-#import <SendBirdDesk/SendBirdDesk.h>
+## Create your first ticket
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // ...
+After installation has been completed, a ticket can be created for communication between an agent and customer. Follow the step-by-step instructions below to create your first ticket.
 
-    [SBDMain initWithApplicationId:APP_ID];
-    [SBDSKMain initializeDesk];
+### Step 1: Initialize the Desk SDK 
 
-    // ...
+A ‘SBDSKMain’ instance must be initialized when launching a client app. Call the `SBDMain.initWithApplicationId()` and `SBDSKMain.initializeDesk()` methods within the `applicationDidFinishLaunching()`. The `initWithApplicationId()` should be called first by the `APP_ID` of your Sendbird application in the dashboard. 
 
-    return YES;
-}
-
-```
-
-> Calling `initWithApplicationId:` of `SBDMain` and `initializeDesk` of `SBDSKMain` on `application:didFinishLaunchingWithOptions:` of `AppDelegate.m` is highly recommended.
-
-> Even you use SendBird Desk SDK, you have to handle chat messages thru SendBird SDK. SendBird Desk SDK provides add-on features like chat ticket creation and loading chat tickets.
-Ticket is the concept that does not exist on SendBird SDK and newly introduced on SendBird Desk SDK to support customer service ticketing system.
-Every ticket created will be assigned to the appropriate agents and it will have a mapping channel of SendBird SDK, so you can implement real-time messaging on tickets with SendBird SDK.
-> While using SendBird Desk SDK, it is also possible that you implement your own chat service using SendBird SDK.
-For example, if you are operating an on-demand service, you can add an in-app messenger (for your platform users) as well as customer service chat (between users and agents)
-into your application or website by combination of SendBird SDK and SendBird Desk SDK.
-
-
-## Authentication
-
-After initialization, connecting to SendBird's server by SendBird SDK is required for real-time messaging. 
-This part is fully described on [SendBird SDK guide docs](https://docs.sendbird.com/ios#authentication_2_authentication).
-Authentication of SendBird Desk `authenticateWithUserId:accessToken:completionHandler:` of `SBDSKMain` is also a mandatory for you to use ticket related features.
-Below is an example for SendBird SDK connection and SendBird Desk SDK authentication.
-```obj-c
-- (void)connect {
-    [SBDMain connectWithUserId:USER_ID accessToken:ACCESS_TOKEN completionHandler:^(SBDUser * _Nullable user, SBDError * _Nullable error) {
-            // Error handling.
-            
-            return;
-        }
-        
-        
-        // Use the same user ID and access token used on connectWithUserId: of SBDMain.
-        [SBDSKMain authenticateWithUserId:USER_ID accessToken:ACCESS_TOKEN completionHandler:^(SBDError * _Nullable error) {
-            if (error != nil) {
-                // Error handling.
-                
-                return;
-            }
-            
-            // Now you can create a ticket, get open ticket count and load tickets.
-        }];
-    }];
+```swift
+class AppDelegate: UIApplicationDelegate {
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        SBDMain.initWithApplicationId(APP_ID)
+        SBDSKMain.initializeDesk()
+    }
 }
 ```
-  
-Now your customers are ready to create chat tickets and start inquiry with your agents!
 
-## Setting customer customFields
+> **Note**: Built with Sendbird Chat SDK, Sendbird Desk SDK is a plugin that handles customer inquiries through tickets. Messages within tickets are dealt with by Sendbird Chat platform, and every ticket is mapped to a group channel in Sendbird Chat. Because of this interaction, the same `APP_ID` should be used for both Desk and Chat SDKs.
 
+### Step 2: Authenticate a customer
 
+Customers can request support from various types of channels: in-app chats or social media such as Facebook, Instagram and Twitter. To use these support features of Desk SDK, the SendBirdDesk instance should be connected with Sendbird server depending on which channel the request is from: 
 
-Customer information could be kept in `customFields`. `setCustomerCustomFields:completionHandler:` in `SBDSKMain` lets the SDK set the `customFields` of the current customer. The `customFields` columns should be defined in SendBird Dashboard beforehand. Otherwise, the setting would be ignored.
-```obj-c
-NSDictionary *customerCustomFields = @{
-                                       @"gender": @"male",
-                                       @"age": @"20",
-                                       };
+- **Sendbird Chat Platform**: Authenticate using the `SBDMain.connect()` and `SBDSKMain.authenticate()` method with their user IDs. 
+- **Social media platforms**: No authentication needed as customers are automatically registered in the [dashboard](https://dashboard.sendbird.com/auth/signin) with their social media accounts.
 
-[SBDSKMain setCustomerCustomFields:customerCustomFields completionHandler:^(SBDError * _Nullable error) {
-    if (error != nil) {
-        // Error handling.
+Once authenticated, customers can live-chat with agents based on Sendbird Chat platform.
+
+```swift
+SBDMain.connect(withUserId: USER_ID, accessToken: ACCESS_TOKEN) { (user, error) in
+    guard error == nil else {   // Error.
+        return
     }
     
-    // customer's customFields is rightly set
-    // (or a certain key could get ignored if the key is not defined yet)
-}];
-```
-
-## Creating a new ticket
-
-Creating a new ticket is as simple as just calling `createTicketWithTitle:userName:completionHandler:` of `SBDSKTicket`. Ticket title and user name can be passed at the same time.
-The returned ticket will have a channel instance which can be accessed by `ticket.channel`. So you can send messages to the channel using SendBird SDK.
-For more detail of sending messages to channel, please refer to [SendBird SDK guide docs](https://docs.sendbird.com/ios#group_channel_3_sending_messages).
-Please notice that only after customers sending at least one message to the ticket, the ticket will be routed to the online agents so they can answer it.
-```obj-c
-- (void)createTicket {
-    [SBDSKTicket createTicketWithTitle:TICKET_TITLE userName:USER_NAME completionHandler:^(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error) {
-        if (error != nil) {
-            // Error handling.
-            return;
+    // Use the same user ID and access token used in the SBDMain.connect()
+    SBDSKMain.authenticate(withUserId: USER_ID, accessToken: ACCESS_TOKEN) { (error) in
+        guard error == nil else {   // Error.
+            return
         }
         
-        // Now you can send messages to the ticket by `[self.ticket.channel sendUserMessage:]` or `[self.ticket.channel sendFileMessage:]`.
-    }];  
-}
-```
-> `createTicketWithTitle:userName:completionHandler:` of `SBDSKTicket` has a overloaded method with `Priority` parameters so you can set the priority of ticket as well.
- ```obj-c
-- (void)createTicket {
-    [SBDSKTicket createTicketWithTitle:TICKET_TITLE userName:USER_NAME priority:priority completionHandler:^(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error) {
-        if (error != nil) {
-            // Error handling.
-            return;
-        }
-        
-        // Now you can send messages to the ticket by `[self.ticket.channel sendUserMessage:]` or `[self.ticket.channel sendFileMessage:]`.
-    }];  
+        // SendBirdDesk is now initialized, and the customer is authenticated.
+    }
 }
 ```
 
-> To create a ticket, you can use `createTicketWithTitle:userName:groupKey:customField:completionHandler:` method. The `groupKey` and `customField` could be evaluated when a ticket is created though it's used only in Dashboard currently. `groupKey` is the key of an agent group so that the ticket is assigned to the agents in that group. `customField` holds customizable data for the individual ticket.
+> **Note**: **Customers from Sendbird Chat platform** signifies users who are already authenticated with the Chat SDK. If you’re implementing Chat SDK and Desk SDK at the same time, [connect a user to Sendbird server with their user ID and access token](https://sendbird.com/docs/chat/v3/ios/guides/authentication) first.
 
-## Setting Ticket customFields
-Ticket information could be kept in `customFields`. `setCustomFields:completionHandler:` in `SBDSKTicket` lets the SDK set the `customFields` of the current customer. The `customFields` columns should be defined in SendBird Dashboard beforehand. Otherwise, the setting would be ignored.
-```obj-c
-NSDictionary *ticketCustomFields = @{
-                                     @"gender": @"male",
-                                     @"age": @"20",
-                                     };
+### Step 3: Create a ticket
 
-[ticket setCustomFields:ticketCustomFields completionHandler:^(SBDError * _Nullable error) {
-    if (error != nil) {
-        // Error handling.
+Implement the `SBDSKTicket.createTicket()` method to create a new ticket either before or after the customer’s initial message. The returned ticket will have a channel instance which can be accessed by ticket.channel. So you can send messages to the channel using SendBird SDK.
+
+```swift
+SBDSKTicket.createTicket(withTitle: TITLE, userName: USER_NAME) { (ticket, error) in
+    guard error == nil else {   // Error.
+        return
     }
     
-    // ticket's customFields is rightly set
-    // (or a certain key could get ignored if the key is not defined yet)
-}];
+    // The ticket is created. Agents and customers can chat with each other by sending a message through the ticket.channel.sendUserMessage() or sendFileMessage().
+}
 ```
 
-## Setting Ticket priority
+Once a ticket is successfully created on the Sendbird server, you can access the ticket and its channel through the callback from the server.  
 
- Ticket information could be kept in `Priority`. 
- `setPriority:completionHandler:` in `SBDSKTicket` lets the SDK set the `Priority` of the current ticket. 
- If you didn't set the Priority of ticket the default `Priority` has been set to `SBDSKTicketPriorityMedium`
-```obj-c
-[ticket setPriority:SBDSKTicketPriorityMedium completionHandler:^(SBDError * _Nullable error) {
-    if (error != nil) {
-        // Error handling.
+Before a customer sends the first message, agents can’t see the ticket in the dashboard and ticket assignment does not occur. When conversation starts, the ticket is assigned to an available agent by the Desk Dashboard while messages are sent and received through the Chat SDK.
+
+You can use the following arguments for parameters in the method when creating a ticket.
+
+|Argument|Type|Description|
+|---|---|---|
+|TICKET_TITLE|string |Specifies the title of the ticket.|
+|USER_NAME|string |Specifies the name of the user who submits or receives the ticket.|
+|GROUP_KEY|string | Specifies the identifier of a specific team.|
+|customFields| [String:String]|Specifies additional information of the ticket that consists of **key-value** custom items. Only custom fields already registered in **Settings** > **Ticket** fields in your dashboard can be used as a key. |
+|PRIORITY |string |Specifies the priority value of the ticket. Higher values stand for higher priority. Valid values are **LOW**, **MEDIUM**, **HIGH** and **URGENT**. |
+|RELATED_CHANNEL_URLS|array | Specifies group channels in Sendbird Chat platform that are related to this ticket and consists of channel URLs and channel names. Up to 3 related channels can be added.|
+
+```swift
+var customFields = [String: String]()
+customFields["product"] = "desk"
+customFields["line"] = "14"
+customFields["select"] = "option2"
+
+SBDSKTicket.createTicket(withTitle: TICKET_TITLE, userName: USER_NAME, groupKey: "cs-team-1", customFields: customFields, priority: PRIORITY, relatedChannels: RELATED_CHANNEL_URLS) { (ticket, error) in
+    guard error == nil else {   // Error.
+        return 
     }
     
-    // ticket's priority is rightly set
-}];
- ```
- 
-## Related channels
-You can link certain channels to a ticket. Then the ticket would have relatedChannels property which contains the channelUrl and its name. In order to relate the channels to a ticket, use ticket.setRelatedChannelUrls() for the update, or set the relatedChannelUrls parameter at the time of ticket creation.
-
-```obj-c
-[SBDSKTicket createTicketWithTitle:title userName:name relatedChannels:relatedChannelUrls completionHandler:^(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error) {
-  // The created ticket will have `relatedChannels` property with the channel information that you provided. 
-}];
-
-[ticket setRelatedChannels:relatedChannelUrls completionHandler:^(SBDError * _Nullable error) {
-  // The `relatedChannels` of the `ticket` will be updated. 
-}];
-```
-
- 
-## Count of opened tickets
-When you need to display opened ticket count somewhere on your application, `[SBDSKTicket getOpenCountWithCompletionHandler:]` is useful.
-```obj-c
-- (void)getOpenCount {
-    [SBDSKTicket getOpenCountWithCompletionHandler:^(int count, SBDError * _Nullable error) {
-        if (error != nil) {
-            // Error handling.
-            return;
-        }
-    }];
+    // The ticket is created with parameters.
 }
 ```
-
-## Loading ticket list
-Usually you will design `Inbox` activity for open tickets and closed tickets history for your customer.
-Open tickets and closed tickets can be loaded from `getOpenedListWithOffset:completionHandler:` of `SBDSKTicket` and `getClosedListWithOffset:completionHandler:` of `SBDSKTicket`.
-Zero is a good start value of the offset, then the maximum 10 tickets will be returned for each call by last message creation time descending order.
-Open ticket list and closed ticket list can be loaded like below:
-```obj-c
-- (void)getOpenedList {
-    [SBDSKTicket getOpenedListWithOffset:offset completionHandler:^(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error) {
-        if (error != nil) {
-            // Error handling.
-            return;
-        }
-        
-        // offset += tickets.count; for the next tickets.
-        // This is the best place you display tickets on inbox.
-    }];
-}
-```
-
-```obj-c
-- (void)getClosedList {
-    [SBDSKTicket getClosedListWithOffset:offset completionHandler:^(NSArray<SBDSKTicket *> * _Nonnull tickets, BOOL hasNext, SBDError * _Nullable error) {
-        if (error != nil) {
-            // Error handling.
-            return;
-        }
-        
-        // offset += tickets.count; for the next tickets.
-        // This is the best place you display tickets on inbox.
-    }];
-}
-```
-
-> To get opened ticket list or closed ticket list, you can use `getOpenedListWithOffset:customFieldFilter:completionHandler:` method or `getClosedListWithOffset:customFieldFilter:completionHandler:` method respectively. Once you set `customField` to tickets, you can put `customFieldFilter` to `getOpenedListWithOffset:customFieldFilter:completionHandler:` and `getClosedListWithOffset:customFieldFilter:completionHandler:` in order to filter the tickets by `customField` values.
-
-## Confirming end of chat
-There are predefined rich messages on SendBird Desk and `Confirm end of chat` is one of them. For other rich messages, please refer to [Handling messages](#handling-messages).
-All rich messages have message custom type (can be accessed by `SBDUserMessage.customType` on SendBird SDK) as `SENDBIRD_DESK_RICH_MESSAGE`,
-and `Confirm end of chat` message has custom data (can be accessed by `SBDUserMessage.data` on SendBird SDK) as below:
-```js
-{
-    "type": "SENDBIRD_DESK_INQUIRE_TICKET_CLOSURE",
-    "body": {
-        "state": "WAITING" // also can have "CONFIRMED", "DECLINED"
-    }
-}
-```
-
-This `Confirm end of chat` massage is initiated from agents to inquire closure of ticket to customers.
-The initial `state` will be `WAITING` and you have to implement of updating the `state` according to customers action.
-Usually, you can display `YES` or `NO` button like sample and update to `CONFIRMED` when customers touch `YES` button. Updating to `DECLINED` is also possible when customers touch `NO`.
-For update the `state` of `Confirm end of chat`, please use `confirmEndOfChatWithMessage:confirm:completionHandler:` of `SBDSKTicket`.
-```obj-c
-[SBDSKTicket confirmEndOfChatWithMessage:(SBDUserMessage *)message confirm:confirm_or_decline completionHandler:^(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error) {
-    if (error != nil) {
-        // Error handling.
-        return;
-    }
-    
-    // You can update message UI like hiding YES NO buttons.
-}];
-
-```
-At the moment, tickets will be closed (ticket close event will be sent to customers) only after customers confirming end of chat,  
-
-## Handling ticket event
-SendBird Desk SDK uses some predefined AdminMessage custom type (`SBDAdminMessage.customType` on SendBird SDK) for ticket update notification.
-This reserved custom type value is `SENDBIRD_DESK_ADMIN_MESSAGE_CUSTOM_TYPE` and at the moment there are 3 kinds of ticket event, which are `Ticket assign`, `Ticket transfer` and `Ticket close`.
-Each event has the following `AdminMessage.getData()`:
-```js
-{
-    "type": "TICKET_ASSIGN" // "TICKET_TRANSFER", "TICKET_CLOSE"
-}
-```
-You can check these messages from `channel:didReceiveMessage:` delegate of `SBDChannelDelegate` on SendBird SDK.
-SendBird Desk SDK internally tracks these events and update ticket status automatically. So when you see these events, you can directly get ticket object by `getByChannelUrl:completionHandler:` of `SBDSKTicket` and then use it for e.g. 
-rendering assigned agent's profile or moving ticket from open list to closed list.
-
-### Ticket Feedback
-
-If Desk satisfaction feature is on, a message would come after closing the ticket. The message is for getting customer feedback including score and comment. The data of satisfaction form message looks like below.
-
-```js
-{
-    "type": "SENDBIRD_DESK_CUSTOMER_SATISFACTION",
-    "body": {
-        "state": "WAITING" // also can have "CONFIRMED",
-        "customerSatisfactionScore": null, // or a number ranged in [1, 5]
-        "customerSatisfactionComment": null // or a string (optional)
-    }
-}
-```
-
-Once the customer inputs the score and the comment, the data could be submitted by calling `submitFeedbackWithMessage:score:comment:completionHandler:` in `SBDSKTicket`. Then updated message is going to be sent in `channel:didUpdateMessage:`.
-
-
-```obj-c
-[SBDSKTicket getByChannelUrl:sender.channelUrl completionHandler:^(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error) {
-    if (error != nil) {
-        return;
-    }
-    
-    NSDictionary *result = nil;
-    NSError *parsingError = nil;
-    @autoreleasepool {
-        result = [NSJSONSerialization JSONObjectWithData:[message.data dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&parsingError];
-    }
-    if (parsingError == nil) {
-        if ([result[@"type"] isEqualToString:@"SENDBIRD_DESK_CUSTOMER_SATISFACTION"]) {
-            NSString *state = result[@"body"][@"state"];
-            if ([state isEqualToString:@"WAITING"]) {
-                // do something on WAITING
-            }
-            else if ([state isEqualToString:@"CONFIRMED"]) {
-                // do something on CONFIRMED
-            }
-        }
-    }
-}];
-```
-
-## Rich messages
-Besides, `Confirm end of chat` message, URL preview is available as one of rich messages. (We are adding more very fast.)
-URL preview message's `SBDUserMessage.customType` is also the same as `Confirm end of chat`, so it is `SENDBIRD_DESK_RICH_MESSAGE`.
-Its `UserMessage.getData()` has the following format:
-```js
-{
-    "type": "SENDBIRD_DESK_URL_PREVIEW",
-    "body": {
-        "url": "string",
-        "site_name": "string",
-        "title": "string",
-        "description": "string",
-        "image": "string (image url)"
-    }
-}
-```
-Therefore, when this type of message is received on `channel:didReceiveMessage:` delegate of `SBDChannelDelegate` or `getPreviousMessagesByTimestamp:limit:reverse:messageType:customType:completionHandler:` of channel, you can parse the data and use it for URL preview rendering.
-Also if you extract URL information from customers text, build above JSON, stringify it and then send it as custom data by `sendUserMessage:` of channel, agents can also see URL preview.
