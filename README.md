@@ -8,7 +8,7 @@
   1. [Introduction](#introduction)
   1. [Before getting started](#before-getting-started)
   1. [Getting started](#getting-started)
-  1. [Create your first ticket](#create-your-first-ticket)
+  1. [Creating your first ticket](#creating-your-first-ticket)
   1. [Implementation guide](#implementation-guide)
 
   
@@ -16,7 +16,7 @@
 
 ## Introduction
 
-Sendbird Desk enables strong customer engagement through live, in-app support. The Desk SDK lets you easily initialize, configure, and build customer support-related functionality into your iOS applications.
+**Sendbird Desk** enables strong customer engagement through live, in-app support. The Desk SDK lets you easily initialize, configure, and build customer support-related functionality into your iOS applications.
 
 ### How it works
 
@@ -107,7 +107,7 @@ Alternatively, you can download the latest Desk SDK for iOS. Copy the Desk SDK, 
 
 <br />
 
-## Create your first ticket
+## Creating your first ticket
 
 After installation has been completed, a ticket can be created for communication between an agent and customer. Follow the step-by-step instructions below to create your first ticket.
 
