@@ -39,6 +39,7 @@ These are a few of the main components of Desk SDK.
 | User message| Agent or customer|Rich messages |
 | Admin message |Sent from the Desk server without a specific sender |Notification messages and System messages |
 
+> **Note**: Rich messages are further classified into [URL preview](#add-url-previews), [confirmation request for ticket closing](#request-confirmation-to-close-a-ticket), and [feedback request](#request-customer-feedback) messages. 
 
 ### More about Sendbird Desk SDK for iOS
 
