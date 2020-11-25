@@ -8,7 +8,6 @@
   1. [Creating your first ticket](#creating-your-first-ticket)
   1. [Implementation guide](#implementation-guide)
 
-  
 <br />
 
 ## Introduction
