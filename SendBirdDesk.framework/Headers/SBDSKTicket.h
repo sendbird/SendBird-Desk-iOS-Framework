@@ -308,4 +308,15 @@ Sets the specific ticket's related channels. The method accepts an array of stri
 - (void)setRelatedChannels:(NSArray<NSString *> * _Nonnull)relatedChannels
          completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
 
+
+/**
+ Closes this ticket.
+ 
+ @param comment A comment for this ticket.
+ @param completionHandler Callback handler.
+ @since 1.0.11
+ */
+- (void)closeWithComment:(NSString * _Nullable)comment
+       completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
 @end
