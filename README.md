@@ -1,8 +1,5 @@
 # [Sendbird](https://sendbird.com) Desk SDK for iOS
 
-![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)
-![Languages](https://img.shields.io/badge/language-Objective--C-orange.svg)
-
 ## Table of contents
 
   1. [Introduction](#introduction)
