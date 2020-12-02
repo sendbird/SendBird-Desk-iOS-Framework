@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.0.12 (Dec 2, 2020) 
+* Stability improvements 
+
 ### v1.0.11 (Nov 25, 2020)
 * Added `closeWithComment:completionHandler:` to `SBDSKTicket`. 
 
