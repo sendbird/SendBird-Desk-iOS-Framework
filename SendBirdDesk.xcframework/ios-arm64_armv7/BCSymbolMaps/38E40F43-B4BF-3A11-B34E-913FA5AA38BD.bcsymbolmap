@@ -1,0 +1,900 @@
+BCSymbolMap Version: 2.0
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+/Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk
+iPhoneOS14.4.sdk
+/Users/minhyuk.kim/Library/Developer/Xcode/DerivedData/SendBirdDesk-bmnnmqvhmtevhmhbtmpbxnqmjwhn/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/IntermediateBuildFilesPath/SendBirdDesk.build/Release-iphoneos/SendBirdDesk.build/DerivedSources/SendBirdDesk_vers.c
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios
+-[SBDSKFAQData initWithMesage:]
+-[SBDSKFAQData faqFileId]
+-[SBDSKFAQData setFaqFileId:]
+-[SBDSKFAQData type]
+-[SBDSKFAQData setType:]
+-[SBDSKFAQData faqResults]
+-[SBDSKFAQData setFaqResults:]
+-[SBDSKFAQData .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_CLASSLIST_REFERENCES_$_.9
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_SELECTOR_REFERENCES_.13
+_OBJC_CLASSLIST_REFERENCES_$_.14
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_CLASSLIST_REFERENCES_$_.21
+_OBJC_SELECTOR_REFERENCES_.23
+_OBJC_CLASSLIST_REFERENCES_$_.24
+_OBJC_CLASSLIST_REFERENCES_$_.27
+_OBJC_SELECTOR_REFERENCES_.29
+_OBJC_CLASSLIST_REFERENCES_$_.30
+_OBJC_CLASSLIST_REFERENCES_$_.31
+_OBJC_SELECTOR_REFERENCES_.33
+_OBJC_SELECTOR_REFERENCES_.35
+_OBJC_SELECTOR_REFERENCES_.37
+_OBJC_SELECTOR_REFERENCES_.39
+__OBJC_METACLASS_RO_$_SBDSKFAQData
+__OBJC_$_INSTANCE_METHODS_SBDSKFAQData
+_OBJC_IVAR_$_SBDSKFAQData._type
+_OBJC_IVAR_$_SBDSKFAQData._faqResults
+_OBJC_IVAR_$_SBDSKFAQData._faqFileId
+__OBJC_$_INSTANCE_VARIABLES_SBDSKFAQData
+__OBJC_$_PROP_LIST_SBDSKFAQData
+__OBJC_CLASS_RO_$_SBDSKFAQData
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Model/SBDSKFAQData.m
+SendBirdDesk/Model/SBDSKFAQData.m
+SendBirdDesk/Model/SBDSKFAQData.h
++[NSDictionary(SendBirdDesk) dictionaryWithArray:valueName:keyName:]
+_OBJC_CLASSLIST_REFERENCES_$_.1
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_SELECTOR_REFERENCES_.5
+_OBJC_SELECTOR_REFERENCES_.7
+_OBJC_SELECTOR_REFERENCES_.9
+__OBJC_$_CATEGORY_CLASS_METHODS_NSDictionary_$_SendBirdDesk
+__OBJC_$_CATEGORY_NSDictionary_$_SendBirdDesk
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Categories/NSDictionary+SendBirdDesk.m
+SendBirdDesk/Categories/NSDictionary+SendBirdDesk.m
+-[SBDSKRelatedChannel initWithDictionary:]
+-[SBDSKRelatedChannel name]
+-[SBDSKRelatedChannel setName:]
+-[SBDSKRelatedChannel channelUrl]
+-[SBDSKRelatedChannel setChannelUrl:]
+-[SBDSKRelatedChannel .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.14
+__OBJC_METACLASS_RO_$_SBDSKRelatedChannel
+__OBJC_$_INSTANCE_METHODS_SBDSKRelatedChannel
+_OBJC_IVAR_$_SBDSKRelatedChannel._name
+_OBJC_IVAR_$_SBDSKRelatedChannel._channelUrl
+__OBJC_$_INSTANCE_VARIABLES_SBDSKRelatedChannel
+__OBJC_$_PROP_LIST_SBDSKRelatedChannel
+__OBJC_CLASS_RO_$_SBDSKRelatedChannel
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Model/SBDSKRelatedChannel.m
+SendBirdDesk/Model/SBDSKRelatedChannel.m
+SendBirdDesk/Model/SBDSKRelatedChannel.h
++[SBDSKApiClient getApplicationId]
++[SBDSKApiClient getUserId]
++[SBDSKApiClient getDeskToken]
++[SBDSKApiClient getSdkVersion]
++[SBDSKApiClient getOsVersion]
++[SBDSKApiClient requestAuthWithAccessToken:completionHandler:]
++[SBDSKApiClient checkApiRequestWithCompletionHandler:]
++[SBDSKApiClient getOpenTicketCountWithCompletionHandler:]
+___58+[SBDSKApiClient getOpenTicketCountWithCompletionHandler:]_block_invoke
+___copy_helper_block_e4_20b
+___destroy_helper_block_e4_20s
++[SBDSKApiClient getOpenTicketsWithOffset:customFieldFilter:completionHandler:]
+___79+[SBDSKApiClient getOpenTicketsWithOffset:customFieldFilter:completionHandler:]_block_invoke
++[SBDSKApiClient getClosedTicketsWithOffset:customFieldFilter:completionHandler:]
+___81+[SBDSKApiClient getClosedTicketsWithOffset:customFieldFilter:completionHandler:]_block_invoke
++[SBDSKApiClient getTicketByChannelUrl:completionHandler:]
+___58+[SBDSKApiClient getTicketByChannelUrl:completionHandler:]_block_invoke
+___58+[SBDSKApiClient getTicketByChannelUrl:completionHandler:]_block_invoke_2
+___copy_helper_block_e4_20b24s
+___destroy_helper_block_e4_20s24s
++[SBDSKApiClient createTicketWithChannelName:info:groupKey:customFields:priority:relatedChannelUrls:botKey:completionHandler:]
+___126+[SBDSKApiClient createTicketWithChannelName:info:groupKey:customFields:priority:relatedChannelUrls:botKey:completionHandler:]_block_invoke
+___126+[SBDSKApiClient createTicketWithChannelName:info:groupKey:customFields:priority:relatedChannelUrls:botKey:completionHandler:]_block_invoke_2
++[SBDSKApiClient getTicketWithTicketId:completionHandler:]
+___58+[SBDSKApiClient getTicketWithTicketId:completionHandler:]_block_invoke
++[SBDSKApiClient updateTicketWithTicketId:status:completionHandler:]
+___68+[SBDSKApiClient updateTicketWithTicketId:status:completionHandler:]_block_invoke
++[SBDSKApiClient editMessageWithTicketId:message:messageData:completionHandler:]
+___80+[SBDSKApiClient editMessageWithTicketId:message:messageData:completionHandler:]_block_invoke
++[SBDSKApiClient reopenTicketWithId:completionHandler:]
+___55+[SBDSKApiClient reopenTicketWithId:completionHandler:]_block_invoke
++[SBDSKApiClient closeTicketWithTicketId:comment:completionHandler:]
+___68+[SBDSKApiClient closeTicketWithTicketId:comment:completionHandler:]_block_invoke
++[SBDSKApiClient cancelTicketWithTicketId:transferGroupKey:completionHandler:]
+___78+[SBDSKApiClient cancelTicketWithTicketId:transferGroupKey:completionHandler:]_block_invoke
++[SBDSKApiClient selectQuestionWithTicketId:faqFileId:question:completionHandler:]
+___82+[SBDSKApiClient selectQuestionWithTicketId:faqFileId:question:completionHandler:]_block_invoke
++[SBDSKApiClient refreshTicketWithId:completionHandler:]
+___56+[SBDSKApiClient refreshTicketWithId:completionHandler:]_block_invoke
++[SBDSKApiClient confirmEndOfChatWithUserMessage:confirm:completionHandler:]
+___76+[SBDSKApiClient confirmEndOfChatWithUserMessage:confirm:completionHandler:]_block_invoke
++[SBDSKApiClient submitFeedbackWithMessage:score:comment:completionHandler:]
+___76+[SBDSKApiClient submitFeedbackWithMessage:score:comment:completionHandler:]_block_invoke
++[SBDSKApiClient setTicketWithTicketId:CustomFields:completionHandler:]
+___71+[SBDSKApiClient setTicketWithTicketId:CustomFields:completionHandler:]_block_invoke
++[SBDSKApiClient setTicketWithTicketId:priority:completionHandler:]
+___67+[SBDSKApiClient setTicketWithTicketId:priority:completionHandler:]_block_invoke
++[SBDSKApiClient setTicketWithTicketId:relatedChannelUrls:completionHandler:]
+___77+[SBDSKApiClient setTicketWithTicketId:relatedChannelUrls:completionHandler:]_block_invoke
++[SBDSKApiClient setCustomerCustomFields:completionHandler:]
+___60+[SBDSKApiClient setCustomerCustomFields:completionHandler:]_block_invoke
++[SBDSKApiClient urlencodeWithSource:]
++[SBDSKApiClient buildQueryStringFromParametersWithDictionary:]
++[SBDSKApiClient buildDefaultGetParams]
++[SBDSKApiClient buildDefaultPostBody]
++[SBDSKApiClient buildDefaultPatchBody]
++[SBDSKApiClient buildPostRequestWithAccessToken:]
++[SBDSKApiClient postUriWithAccessToken:body:completionHandler:]
++[SBDSKApiClient buildGetRequest]
++[SBDSKApiClient getUri:parameter:completionHandler:]
++[SBDSKApiClient buildPostRequestWithBody:]
++[SBDSKApiClient postUri:body:completionHandler:]
++[SBDSKApiClient buildPatchRequestWithBody:uri:]
++[SBDSKApiClient patchUri:body:completionHandler:]
++[SBDSKApiClient runRequestWithSharedSession:uri:completionHandler:]
+___68+[SBDSKApiClient runRequestWithSharedSession:uri:completionHandler:]_block_invoke
+_OBJC_CLASSLIST_REFERENCES_$_.7
+_atoken
+_OBJC_SELECTOR_REFERENCES_.15
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_CLASSLIST_REFERENCES_$_.18
+_OBJC_SELECTOR_REFERENCES_.25
+___block_descriptor_24_e4_20bs_e20_v12?04"SBDError"8l
+_OBJC_SELECTOR_REFERENCES_.44
+_OBJC_CLASSLIST_REFERENCES_$_.45
+_OBJC_SELECTOR_REFERENCES_.47
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_CLASSLIST_REFERENCES_$_.52
+_OBJC_SELECTOR_REFERENCES_.54
+_OBJC_SELECTOR_REFERENCES_.58
+_OBJC_CLASSLIST_REFERENCES_$_.69
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_CLASSLIST_REFERENCES_$_.76
+_OBJC_SELECTOR_REFERENCES_.78
+_OBJC_SELECTOR_REFERENCES_.80
+_OBJC_SELECTOR_REFERENCES_.82
+_OBJC_CLASSLIST_REFERENCES_$_.83
+_OBJC_SELECTOR_REFERENCES_.85
+_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_SELECTOR_REFERENCES_.91
+_OBJC_SELECTOR_REFERENCES_.95
+_OBJC_SELECTOR_REFERENCES_.97
+_OBJC_CLASSLIST_REFERENCES_$_.98
+_OBJC_SELECTOR_REFERENCES_.100
+_OBJC_SELECTOR_REFERENCES_.102
+___block_descriptor_28_e4_20bs24s_e37_v12?0"SBDGroupChannel"4"SBDError"8l
+_OBJC_SELECTOR_REFERENCES_.105
+_OBJC_SELECTOR_REFERENCES_.121
+_OBJC_SELECTOR_REFERENCES_.137
+_OBJC_CLASSLIST_REFERENCES_$_.138
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_SELECTOR_REFERENCES_.146
+_OBJC_SELECTOR_REFERENCES_.148
+_OBJC_SELECTOR_REFERENCES_.152
+_OBJC_CLASSLIST_REFERENCES_$_.155
+_OBJC_SELECTOR_REFERENCES_.157
+___block_descriptor_28_e4_20bs24s_e20_v12?04"SBDError"8l
+_OBJC_SELECTOR_REFERENCES_.173
+_OBJC_CLASSLIST_REFERENCES_$_.182
+_OBJC_SELECTOR_REFERENCES_.184
+_OBJC_SELECTOR_REFERENCES_.186
+_OBJC_SELECTOR_REFERENCES_.188
+_OBJC_CLASSLIST_REFERENCES_$_.191
+_OBJC_SELECTOR_REFERENCES_.197
+_OBJC_SELECTOR_REFERENCES_.207
+_OBJC_CLASSLIST_REFERENCES_$_.218
+_OBJC_SELECTOR_REFERENCES_.220
+_OBJC_SELECTOR_REFERENCES_.222
+_OBJC_SELECTOR_REFERENCES_.226
+_OBJC_SELECTOR_REFERENCES_.230
+_OBJC_SELECTOR_REFERENCES_.234
+_OBJC_SELECTOR_REFERENCES_.238
+_OBJC_CLASSLIST_REFERENCES_$_.243
+_OBJC_SELECTOR_REFERENCES_.247
+_OBJC_SELECTOR_REFERENCES_.249
+_OBJC_CLASSLIST_REFERENCES_$_.252
+_OBJC_SELECTOR_REFERENCES_.258
+_OBJC_SELECTOR_REFERENCES_.262
+_OBJC_SELECTOR_REFERENCES_.266
+_OBJC_SELECTOR_REFERENCES_.270
+_OBJC_SELECTOR_REFERENCES_.286
+_OBJC_SELECTOR_REFERENCES_.288
+_OBJC_SELECTOR_REFERENCES_.290
+_OBJC_SELECTOR_REFERENCES_.292
+_OBJC_SELECTOR_REFERENCES_.298
+_OBJC_SELECTOR_REFERENCES_.302
+_OBJC_SELECTOR_REFERENCES_.304
+_OBJC_SELECTOR_REFERENCES_.308
+_OBJC_CLASSLIST_REFERENCES_$_.309
+_OBJC_SELECTOR_REFERENCES_.311
+_OBJC_CLASSLIST_REFERENCES_$_.314
+_OBJC_SELECTOR_REFERENCES_.318
+_OBJC_SELECTOR_REFERENCES_.320
+_OBJC_CLASSLIST_REFERENCES_$_.323
+_OBJC_SELECTOR_REFERENCES_.325
+_OBJC_SELECTOR_REFERENCES_.327
+_OBJC_SELECTOR_REFERENCES_.337
+___block_descriptor_24_e4_20bs_e45_v16?0"NSData"4"NSURLResponse"8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.342
+_OBJC_SELECTOR_REFERENCES_.344
+__OBJC_$_CLASS_METHODS_SBDSKApiClient
+__OBJC_METACLASS_RO_$_SBDSKApiClient
+__OBJC_CLASS_RO_$_SBDSKApiClient
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/ApiClient/SBDSKApiClient.m
+__68+[SBDSKApiClient runRequestWithSharedSession:uri:completionHandler:]_block_invoke
+SendBirdDesk/ApiClient/SBDSKApiClient.m
+__60+[SBDSKApiClient setCustomerCustomFields:completionHandler:]_block_invoke
+__77+[SBDSKApiClient setTicketWithTicketId:relatedChannelUrls:completionHandler:]_block_invoke
+__67+[SBDSKApiClient setTicketWithTicketId:priority:completionHandler:]_block_invoke
+__71+[SBDSKApiClient setTicketWithTicketId:CustomFields:completionHandler:]_block_invoke
+__76+[SBDSKApiClient submitFeedbackWithMessage:score:comment:completionHandler:]_block_invoke
+__76+[SBDSKApiClient confirmEndOfChatWithUserMessage:confirm:completionHandler:]_block_invoke
+__56+[SBDSKApiClient refreshTicketWithId:completionHandler:]_block_invoke
+__82+[SBDSKApiClient selectQuestionWithTicketId:faqFileId:question:completionHandler:]_block_invoke
+__78+[SBDSKApiClient cancelTicketWithTicketId:transferGroupKey:completionHandler:]_block_invoke
+__68+[SBDSKApiClient closeTicketWithTicketId:comment:completionHandler:]_block_invoke
+__55+[SBDSKApiClient reopenTicketWithId:completionHandler:]_block_invoke
+__80+[SBDSKApiClient editMessageWithTicketId:message:messageData:completionHandler:]_block_invoke
+__68+[SBDSKApiClient updateTicketWithTicketId:status:completionHandler:]_block_invoke
+__58+[SBDSKApiClient getTicketWithTicketId:completionHandler:]_block_invoke
+__126+[SBDSKApiClient createTicketWithChannelName:info:groupKey:customFields:priority:relatedChannelUrls:botKey:completionHandler:]_block_invoke_2
+__126+[SBDSKApiClient createTicketWithChannelName:info:groupKey:customFields:priority:relatedChannelUrls:botKey:completionHandler:]_block_invoke
+__destroy_helper_block_e4_20s24s
+__copy_helper_block_e4_20b24s
+__58+[SBDSKApiClient getTicketByChannelUrl:completionHandler:]_block_invoke_2
+__58+[SBDSKApiClient getTicketByChannelUrl:completionHandler:]_block_invoke
+__81+[SBDSKApiClient getClosedTicketsWithOffset:customFieldFilter:completionHandler:]_block_invoke
+__79+[SBDSKApiClient getOpenTicketsWithOffset:customFieldFilter:completionHandler:]_block_invoke
+__destroy_helper_block_e4_20s
+__copy_helper_block_e4_20b
+__58+[SBDSKApiClient getOpenTicketCountWithCompletionHandler:]_block_invoke
+-[SBDSKAgent initWithDictionary:]
+-[SBDSKAgent sendBirdId]
+-[SBDSKAgent setSendBirdId:]
+-[SBDSKAgent name]
+-[SBDSKAgent setName:]
+-[SBDSKAgent profileUrl]
+-[SBDSKAgent setProfileUrl:]
+-[SBDSKAgent .cxx_destruct]
+__OBJC_METACLASS_RO_$_SBDSKAgent
+__OBJC_$_INSTANCE_METHODS_SBDSKAgent
+_OBJC_IVAR_$_SBDSKAgent._sendBirdId
+_OBJC_IVAR_$_SBDSKAgent._name
+_OBJC_IVAR_$_SBDSKAgent._profileUrl
+__OBJC_$_INSTANCE_VARIABLES_SBDSKAgent
+__OBJC_$_PROP_LIST_SBDSKAgent
+__OBJC_CLASS_RO_$_SBDSKAgent
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Model/SBDSKAgent.m
+SendBirdDesk/Model/SBDSKAgent.m
+SendBirdDesk/Model/SBDSKAgent.h
+-[SBDSKFAQResult initWithDictionary:]
+-[SBDSKFAQResult category]
+-[SBDSKFAQResult setCategory:]
+-[SBDSKFAQResult question]
+-[SBDSKFAQResult setQuestion:]
+-[SBDSKFAQResult answer]
+-[SBDSKFAQResult setAnswer:]
+-[SBDSKFAQResult keyword]
+-[SBDSKFAQResult setKeyword:]
+-[SBDSKFAQResult url]
+-[SBDSKFAQResult setUrl:]
+-[SBDSKFAQResult imageURL]
+-[SBDSKFAQResult setImageURL:]
+-[SBDSKFAQResult .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_SELECTOR_REFERENCES_.20
+_OBJC_SELECTOR_REFERENCES_.24
+_OBJC_SELECTOR_REFERENCES_.28
+__OBJC_METACLASS_RO_$_SBDSKFAQResult
+__OBJC_$_INSTANCE_METHODS_SBDSKFAQResult
+_OBJC_IVAR_$_SBDSKFAQResult._category
+_OBJC_IVAR_$_SBDSKFAQResult._question
+_OBJC_IVAR_$_SBDSKFAQResult._answer
+_OBJC_IVAR_$_SBDSKFAQResult._keyword
+_OBJC_IVAR_$_SBDSKFAQResult._url
+_OBJC_IVAR_$_SBDSKFAQResult._imageURL
+__OBJC_$_INSTANCE_VARIABLES_SBDSKFAQResult
+__OBJC_$_PROP_LIST_SBDSKFAQResult
+__OBJC_CLASS_RO_$_SBDSKFAQResult
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Model/SBDSKFAQResult.m
+SendBirdDesk/Model/SBDSKFAQResult.m
+SendBirdDesk/Model/SBDSKFAQResult.h
++[SBDSKMain initializeDesk]
++[SBDSKMain getSdkVersion]
++[SBDSKMain setLogLevel:]
++[SBDSKMain getLogLevel]
++[SBDSKMain setCompletionHandlerDelegateQueue:]
++[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]
+___66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke
+___66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke.28
+___66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke_2
+___66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke_3
+___66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke.45
+___copy_helper_block_e4_24b
+___destroy_helper_block_e4_24s
++[SBDSKMain isDeskChannel:]
++[SBDSKMain setCustomerCustomFields:completionHandler:]
+___55+[SBDSKMain setCustomerCustomFields:completionHandler:]_block_invoke
+___55+[SBDSKMain setCustomerCustomFields:completionHandler:]_block_invoke_2
+___55+[SBDSKMain setCustomerCustomFields:completionHandler:]_block_invoke.59
++[SBDSKMain sharedInstance]
+___27+[SBDSKMain sharedInstance]_block_invoke
+___copy_helper_block_e4_
+___destroy_helper_block_e4_
++[SBDSKMain logWithLevel:format:]
++[SBDSKMain getApplicationId]
++[SBDSKMain getUserId]
++[SBDSKMain getDeskToken]
++[SBDSKMain performComletionHandlerDelegateQueueBlock:]
+-[SBDSKMain channel:didReceiveMessage:]
+-[SBDSKMain logLevel]
+-[SBDSKMain setLogLevel:]
+-[SBDSKMain deskToken]
+-[SBDSKMain setDeskToken:]
+-[SBDSKMain completionHandlerQueue]
+-[SBDSKMain setCompletionHandlerQueue:]
+-[SBDSKMain .cxx_destruct]
+__sharedInstance
+_OBJC_CLASSLIST_REFERENCES_$_.3
+_OBJC_CLASSLIST_REFERENCES_$_.12
+_OBJC_CLASSLIST_REFERENCES_$_.15
+_OBJC_SELECTOR_REFERENCES_.22
+___block_descriptor_24_e4_20bs_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.27
+_OBJC_CLASSLIST_REFERENCES_$_.33
+___block_descriptor_28_e4_20bs24s_e5_v4?0l
+_OBJC_CLASSLIST_REFERENCES_$_.38
+_OBJC_SELECTOR_REFERENCES_.40
+_OBJC_SELECTOR_REFERENCES_.42
+___block_descriptor_28_e4_24bs_e20_v12?04"SBDError"8l
+_OBJC_SELECTOR_REFERENCES_.48
+_OBJC_CLASSLIST_REFERENCES_$_.49
+_OBJC_SELECTOR_REFERENCES_.55
+___block_descriptor_28_e4_20bs_e17_v8?0"SBDError"4l
+_sharedInstance.p
+_sharedInstance._sharedObject
+___block_descriptor_24_e4__e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_SELECTOR_REFERENCES_.69
+_OBJC_SELECTOR_REFERENCES_.73
+_OBJC_CLASSLIST_REFERENCES_$_.74
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_CLASSLIST_REFERENCES_$_.79
+_OBJC_SELECTOR_REFERENCES_.81
+_OBJC_SELECTOR_REFERENCES_.83
+_OBJC_SELECTOR_REFERENCES_.89
+__OBJC_$_CLASS_METHODS_SBDSKMain
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_SBDChannelDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_SBDChannelDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_SBDChannelDelegate
+__OBJC_PROTOCOL_$_SBDChannelDelegate
+__OBJC_LABEL_PROTOCOL_$_SBDChannelDelegate
+__OBJC_CLASS_PROTOCOLS_$_SBDSKMain
+__OBJC_METACLASS_RO_$_SBDSKMain
+__OBJC_$_INSTANCE_METHODS_SBDSKMain
+_OBJC_IVAR_$_SBDSKMain._logLevel
+_OBJC_IVAR_$_SBDSKMain._deskToken
+_OBJC_IVAR_$_SBDSKMain._completionHandlerQueue
+__OBJC_$_INSTANCE_VARIABLES_SBDSKMain
+__OBJC_$_PROP_LIST_SBDSKMain
+__OBJC_CLASS_RO_$_SBDSKMain
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Main/SBDSKMain.m
+SendBirdDesk/Main/SBDSKMain.m
+__destroy_helper_block_e4_
+__copy_helper_block_e4_
+__27+[SBDSKMain sharedInstance]_block_invoke
+/Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/dispatch/once.h
+__55+[SBDSKMain setCustomerCustomFields:completionHandler:]_block_invoke.59
+__55+[SBDSKMain setCustomerCustomFields:completionHandler:]_block_invoke_2
+__55+[SBDSKMain setCustomerCustomFields:completionHandler:]_block_invoke
+__destroy_helper_block_e4_24s
+__copy_helper_block_e4_24b
+__66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke.45
+__66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke_3
+__66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke_2
+__66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke.28
+__66+[SBDSKMain authenticateWithUserId:accessToken:completionHandler:]_block_invoke
++[SBDSKAdminMessage isAdminMessage:]
+__OBJC_$_CLASS_METHODS_SBDSKAdminMessage
+__OBJC_METACLASS_RO_$_SBDSKAdminMessage
+__OBJC_CLASS_RO_$_SBDSKAdminMessage
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Model/SBDSKAdminMessage.m
+SendBirdDesk/Model/SBDSKAdminMessage.m
+-[SBDSKTicket refreshWithCompletionHandler:]
+___44-[SBDSKTicket refreshWithCompletionHandler:]_block_invoke
+___44-[SBDSKTicket refreshWithCompletionHandler:]_block_invoke_2
+___copy_helper_block_e4_20b24s28s
+___destroy_helper_block_e4_20s24s28s
++[SBDSKTicket confirmEndOfChatWithMessage:confirm:completionHandler:]
+___69+[SBDSKTicket confirmEndOfChatWithMessage:confirm:completionHandler:]_block_invoke
+___69+[SBDSKTicket confirmEndOfChatWithMessage:confirm:completionHandler:]_block_invoke.14
+___69+[SBDSKTicket confirmEndOfChatWithMessage:confirm:completionHandler:]_block_invoke_2
++[SBDSKTicket createTicketWithTitle:userName:completionHandler:]
++[SBDSKTicket createTicketWithTitle:userName:priority:completionHandler:]
++[SBDSKTicket createTicketWithTitle:userName:relatedChannels:completionHandler:]
++[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:completionHandler:]
++[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:completionHandler:]
++[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:completionHandler:]
++[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:]
+___118+[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:]_block_invoke
+___118+[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:]_block_invoke_2
+___118+[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:]_block_invoke_3
++[SBDSKTicket createTicketWithTitle:userName:groupKey:customField:completionHandler:]
++[SBDSKTicket getOpenCountWithCompletionHandler:]
+___49+[SBDSKTicket getOpenCountWithCompletionHandler:]_block_invoke
+___49+[SBDSKTicket getOpenCountWithCompletionHandler:]_block_invoke_2
++[SBDSKTicket getOpenedListWithOffset:completionHandler:]
++[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]
+___75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke
+___75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_2
+___75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke.64
+___75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_2.65
+___75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_3
+___75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke.76
++[SBDSKTicket getClosedListWithOffset:completionHandler:]
++[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]
+___75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke
+___75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_2
+___75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_3
+___75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_4
+___75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_5
+___75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_6
++[SBDSKTicket getByChannelUrl:completionHandler:]
+___49+[SBDSKTicket getByChannelUrl:completionHandler:]_block_invoke
+___49+[SBDSKTicket getByChannelUrl:completionHandler:]_block_invoke.89
+___49+[SBDSKTicket getByChannelUrl:completionHandler:]_block_invoke_2
+-[SBDSKTicket reopenWithCompletionHandler:]
+___43-[SBDSKTicket reopenWithCompletionHandler:]_block_invoke
+___43-[SBDSKTicket reopenWithCompletionHandler:]_block_invoke_2
++[SBDSKTicket submitFeedbackWithMessage:score:comment:completionHandler:]
+___73+[SBDSKTicket submitFeedbackWithMessage:score:comment:completionHandler:]_block_invoke
+___73+[SBDSKTicket submitFeedbackWithMessage:score:comment:completionHandler:]_block_invoke_2
+___73+[SBDSKTicket submitFeedbackWithMessage:score:comment:completionHandler:]_block_invoke_3
+-[SBDSKTicket setCustomFields:completionHandler:]
+___49-[SBDSKTicket setCustomFields:completionHandler:]_block_invoke
+___49-[SBDSKTicket setCustomFields:completionHandler:]_block_invoke_2
+-[SBDSKTicket setPriority:completionHandler:]
+___45-[SBDSKTicket setPriority:completionHandler:]_block_invoke
+___45-[SBDSKTicket setPriority:completionHandler:]_block_invoke_2
+-[SBDSKTicket setRelatedChannels:completionHandler:]
+___52-[SBDSKTicket setRelatedChannels:completionHandler:]_block_invoke
+___52-[SBDSKTicket setRelatedChannels:completionHandler:]_block_invoke_2
+-[SBDSKTicket closeWithComment:completionHandler:]
+___50-[SBDSKTicket closeWithComment:completionHandler:]_block_invoke
+___50-[SBDSKTicket closeWithComment:completionHandler:]_block_invoke_2
+-[SBDSKTicket cancelWithTransferGroupKey:completionHandler:]
+___60-[SBDSKTicket cancelWithTransferGroupKey:completionHandler:]_block_invoke
+___60-[SBDSKTicket cancelWithTransferGroupKey:completionHandler:]_block_invoke_2
+-[SBDSKTicket selectQuestionWithFaqFileId:question:completionHandler:]
+___70-[SBDSKTicket selectQuestionWithFaqFileId:question:completionHandler:]_block_invoke
+___70-[SBDSKTicket selectQuestionWithFaqFileId:question:completionHandler:]_block_invoke_2
++[SBDSKTicket init]
+-[SBDSKTicket initWithDictionary:]
+-[SBDSKTicket updateWithDictionary:]
+-[SBDSKTicket parseWithDictionary:]
+-[SBDSKTicket setChannel:]
+-[SBDSKTicket getChannelUrl]
+-[SBDSKTicket getGroup]
++[SBDSKTicket setChannelsToTickets:completionHandler:]
+___54+[SBDSKTicket setChannelsToTickets:completionHandler:]_block_invoke
+___54+[SBDSKTicket setChannelsToTickets:completionHandler:]_block_invoke_2
+___54+[SBDSKTicket setChannelsToTickets:completionHandler:]_block_invoke_3
++[SBDSKTicket createZendeskChatInfoWithSubject:userName:userId:groupId:comment:tags:]
++[SBDSKTicket getFromCacheWithChannelUrl:]
++[SBDSKTicket upsertToTicketCacheWithDictionary:]
++[SBDSKTicket removeTicketFromCacheWithChannelUrl:]
++[SBDSKTicket clearCache]
++[SBDSKTicket addGlobalChannelHandlerForTicketCaching]
+-[SBDSKTicket ticketId]
+-[SBDSKTicket setTicketId:]
+-[SBDSKTicket title]
+-[SBDSKTicket setTitle:]
+-[SBDSKTicket status]
+-[SBDSKTicket setStatus:]
+-[SBDSKTicket agent]
+-[SBDSKTicket setAgent:]
+-[SBDSKTicket channel]
+-[SBDSKTicket customFields]
+-[SBDSKTicket setCustomFields:]
+-[SBDSKTicket priority]
+-[SBDSKTicket setPriority:]
+-[SBDSKTicket relatedChannels]
+-[SBDSKTicket setRelatedChannels:]
+-[SBDSKTicket channelUrl]
+-[SBDSKTicket setChannelUrl:]
+-[SBDSKTicket group]
+-[SBDSKTicket setGroup:]
+-[SBDSKTicket .cxx_destruct]
+_cachedTickets
+___block_descriptor_32_e4_20bs24s28s_e5_v4?0l
+___block_descriptor_24_e4_20bs_e33_v12?0"SBDSKTicket"4"SBDError"8l
+_OBJC_CLASSLIST_REFERENCES_$_.23
+_OBJC_CLASSLIST_REFERENCES_$_.28
+_OBJC_SELECTOR_REFERENCES_.30
+_OBJC_SELECTOR_REFERENCES_.32
+_OBJC_SELECTOR_REFERENCES_.34
+___block_descriptor_32_e4_20bs24s_e5_v4?0l
+___block_descriptor_24_e4_20bs_e20_v12?0i4"SBDError"8l
+___block_descriptor_33_e4_20bs24s28s_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.41
+_OBJC_SELECTOR_REFERENCES_.43
+_OBJC_SELECTOR_REFERENCES_.45
+_OBJC_CLASSLIST_REFERENCES_$_.48
+_OBJC_SELECTOR_REFERENCES_.50
+_OBJC_SELECTOR_REFERENCES_.52
+_OBJC_CLASSLIST_REFERENCES_$_.57
+_OBJC_SELECTOR_REFERENCES_.59
+_OBJC_SELECTOR_REFERENCES_.61
+_OBJC_CLASSLIST_REFERENCES_$_.66
+_OBJC_SELECTOR_REFERENCES_.68
+_OBJC_SELECTOR_REFERENCES_.70
+_OBJC_SELECTOR_REFERENCES_.72
+___block_descriptor_29_e4_20bs24s_e29_v12?0"NSArray"4"SBDError"8l
+_OBJC_SELECTOR_REFERENCES_.75
+___block_descriptor_24_e4_20bs_e32_v16?0"NSArray"4c8"SBDError"12l
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_CLASSLIST_REFERENCES_$_.86
+_OBJC_SELECTOR_REFERENCES_.88
+___block_descriptor_28_e4_20bs24s_e33_v12?0"SBDSKTicket"4"SBDError"8l
+_OBJC_SELECTOR_REFERENCES_.93
+___block_descriptor_24_e4_20bs_e17_v8?0"SBDError"4l
+_OBJC_SELECTOR_REFERENCES_.98
+_OBJC_SELECTOR_REFERENCES_.104
+_OBJC_SELECTOR_REFERENCES_.106
+_OBJC_SELECTOR_REFERENCES_.108
+_OBJC_SELECTOR_REFERENCES_.110
+_OBJC_SELECTOR_REFERENCES_.112
+_OBJC_SELECTOR_REFERENCES_.114
+_OBJC_CLASSLIST_REFERENCES_$_.117
+_OBJC_SELECTOR_REFERENCES_.119
+_OBJC_SELECTOR_REFERENCES_.123
+_OBJC_SELECTOR_REFERENCES_.125
+_OBJC_SELECTOR_REFERENCES_.129
+_OBJC_SELECTOR_REFERENCES_.133
+_OBJC_CLASSLIST_REFERENCES_$_.140
+_OBJC_CLASSLIST_REFERENCES_$_.149
+_OBJC_SELECTOR_REFERENCES_.151
+_OBJC_SELECTOR_REFERENCES_.153
+_OBJC_SELECTOR_REFERENCES_.155
+_OBJC_SELECTOR_REFERENCES_.163
+_OBJC_SELECTOR_REFERENCES_.165
+_OBJC_CLASSLIST_REFERENCES_$_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_CLASSLIST_REFERENCES_$_.171
+_OBJC_CLASSLIST_REFERENCES_$_.174
+_OBJC_SELECTOR_REFERENCES_.176
+_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_SELECTOR_REFERENCES_.190
+___block_descriptor_28_e4_20bs24s_e29_v12?0"NSArray"4"SBDError"8l
+_OBJC_SELECTOR_REFERENCES_.200
+_OBJC_SELECTOR_REFERENCES_.210
+_OBJC_SELECTOR_REFERENCES_.212
+_OBJC_SELECTOR_REFERENCES_.214
+_OBJC_CLASSLIST_REFERENCES_$_.215
+_OBJC_SELECTOR_REFERENCES_.217
+_OBJC_SELECTOR_REFERENCES_.221
+__OBJC_$_CLASS_METHODS_SBDSKTicket
+__OBJC_METACLASS_RO_$_SBDSKTicket
+__OBJC_$_INSTANCE_METHODS_SBDSKTicket
+_OBJC_IVAR_$_SBDSKTicket._title
+_OBJC_IVAR_$_SBDSKTicket._status
+_OBJC_IVAR_$_SBDSKTicket._agent
+_OBJC_IVAR_$_SBDSKTicket._channel
+_OBJC_IVAR_$_SBDSKTicket._customFields
+_OBJC_IVAR_$_SBDSKTicket._priority
+_OBJC_IVAR_$_SBDSKTicket._relatedChannels
+_OBJC_IVAR_$_SBDSKTicket._channelUrl
+_OBJC_IVAR_$_SBDSKTicket._group
+_OBJC_IVAR_$_SBDSKTicket._ticketId
+__OBJC_$_INSTANCE_VARIABLES_SBDSKTicket
+__OBJC_$_PROP_LIST_SBDSKTicket
+__OBJC_CLASS_RO_$_SBDSKTicket
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Model/SBDSKTicket.m
+SendBirdDesk/Model/SBDSKTicket.m
+SendBirdDesk/Model/SBDSKTicket.h
+__54+[SBDSKTicket setChannelsToTickets:completionHandler:]_block_invoke_3
+__54+[SBDSKTicket setChannelsToTickets:completionHandler:]_block_invoke_2
+__54+[SBDSKTicket setChannelsToTickets:completionHandler:]_block_invoke
+__70-[SBDSKTicket selectQuestionWithFaqFileId:question:completionHandler:]_block_invoke_2
+__70-[SBDSKTicket selectQuestionWithFaqFileId:question:completionHandler:]_block_invoke
+__60-[SBDSKTicket cancelWithTransferGroupKey:completionHandler:]_block_invoke_2
+__60-[SBDSKTicket cancelWithTransferGroupKey:completionHandler:]_block_invoke
+__50-[SBDSKTicket closeWithComment:completionHandler:]_block_invoke_2
+__50-[SBDSKTicket closeWithComment:completionHandler:]_block_invoke
+__52-[SBDSKTicket setRelatedChannels:completionHandler:]_block_invoke_2
+__52-[SBDSKTicket setRelatedChannels:completionHandler:]_block_invoke
+__45-[SBDSKTicket setPriority:completionHandler:]_block_invoke_2
+__45-[SBDSKTicket setPriority:completionHandler:]_block_invoke
+__49-[SBDSKTicket setCustomFields:completionHandler:]_block_invoke_2
+__49-[SBDSKTicket setCustomFields:completionHandler:]_block_invoke
+__73+[SBDSKTicket submitFeedbackWithMessage:score:comment:completionHandler:]_block_invoke_3
+__73+[SBDSKTicket submitFeedbackWithMessage:score:comment:completionHandler:]_block_invoke_2
+__73+[SBDSKTicket submitFeedbackWithMessage:score:comment:completionHandler:]_block_invoke
+__43-[SBDSKTicket reopenWithCompletionHandler:]_block_invoke_2
+__43-[SBDSKTicket reopenWithCompletionHandler:]_block_invoke
+__49+[SBDSKTicket getByChannelUrl:completionHandler:]_block_invoke_2
+__49+[SBDSKTicket getByChannelUrl:completionHandler:]_block_invoke.89
+__49+[SBDSKTicket getByChannelUrl:completionHandler:]_block_invoke
+__75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_6
+__75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_5
+__75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_4
+__75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_3
+__75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_2
+__75+[SBDSKTicket getClosedListWithOffset:customFieldFilter:completionHandler:]_block_invoke
+__75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke.76
+__75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_3
+__75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_2.65
+__75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke.64
+__75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke_2
+__75+[SBDSKTicket getOpenedListWithOffset:customFieldFilter:completionHandler:]_block_invoke
+__49+[SBDSKTicket getOpenCountWithCompletionHandler:]_block_invoke_2
+__49+[SBDSKTicket getOpenCountWithCompletionHandler:]_block_invoke
+__118+[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:]_block_invoke_3
+__118+[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:]_block_invoke_2
+__118+[SBDSKTicket createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:]_block_invoke
+__69+[SBDSKTicket confirmEndOfChatWithMessage:confirm:completionHandler:]_block_invoke_2
+__69+[SBDSKTicket confirmEndOfChatWithMessage:confirm:completionHandler:]_block_invoke.14
+__69+[SBDSKTicket confirmEndOfChatWithMessage:confirm:completionHandler:]_block_invoke
+__destroy_helper_block_e4_20s24s28s
+__copy_helper_block_e4_20b24s28s
+__44-[SBDSKTicket refreshWithCompletionHandler:]_block_invoke_2
+__44-[SBDSKTicket refreshWithCompletionHandler:]_block_invoke
++[SBDSKUtils jsonStringWithDictionary:]
+_OBJC_CLASSLIST_REFERENCES_$_.6
+__OBJC_$_CLASS_METHODS_SBDSKUtils
+__OBJC_METACLASS_RO_$_SBDSKUtils
+__OBJC_CLASS_RO_$_SBDSKUtils
+/Users/minhyuk.kim/Desktop/Sendbird/Desk/desk-ios/SendBirdDesk/Common/SBDSKUtils.m
+SendBirdDesk/Common/SBDSKUtils.m
+__ZL15__ARCLite__loadv
+__ZL30add_image_hook_autoreleasepoolPK11mach_headerl
+__ZL34__arclite_objc_autoreleasePoolPushv
+__ZL33__arclite_objc_autoreleasePoolPopPv
+__ZL19patch_lazy_pointersPK11mach_headerP7patch_tm
+__ZL42__arclite_NSArray_objectAtIndexedSubscriptP7NSArrayP13objc_selectorj
+__ZL53__arclite_NSMutableArray_setObject_atIndexedSubscriptP14NSMutableArrayP13objc_selectorP11objc_objectj
+__ZL46__arclite_NSDictionary_objectForKeyedSubscriptP12NSDictionaryP13objc_selectorP11objc_object
+__ZL47__arclite_NSOrderedSet_objectAtIndexedSubscriptP12NSOrderedSetP13objc_selectorj
+__ZL58__arclite_NSMutableOrderedSet_setObject_atIndexedSubscriptP19NSMutableOrderedSetP13objc_selectorP11objc_objectj
+__ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+__ZL18add_image_hook_ARCPK11mach_headerl
+__ZL27__arclite_objc_loadClassrefPP10objc_class
+__ZL36__arclite_object_setInstanceVariableP11objc_objectPKcPv
+__ZL24__arclite_object_setIvarP11objc_objectP9objc_ivarS0_
+__ZL21__arclite_object_copyP11objc_objectm
+__ZL21__arclite_objc_retainP11objc_object
+__ZL26__arclite_objc_retainBlockP11objc_object
+__ZL22__arclite_objc_releaseP11objc_object
+__ZL26__arclite_objc_autoreleaseP11objc_object
+__ZL32__arclite_objc_retainAutoreleaseP11objc_object
+__ZL37__arclite_objc_autoreleaseReturnValueP11objc_object
+__ZL43__arclite_objc_retainAutoreleaseReturnValueP11objc_object
+__ZL44__arclite_objc_retainAutoreleasedReturnValueP11objc_object
+__ZL26__arclite_objc_storeStrongPP11objc_objectS0_
+__ZL22add_image_hook_swiftV1PK11mach_headerl
+__ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+__ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+__ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+__ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+__ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+__ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+__ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+__ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+__ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+__ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+__ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+__ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+__ZL32__arclite_object_getIndexedIvarsP11objc_object
+__ZL23__arclite_objc_getClassPKc
+__ZL27__arclite_objc_getMetaClassPKc
+__ZL31__arclite_objc_getRequiredClassPKc
+__ZL26__arclite_objc_lookUpClassPKc
+__ZL26__arclite_objc_getProtocolPKc
+__ZL23__arclite_class_getNameP10objc_class
+__ZL26__arclite_protocol_getNameP8Protocol
+__ZL37__arclite_objc_copyClassNamesForImagePKcPj
+__ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+__ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+__ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+__ZL14initialize_impP11objc_objectP13objc_selector
+__ZL18allocateMaybeSwiftP18glue_swift_class_tm
+__ZL22copySwiftV1MangledNamePKcb
+__ZL13demangledNamePKcb
+__ZL16scanMangledFieldRPKcS0_S1_Ri
+__ZL30arclite_uninitialized_functionv
+__ZL12cxxConstructP11objc_object
+__ZL20fixStringForCoreDataP11objc_object
+_OBJC_METACLASS_$___ARCLite__
+__ZL24OBJC_CLASS_$___ARCLite__
+__ZL31OBJC_METACLASS_RO_$___ARCLite__
+__non_lazy_classes
+__ZL27OBJC_CLASS_RO_$___ARCLite__
+__ZL11_class_name
+__ZL32OBJC_$_CLASS_METHODS___ARCLite__
+__ZL17_load_method_name
+__ZL17_load_method_type
+__ZL23NSAutoreleasePool_class
+__ZZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+__ZGVZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+_OBJC_SELECTOR_REFERENCES_.19
+__OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteIndexedSubscripting__
+__OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteIndexedSubscripting__
+__OBJC_PROTOCOL_$___ARCLiteIndexedSubscripting__
+__OBJC_LABEL_PROTOCOL_$___ARCLiteIndexedSubscripting__
+__OBJC_PROTOCOL_REFERENCE_$___ARCLiteIndexedSubscripting__
+_OBJC_SELECTOR_REFERENCES_.26
+__OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteKeyedSubscripting__
+__OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteKeyedSubscripting__
+__OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+__OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+__OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+_OBJC_SELECTOR_REFERENCES_.36
+_OBJC_SELECTOR_REFERENCES_.38
+__ZZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZGVZL18add_image_hook_ARCPK11mach_headerlE7patches
+_OBJC_SELECTOR_REFERENCES_.57
+__ZL30NSUndoManagerProxy_targetClass
+__ZL29original_NSManagedObject_init
+__ZL40original_NSManagedObject_allocWithEntity
+__ZL35original_NSManagedObject_allocBatch
+__ZL25NSMutableDictionary_class
+__ZL22NSConstantString_class
+__ZL14NSString_class
+__ZL36original_NSKKMS_fastIndexForKnownKey
+__ZL27original_NSKKMS_indexForKey
+__ZL28original_NSKKsD_objectForKey
+__ZL34original_NSKKsD_removeObjectForKey
+__ZL32original_NSKKsD_setObject_forKey
+__ZL40original_NSKKsD_addEntriesFromDictionary
+__ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZL31original_objc_allocateClassPair
+__ZL31original_object_getIndexedIvars
+__ZL22original_objc_getClass
+__ZL26original_objc_getMetaClass
+__ZL30original_objc_getRequiredClass
+__ZL25original_objc_lookUpClass
+__ZL25original_objc_getProtocol
+__ZL22original_class_getName
+__ZL25original_protocol_getName
+__ZL36original_objc_copyClassNamesForImage
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_SELECTOR_REFERENCES_.96
+__ZL12demangleLock
+__ZL9Demangled
+_OBJC_SELECTOR_REFERENCES_.107
+_OBJC_SELECTOR_REFERENCES_.109
+_OBJC_SELECTOR_REFERENCES_.111
+_OBJC_SELECTOR_REFERENCES_.113
+_OBJC_SELECTOR_REFERENCES_.115
+_OBJC_SELECTOR_REFERENCES_.117
+Apple clang version 12.0.0 (clang-1200.0.32.28)
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ --target=armv7-apple-ios4.3 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -fno-sanitize=vptr -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -fno-threadsafe-statics -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -fembed-bitcode=all -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources-normal/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -Wno-error=deprecated-declarations -Wno-error=documentation -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -Wno-error=deprecated-declarations -Wno-error=documentation -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-76/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.o -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -mlinker-version=609.8 -march=armv7a
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.Internal.sdk
+iPhoneOS14.2.Internal.sdk
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-76/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-76
+fixStringForCoreData
+source/arclite.mm
+cxxConstruct
+arclite_uninitialized_function
+scanMangledField
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.Internal.sdk/usr/include/_ctype.h
+__isctype
+demangledName
+copySwiftV1DemangledName
+copySwiftV1MangledName
+allocateMaybeSwift
+word_align
+isSwift
+initialize_imp
+transcribeProperties
+property_list_nth
+transcribeProtocols
+transcribeMethods
+data
+method_list_nth
+__arclite_objc_copyClassNamesForImage
+__arclite_protocol_getName
+__arclite_class_getName
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+__arclite_objc_getClass
+__arclite_object_getIndexedIvars
+__arclite_objc_allocateClassPair
+metaclass
+__arclite_objc_readClassPair
+transcribeIvars
+ivar_list_nth
+max
+alignment
+ro
+fastFlags
+__arclite_NSKKsD_addEntriesFromDictionary
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+__arclite_NSManagedObject_init
+__arclite_NSUndoManagerProxy_isKindOfClass
+add_image_hook_swiftV1
+patch_t<const char **(const char *, unsigned int *)>
+patch_t<const char *(Protocol *)>
+patch_t<const char *(Class)>
+patch_t<Protocol *(const char *)>
+patch_t<Class (const char *)>
+patch_t<void *(id)>
+patch_t<Class (Class, const char *, unsigned long)>
+patch_t<Class (Class, const objc_image_info *)>
+__arclite_objc_storeStrong
+__arclite_objc_release
+__arclite_objc_retain
+__arclite_objc_retainAutoreleasedReturnValue
+__arclite_objc_retainAutoreleaseReturnValue
+__arclite_objc_autoreleaseReturnValue
+__arclite_objc_retainAutorelease
+__arclite_objc_autorelease
+__arclite_objc_retainBlock
+__arclite_object_copy
+fixupCopiedReferences
+_class_getInstanceStart
+alignedInstanceStart
+__arclite_class_usesAutomaticRetainRelease
+classOrSuperClassesUseARR
+__arclite_object_setIvar
+isScannedOffset
+_ivar_getClass
+__arclite_object_setInstanceVariable
+__arclite_objc_loadClassref
+add_image_hook_ARC
+patch_t<void (id *, id)>
+patch_t<id (id)>
+patch_t<void (id)>
+patch_t<id (id, unsigned long)>
+patch_t<void (id, objc_ivar *, id)>
+patch_t<objc_ivar *(id, const char *, void *)>
+patch_t<Class (Class *)>
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+__arclite_NSMutableOrderedSet_setObject_atIndexedSubscript
+__arclite_NSOrderedSet_objectAtIndexedSubscript
+__arclite_NSDictionary_objectForKeyedSubscript
+__arclite_NSMutableArray_setObject_atIndexedSubscript
+__arclite_NSArray_objectAtIndexedSubscript
+patch_lazy_pointers
+__arclite_objc_autoreleasePoolPop
+__arclite_objc_autoreleasePoolPush
+add_image_hook_autoreleasepool
+patch_t<void (void *)>
+patch_t<void *()>
+__ARCLite__load
+install_swiftV1
+replaceMethod
+install_ARC
+install_dict_nil_value
+addOrReplaceMethod
+keyedGetter
+install_subscripting
+addMethod
+indexedGetter
+install_autoreleasepool
