@@ -1,0 +1,11 @@
+framework module SendBirdDesk {
+  umbrella header "SendBirdDesk.h"
+
+  export *
+  module * { export * }
+}
+
+module SendBirdDesk.Swift {
+    header "SendBirdDesk-Swift.h"
+    requires objc
+}
