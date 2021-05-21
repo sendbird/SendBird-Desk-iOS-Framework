@@ -52,7 +52,7 @@ This section shows the prerequisites you need to check to use Sendbird Desk SDK 
 The requirements of Desk SDK for iOS are:
 
 - `iOS 8.0 or higher`
-- `Sendbird iOS SDK 3.0.90 or higher`
+- `Sendbird iOS SDK 3.0.200 or higher`
 
 <br />
 
@@ -92,7 +92,7 @@ target 'YourTarget' do
     use_frameworks!
     
     # Pods for YourTarget
-    pod 'SendBirdDesk', :git => 'https://github.com/sendbird/SendBird-Desk-iOS-Framework', :tag => 'v1.0.7'
+    pod 'SendBirdDesk'
 
 end
 ```
