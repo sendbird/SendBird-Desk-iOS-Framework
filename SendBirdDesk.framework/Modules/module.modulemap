@@ -4,3 +4,8 @@ framework module SendBirdDesk {
   export *
   module * { export * }
 }
+
+module SendBirdDesk.Swift {
+    header "SendBirdDesk-Swift.h"
+    requires objc
+}

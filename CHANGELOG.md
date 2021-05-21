@@ -1,5 +1,10 @@
 # Change Log
 
+### v1.0.15 (May 21, 2021)
+* Migrated SDK language to Swift.
+* Added support for XCFramework
+* Raised minimum dependency version of `SendBirdSDK` to `3.0.200`.
+
 ### v1.0.14 (May 21, 2021)
 * Added supports for BotKey.
     * Added option to specify botKey when creating `SBDSKTicket`.

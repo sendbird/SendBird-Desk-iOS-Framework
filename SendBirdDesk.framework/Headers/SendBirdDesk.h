@@ -1,23 +1,15 @@
 //
 //  SendBirdDesk.h
-//  SendBird Desk
+//  SendBirdDesk
 //
-//  Created by SendBird on 11/21/17.
-//  Copyright © 2019 SendBird. All rights reserved.
+//  Created by Sendbird on 2020/11/16.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import <SendBirdSDK/SendBirdSDK.h>
 
-//! Project version number for SendBird Desk.
+//! Project version number for SendBirdDesk.
 FOUNDATION_EXPORT double SendBirdDeskVersionNumber;
 
-//! Project version string for SendBird Desk.
+//! Project version string for SendBirdDesk.
 FOUNDATION_EXPORT const unsigned char SendBirdDeskVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <SendBirdDesk/PublicHeader.h>
-
-#import "SBDSKMain.h"
-#import "SBDSKAgent.h"
-#import "SBDSKTicket.h"
-#import "SBDSKFAQData.h"

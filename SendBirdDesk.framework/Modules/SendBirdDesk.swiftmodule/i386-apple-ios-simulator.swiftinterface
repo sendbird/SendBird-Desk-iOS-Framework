@@ -1,0 +1,139 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target i386-apple-ios8.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SendBirdDesk
+import Foundation
+@_exported import SendBirdDesk
+import SendBirdSDK
+import Swift
+import UIKit
+@objc public class SBDSKRelatedChannel : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var name: Swift.String
+  @objc public var channelUrl: Swift.String
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class SBDSKFAQData : ObjectiveC.NSObject, Swift.Decodable {
+  @objc final public let faqFileId: Swift.Int64
+  @objc final public let type: Swift.String
+  @objc final public let faqResults: [SendBirdDesk.SBDSKFAQData.SBDSKFAQResult]
+  @available(*, unavailable)
+  @objc override dynamic public init()
+  @objc(initWithMessage:) public init?(with message: SendBirdSDK.SBDBaseMessage)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc public class SBDSKFAQResult : ObjectiveC.NSObject, Swift.Decodable {
+    @objc final public let category: Swift.String?
+    @objc final public let question: Swift.String?
+    @objc final public let answer: Swift.String?
+    @objc final public let keyword: Swift.String?
+    @objc final public let url: Swift.String?
+    @objc final public let imageURL: Swift.String?
+    required public init(from decoder: Swift.Decoder) throws
+    @objc deinit
+    @objc override dynamic public init()
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SBDSKMain : ObjectiveC.NSObject {
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension SBDSKMain {
+  @discardableResult
+  @objc public static func initializeDesk() -> Swift.Bool
+  @objc public static func getSdkVersion() -> Swift.String
+  @objc public static func setCompletionHandlerDelegateQueue(_ queue: Dispatch.DispatchQueue)
+  @objc(authenticateWithUserId:accessToken:completionHandler:) public static func authenticate(withUserId userId: Swift.String, accessToken: Swift.String? = nil, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
+  @objc public static func isDeskChannel(_ channel: SendBirdSDK.SBDBaseChannel) -> Swift.Bool
+  @objc public static func setCustomerCustomFields(_ customFields: [Swift.String : Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler?)
+}
+@objc public enum SBDSKTicketPriority : Swift.Int, Swift.Codable {
+  case low = 0
+  case medium = 1
+  case high = 2
+  case urgent = 3
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias SBDSKErrorHandler = (SendBirdSDK.SBDError?) -> Swift.Void
+public typealias SBDSKTicketHandler = (SendBirdDesk.SBDSKTicket?, SendBirdSDK.SBDError?) -> Swift.Void
+public typealias SBDSKTicketListHandler = ([SendBirdDesk.SBDSKTicket]?, Swift.Bool, SendBirdSDK.SBDError?) -> Swift.Void
+@objc public class SBDSKTicket : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var ticketId: Swift.Int64 {
+    get
+  }
+  @objc public var title: Swift.String? {
+    get
+  }
+  @objc public var status: Swift.String? {
+    get
+  }
+  @objc public var agent: SendBirdDesk.SBDSKAgent? {
+    get
+  }
+  @objc public var channel: SendBirdSDK.SBDGroupChannel? {
+    get
+  }
+  @objc public var customFields: [Swift.String : Swift.String] {
+    get
+  }
+  @objc public var priority: SendBirdDesk.SBDSKTicketPriority {
+    get
+  }
+  @objc public var relatedChannels: [SendBirdDesk.SBDSKRelatedChannel] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension SBDSKTicket {
+  @objc dynamic public func refresh(completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc dynamic public func close(withComment comment: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(confirmEndOfChatWithMessage:confirm:completionHandler:) public static func confirmEndOfChat(with message: SendBirdSDK.SBDUserMessage, confirm: Swift.Bool, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(createTicketWithTitle:userName:completionHandler:) public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(createTicketWithTitle:userName:priority:completionHandler:) public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(createTicketWithTitle:userName:groupKey:customFields:completionHandler:) public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(createTicketWithTitle:userName:groupKey:customFields:priority:completionHandler:) public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(createTicketWithTitle:userName:relatedChannels:completionHandler:) public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, relatedChannels: [Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:completionHandler:) public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, relatedChannels: [Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:) public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, relatedChannels: [Swift.String]?, botKey: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc public static func getOpenCount(completionHandler: ((Swift.Int, SendBirdSDK.SBDError?) -> Swift.Void)?)
+  @objc(getOpenedListWithOffset:completionHandler:) public static func getOpenedList(withOffset offset: Swift.Int, completionHandler: SendBirdDesk.SBDSKTicketListHandler?)
+  @objc(getOpenedListWithOffset:customFieldFilter:completionHandler:) public static func getOpenedList(withOffset offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, completionHandler: SendBirdDesk.SBDSKTicketListHandler?)
+  @objc(getClosedListWithOffset:completionHandler:) public static func getClosedList(withOffset offset: Swift.Int, completionHandler: SendBirdDesk.SBDSKTicketListHandler?)
+  @objc(getClosedListWithOffset:customFieldFilter:completionHandler:) public static func getClosedList(withOffset offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, completionHandler: SendBirdDesk.SBDSKTicketListHandler?)
+  @objc(getByChannelUrl:completionHandler:) public static func getByChannelURL(_ channelUrl: Swift.String, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc dynamic public func reopen(completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(submitFeedbackWithMessage:score:comment:completionHandler:) public static func submitFeedback(with message: SendBirdSDK.SBDUserMessage, score: Swift.Int, comment: Swift.String? = nil, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc dynamic public func setCustomFields(_ customFields: [Swift.String : Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler?)
+  @objc dynamic public func setPriority(_ priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
+  @objc dynamic public func setRelatedChannels(_ relatedChannels: [Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler?)
+  @objc dynamic public func cancel(transferGroupKey: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc dynamic public func selectQuestion(faqFileId: Swift.Int64, question: Swift.String, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
+}
+@_inheritsConvenienceInitializers @objc public class SBDSKAgent : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var sendBirdId: Swift.String? {
+    get
+  }
+  @objc public var name: Swift.String? {
+    get
+  }
+  @objc public var profileUrl: Swift.String? {
+    get
+  }
+  @available(*, unavailable)
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension SendBirdDesk.SBDSKTicketPriority : Swift.Equatable {}
+extension SendBirdDesk.SBDSKTicketPriority : Swift.Hashable {}
+extension SendBirdDesk.SBDSKTicketPriority : Swift.RawRepresentable {}
