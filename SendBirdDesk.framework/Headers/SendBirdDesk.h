@@ -20,3 +20,4 @@ FOUNDATION_EXPORT const unsigned char SendBirdDeskVersionString[];
 #import "SBDSKMain.h"
 #import "SBDSKAgent.h"
 #import "SBDSKTicket.h"
+#import "SBDSKFAQData.h"

@@ -1,5 +1,13 @@
 # Change Log
 
+### v1.0.14 (May 21, 2021)
+* Added supports for BotKey.
+    * Added option to specify botKey when creating `SBDSKTicket`.
+* Added `SBDSKTicket.cancel(transferGroupKey:completionHandler:)`.
+* Added support for FAQ.
+    * Added `SBDSKTicket.selectQuestion(faqFileId:question:completionHandler:)`.
+    * Added `SBDSKFAQData` and `SBDSKFAQResult`.
+
 ### v1.0.13 (Feb 26, 2021) 
 * Improved handling of error code. 
 

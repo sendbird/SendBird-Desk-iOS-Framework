@@ -171,6 +171,29 @@ Creates a new ticket with information.
             completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
     
 /**
+Creates a new ticket with information.
+
+@param title The <span>title</span> of a new ticket.
+@param userName The customer's name.
+@param groupKey The agent group key.
+@param customFields The custom fields that the admin already sets on dashboard.
+@param priority The priority level of ticket.
+@param relatedChannels List of Urls of the channels related with the ticket.
+@param botKey Specifies the identifier of a bot to assign the created ticket to the bot, not to other live agents.
+@param completionHandler The handler block to execute. If the method creates a ticket successfully, the `ticket` object will be valid and the `error` will be nil.
+
+@since 1.0.14
+*/
++ (void)createTicketWithTitle:(nullable NSString *)title
+                     userName:(nullable NSString *)userName
+                     groupKey:(nullable NSString *)groupKey
+                 customFields:(nullable NSDictionary<NSString *, NSString *> *)customFields
+                     priority:(SBDSKTicketPriority)priority
+              relatedChannels:(nullable NSArray<NSString *> *)relatedChannels
+                       botKey:(nullable NSString *)botKey
+            completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+    
+/**
  Creates a new ticket with information.
  
  @param title The <span>title</span> of a new ticket.
@@ -319,4 +342,25 @@ Sets the specific ticket's related channels. The method accepts an array of stri
 - (void)closeWithComment:(NSString * _Nullable)comment
        completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
 
+/**
+ Cancel this ticket.
+ 
+ @param transferGroupKey group key to transfer this ticket to. Nullable.
+ @param completionHandler Callback handler.
+ @since 1.0.14
+ */
+- (void)cancelWithTransferGroupKey:(NSString * _Nullable)transferGroupKey
+                 completionHandler:(nullable void (^)(SBDSKTicket * _Nullable ticket, SBDError * _Nullable error))completionHandler;
+
+/**
+ Select a question.
+ 
+ @param faqFileId File id of FAQ question to select
+ @param question Question to select.
+ @param completionHandler Callback handler.
+ @since 1.0.14
+ */
+- (void)selectQuestionWithFaqFileId:(long long)faqFileId
+                           question:(nonnull NSString *)question
+                 completionHandler:(nullable void (^)(SBDError * _Nullable error))completionHandler;
 @end
