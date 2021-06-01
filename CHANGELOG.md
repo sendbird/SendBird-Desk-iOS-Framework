@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.0.16 (Jun 1, 2021)
+* `SBDSKTicket.cancel(transferGroupKey:completionHandler:)` has been replaced by `SBDSKTicket.cancel(groupKeyForTransfer:completionHandler:)`.
+
 ### v1.0.15 (May 21, 2021)
 * Migrated SDK language to Swift.
 * Added support for XCFramework

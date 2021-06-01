@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SendBirdDesk"
-  s.version      = "1.0.15"
+  s.version      = "1.0.16"
   s.summary      = "SendBird Desk iOS Framework"
   s.homepage     = "https://sendbird.com"
   s.license      = "Commercial"
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform = :ios, "8.0"
   s.documentation_url = 'https://docs.sendbird.com/'
-  s.ios.vendored_frameworks = 'SendBirdDesk.framework'
+  s.ios.vendored_frameworks = 'SendBirdDesk.xcframework'
   s.ios.frameworks = ["UIKit", "AVFoundation", "AVKit", "UserNotifications"]
 
   s.dependency 'SendBirdSDK', "~> 3.0.200"

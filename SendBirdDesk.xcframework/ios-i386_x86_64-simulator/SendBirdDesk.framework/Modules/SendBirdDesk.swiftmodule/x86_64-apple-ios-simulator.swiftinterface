@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target x86_64-apple-ios8.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SendBirdDesk
 import Foundation
 @_exported import SendBirdDesk
@@ -35,10 +35,6 @@ import UIKit
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class SBDSKMain : ObjectiveC.NSObject {
-  @objc deinit
-  @objc override dynamic public init()
-}
-extension SBDSKMain {
   @discardableResult
   @objc public static func initializeDesk() -> Swift.Bool
   @objc public static func getSdkVersion() -> Swift.String
@@ -46,6 +42,8 @@ extension SBDSKMain {
   @objc(authenticateWithUserId:accessToken:completionHandler:) public static func authenticate(withUserId userId: Swift.String, accessToken: Swift.String? = nil, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
   @objc public static func isDeskChannel(_ channel: SendBirdSDK.SBDBaseChannel) -> Swift.Bool
   @objc public static func setCustomerCustomFields(_ customFields: [Swift.String : Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler?)
+  @objc deinit
+  @objc override dynamic public init()
 }
 @objc public enum SBDSKTicketPriority : Swift.Int, Swift.Codable {
   case low = 0
@@ -115,7 +113,7 @@ extension SBDSKTicket {
   @objc dynamic public func setCustomFields(_ customFields: [Swift.String : Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler?)
   @objc dynamic public func setPriority(_ priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
   @objc dynamic public func setRelatedChannels(_ relatedChannels: [Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler?)
-  @objc dynamic public func cancel(transferGroupKey: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
+  @objc(cancelWithGroupKeyForTransfer:completionHandler:) dynamic public func cancel(groupKeyForTransfer: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler?)
   @objc dynamic public func selectQuestion(faqFileId: Swift.Int64, question: Swift.String, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
 }
 @_inheritsConvenienceInitializers @objc public class SBDSKAgent : ObjectiveC.NSObject, Swift.Codable {

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SendBirdDesk-Swift.h</key>
 		<data>
-		JSwjqsXEbNX16Gl7B8DPb8pwBdc=
+		7N3YC9Zy5CsVISX9UkRmXo/ySGI=
 		</data>
 		<key>Headers/SendBirdDesk.h</key>
 		<data>
@@ -14,55 +14,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lIQfRU6AgFvIB6MFppo3dVeMQOY=
+		fgdZ8CtOs/Hml6Vv02ttxt1SpqU=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
-		HzpAxmvbCMp5DQOEp3GfnXLbq4E=
+		okxFZjBk2xbaDI4ZAfNtfIL9jzk=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		+PgPZGxbCSXuJx027JRqMGT+Ze4=
+		5WAVfk3S2ESbCr+JiK0iSDYps5c=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rG09C6lnf1VpU4odiv9IbzDg7lE=
+		cyWDE5tiZAyjfzXRLdEI77CBURI=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386.swiftdoc</key>
 		<data>
-		HzpAxmvbCMp5DQOEp3GfnXLbq4E=
+		okxFZjBk2xbaDI4ZAfNtfIL9jzk=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386.swiftinterface</key>
 		<data>
-		+PgPZGxbCSXuJx027JRqMGT+Ze4=
+		5WAVfk3S2ESbCr+JiK0iSDYps5c=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386.swiftmodule</key>
 		<data>
-		rG09C6lnf1VpU4odiv9IbzDg7lE=
+		cyWDE5tiZAyjfzXRLdEI77CBURI=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		jUvI7Oye9NArz6TecW90od4YXRw=
+		e+E9xVFM/oRGFppatPH5Eu7Ua7M=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		CFQ2rUF3l+6KY+e9bXlo3HghTHw=
+		tPN+N0pyTFQfdhIO67TAP60v60Q=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ICuNXtCHsnIktW7OtznZZRbrwZM=
+		TQuytl2DbPli/9LDMDezbbZ3Sys=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		jUvI7Oye9NArz6TecW90od4YXRw=
+		e+E9xVFM/oRGFppatPH5Eu7Ua7M=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		CFQ2rUF3l+6KY+e9bXlo3HghTHw=
+		tPN+N0pyTFQfdhIO67TAP60v60Q=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		ICuNXtCHsnIktW7OtznZZRbrwZM=
+		TQuytl2DbPli/9LDMDezbbZ3Sys=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,11 +75,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JSwjqsXEbNX16Gl7B8DPb8pwBdc=
+			7N3YC9Zy5CsVISX9UkRmXo/ySGI=
 			</data>
 			<key>hash2</key>
 			<data>
-			xY57nJdwr/kM0LhFj9zajPeGkHQHeq7LtUskuUnK94A=
+			7pTnJcmwoFxR34vgtxk7N8MdsySqsT+dQ+Y9qCHclzk=
 			</data>
 		</dict>
 		<key>Headers/SendBirdDesk.h</key>
@@ -97,132 +97,132 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HzpAxmvbCMp5DQOEp3GfnXLbq4E=
+			okxFZjBk2xbaDI4ZAfNtfIL9jzk=
 			</data>
 			<key>hash2</key>
 			<data>
-			M8CB9ZITYcS8JdIyxcoTuHJDUmtQW0fp2tfZHMssDFE=
+			OX3OzH7cOicVUcsJLVdagVs7uZqEl7ljAGYjn6SYKNQ=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+PgPZGxbCSXuJx027JRqMGT+Ze4=
+			5WAVfk3S2ESbCr+JiK0iSDYps5c=
 			</data>
 			<key>hash2</key>
 			<data>
-			EvwohGlLjFh2bnbISzhHRzaFelZL5aqkmyMLIYOuJLE=
+			1TmoyJqzlbArYXxcjj2LYbJdbxRr87D8KEHjQGrSLKc=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rG09C6lnf1VpU4odiv9IbzDg7lE=
+			cyWDE5tiZAyjfzXRLdEI77CBURI=
 			</data>
 			<key>hash2</key>
 			<data>
-			XF8s62ECiWYcHvB+pehMHURsBIDb6LmkEORsTi2mYCU=
+			U1bYGMTvaK/Q8RCitM2nia1fj24MnI4RouhGjqzgNs8=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/i386.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HzpAxmvbCMp5DQOEp3GfnXLbq4E=
+			okxFZjBk2xbaDI4ZAfNtfIL9jzk=
 			</data>
 			<key>hash2</key>
 			<data>
-			M8CB9ZITYcS8JdIyxcoTuHJDUmtQW0fp2tfZHMssDFE=
+			OX3OzH7cOicVUcsJLVdagVs7uZqEl7ljAGYjn6SYKNQ=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/i386.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+PgPZGxbCSXuJx027JRqMGT+Ze4=
+			5WAVfk3S2ESbCr+JiK0iSDYps5c=
 			</data>
 			<key>hash2</key>
 			<data>
-			EvwohGlLjFh2bnbISzhHRzaFelZL5aqkmyMLIYOuJLE=
+			1TmoyJqzlbArYXxcjj2LYbJdbxRr87D8KEHjQGrSLKc=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rG09C6lnf1VpU4odiv9IbzDg7lE=
+			cyWDE5tiZAyjfzXRLdEI77CBURI=
 			</data>
 			<key>hash2</key>
 			<data>
-			XF8s62ECiWYcHvB+pehMHURsBIDb6LmkEORsTi2mYCU=
+			U1bYGMTvaK/Q8RCitM2nia1fj24MnI4RouhGjqzgNs8=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jUvI7Oye9NArz6TecW90od4YXRw=
+			e+E9xVFM/oRGFppatPH5Eu7Ua7M=
 			</data>
 			<key>hash2</key>
 			<data>
-			7lFDCrfNyABHcSBv7+U2CgSVQMjilpODx83BD1ReMH8=
+			kZQDAiTM7bdlgIVKt9H5CxvomrEhSlDDYmn7MZ2bz/0=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CFQ2rUF3l+6KY+e9bXlo3HghTHw=
+			tPN+N0pyTFQfdhIO67TAP60v60Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			x4J7Ty71EIAgFo4XjOfZILrbzOYG2vSHXops9bb3pdc=
+			FSDuqvBEva8Amw1ncdOFIecYVrgMk2X+8DO/oQR051Q=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ICuNXtCHsnIktW7OtznZZRbrwZM=
+			TQuytl2DbPli/9LDMDezbbZ3Sys=
 			</data>
 			<key>hash2</key>
 			<data>
-			RFYficFTPvxAUj8ugyUDFfhXPVa4uhRj7bMu9OEI6OQ=
+			I3DwWPYLjerbCP56Twep7MW7aLgkgExRyIJzM4Qippk=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jUvI7Oye9NArz6TecW90od4YXRw=
+			e+E9xVFM/oRGFppatPH5Eu7Ua7M=
 			</data>
 			<key>hash2</key>
 			<data>
-			7lFDCrfNyABHcSBv7+U2CgSVQMjilpODx83BD1ReMH8=
+			kZQDAiTM7bdlgIVKt9H5CxvomrEhSlDDYmn7MZ2bz/0=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CFQ2rUF3l+6KY+e9bXlo3HghTHw=
+			tPN+N0pyTFQfdhIO67TAP60v60Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			x4J7Ty71EIAgFo4XjOfZILrbzOYG2vSHXops9bb3pdc=
+			FSDuqvBEva8Amw1ncdOFIecYVrgMk2X+8DO/oQR051Q=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ICuNXtCHsnIktW7OtznZZRbrwZM=
+			TQuytl2DbPli/9LDMDezbbZ3Sys=
 			</data>
 			<key>hash2</key>
 			<data>
-			RFYficFTPvxAUj8ugyUDFfhXPVa4uhRj7bMu9OEI6OQ=
+			I3DwWPYLjerbCP56Twep7MW7aLgkgExRyIJzM4Qippk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
