@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(name: "SendBirdSDK",
                  url: "https://github.com/sendbird/sendbird-ios-framework",
-                 from: "3.0.200"),
+                 from: "3.0.221"),
     ],
     targets: [
         .binaryTarget(name: "SendBirdDesk", path: "SendBirdDesk.xcframework"),

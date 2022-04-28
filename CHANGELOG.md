@@ -1,5 +1,13 @@
 # Change Log
 
+### v1.0.17 (Apr 28, 2022)
+* Raised minimum target of iOS to `9.0`.
+* Raised minimum dependency version of `SendBirdSDK` to `3.0.221`. 
+* Deprecated interfaces
+  * Renamed `SBDSKMain.getSdkVersion()` to `SBDSKMain.getSDKVersion()`
+  * (*Swift only*) Renamed first parameters of public interfaces in `SBDSKTicket`
+* Stability improvements.
+
 ### v1.0.16 (Jun 1, 2021)
 * `SBDSKTicket.cancel(transferGroupKey:completionHandler:)` has been replaced by `SBDSKTicket.cancel(groupKeyForTransfer:completionHandler:)`.
 
