@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.0.18 (Jun 30, 2022)
+* Updated podspec to set dependency to SendbirdChatSDK as “up to next major version”
+
 ### v1.0.17 (Apr 28, 2022)
 * Raised minimum target of iOS to `9.0`.
 * Raised minimum dependency version of `SendBirdSDK` to `3.0.221`. 
