@@ -32,8 +32,8 @@ These are a few of the main components of Desk SDK.
 
 ||Sender|Subtypes|
 |---|---|---|
-| User message| Agent or customer|Rich messages |
-| Admin message |Sent from the Desk server without a specific sender |Notification messages and System messages |
+| User message| Agent or customer| Rich messages |
+| Admin message | Sent from the Desk server without a specific sender | Notification messages and System messages |
 
 > **Note**: Rich messages are further classified into [URL preview](#add-url-previews), [confirmation request for ticket closing](#request-confirmation-to-close-a-ticket), and [feedback request](#request-customer-feedback) messages. 
 
@@ -49,10 +49,10 @@ This section shows the prerequisites you need to check to use Sendbird Desk SDK 
 
 ### Requirements
 
-The requirements of Desk SDK for iOS are:
+The minimum requirements for Sendbird Desk SDK for iOS are:
 
-- `iOS 8.0 or higher`
-- `Sendbird iOS SDK 3.0.200 or higher`
+- iOS 9+
+- Sendbird Chat SDK for iOS 4.0.9+
 
 <br />
 
@@ -109,12 +109,13 @@ After installation has been completed, a ticket can be created for communication
 
 ### Step 1: Initialize the Desk SDK 
 
-A ‘SBDSKMain’ instance must be initialized when launching a client app. Call the `SBDMain.initWithApplicationId()` and `SBDSKMain.initializeDesk()` methods within the `applicationDidFinishLaunching()`. The `initWithApplicationId()` should be called first by the `APP_ID` of your Sendbird application in the dashboard. 
+A ‘SBDSKMain’ instance must be initialized when launching a client app. Call the `SendbirdChat.initialize(params:)` and `SBDSKMain.initializeDesk()` methods within the `applicationDidFinishLaunching()`. The `initialize(params:)` should be called first by the `APP_ID` of your Sendbird application in the dashboard. 
 
 ```swift
 class AppDelegate: UIApplicationDelegate {
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        SBDMain.initWithApplicationId(APP_ID)
+        let initParams = InitParams(applicationId: APP_ID)
+        SendbirdChat.initialize(params: initParams)
         SBDSKMain.initializeDesk()
     }
 }
@@ -124,22 +125,24 @@ class AppDelegate: UIApplicationDelegate {
 
 ### Step 2: Authenticate a customer
 
-Customers can request support from various types of channels: in-app chats or social media such as Facebook, Instagram and Twitter. To use these support features of Desk SDK, the SendBirdDesk instance should be connected with Sendbird server depending on which channel the request is from: 
+Customers can request support from various types of channels: in-app chats or social media such as Facebook, Instagram and Twitter. To use these support features of Desk SDK, the SendbirdDesk instance should be connected with Sendbird server depending on which channel the request is from: 
 
-- **Sendbird Chat Platform**: Authenticate using the `SBDMain.connect()` and `SBDSKMain.authenticate()` method with their user IDs. 
+- **Sendbird Chat Platform**: Authenticate using the `SendbirdChat.connect()` and `SBDSKMain.authenticate()` method with their user IDs. 
 - **Social media platforms**: No authentication needed as customers are automatically registered in the [dashboard](https://dashboard.sendbird.com/auth/signin) with their social media accounts.
 
 Once authenticated, customers can live-chat with agents based on Sendbird Chat platform.
 
 ```swift
-SBDMain.connect(withUserId: USER_ID, accessToken: ACCESS_TOKEN) { (user, error) in
-    guard error == nil else {   // Error.
+SendbirdChat.connect(userId: USER_ID, authToken: ACCESS_TOKEN) { (user, error) in
+    guard error == nil else {
+        // Handle error
         return
     }
     
-    // Use the same user ID and access token used in the SBDMain.connect()
+    // Use the same user ID and access token(`authToken`) used in the SendbirdChat.connect()
     SBDSKMain.authenticate(withUserId: USER_ID, accessToken: ACCESS_TOKEN) { (error) in
-        guard error == nil else {   // Error.
+        guard error == nil else {   
+            // Handle error
             return
         }
         
@@ -148,15 +151,16 @@ SBDMain.connect(withUserId: USER_ID, accessToken: ACCESS_TOKEN) { (user, error) 
 }
 ```
 
-> **Note**: **Customers from Sendbird Chat platform** signifies users who are already authenticated with the Chat SDK. If you’re implementing Chat SDK and Desk SDK at the same time, [connect a user to Sendbird server with their user ID and access token](https://sendbird.com/docs/chat/v3/ios/guides/authentication) first.
+> **Note**: **Customers from Sendbird Chat platform** signifies users who are already authenticated with the Chat SDK. If you’re implementing Chat SDK and Desk SDK at the same time, [connect a user to Sendbird server with their user ID and access token](https://sendbird.com/docs/chat/v4/ios/application/authenticating-a-user/authentication#2-connect-to-the-sendbird-server-with-a-user-id-and-a-token) first.
 
 ### Step 3: Create a ticket
 
-Implement the `SBDSKTicket.createTicket()` method to create a new ticket either before or after the customer’s initial message. The returned ticket will have a channel instance which can be accessed by ticket.channel. So you can send messages to the channel using SendBird SDK.
+Implement the `SBDSKTicket.createTicket()` method to create a new ticket either before or after the customer’s initial message. The returned ticket will have a channel instance which can be accessed by `ticket.channel`. So you can send messages to the channel using `SendbirdChat` SDK.
 
 ```swift
-SBDSKTicket.createTicket(withTitle: TITLE, userName: USER_NAME) { (ticket, error) in
-    guard error == nil else {   // Error.
+SBDSKTicket.createTicket(with: TITLE, userName: USER_NAME) { (ticket, error) in
+    guard error == nil else {   
+        // Handle error.
         return
     }
     
@@ -168,16 +172,17 @@ Once a ticket is successfully created on the Sendbird server, you can access the
 
 Before a customer sends the first message, agents can’t see the ticket in the dashboard and ticket assignment does not occur. When conversation starts, the ticket is assigned to an available agent by the Desk Dashboard while messages are sent and received through the Chat SDK.
 
-You can use the following arguments for parameters in the method when creating a ticket.
+You can use the following arguments for parameters in
+`SBDSKTicket.createTicket()` when creating a ticket.
 
 |Argument|Type|Description|
 |---|---|---|
-|TICKET_TITLE|string |Specifies the title of the ticket.|
-|USER_NAME|string |Specifies the name of the user who submits or receives the ticket.|
-|GROUP_KEY|string | Specifies the identifier of a specific team.|
-|customFields| [String:String]|Specifies additional information of the ticket that consists of **key-value** custom items. Only custom fields already registered in **Settings** > **Ticket** fields in your dashboard can be used as a key. |
-|PRIORITY |string |Specifies the priority value of the ticket. Higher values stand for higher priority. Valid values are **LOW**, **MEDIUM**, **HIGH** and **URGENT**. |
-|RELATED_CHANNEL_URLS|array | Specifies group channels in Sendbird Chat platform that are related to this ticket and consists of channel URLs and channel names. Up to 3 related channels can be added.|
+|TICKET_TITLE| `String` |Specifies the title of the ticket.|
+|USER_NAME| `String` |Specifies the name of the user who submits or receives the ticket.|
+|GROUP_KEY| `String` | Specifies the identifier of a specific team.|
+|CUSTOM_FIELDS| `[String: String]`|Specifies additional information of the ticket that consists of **key-value** custom items. Only custom fields already registered in **Settings** > **Ticket** fields in your dashboard can be used as a key. |
+|PRIORITY | `SBDSKTicketPriority` |Specifies the priority value of the ticket. Higher values stand for higher priority. Valid values are **.low**, **.medium**, **.high** and **.urgent**. |
+|RELATED_CHANNEL_URLS| `[String]` | Specifies group channels in Sendbird Chat platform that are related to this ticket and consists of channel URLs and channel names. Up to 3 related channels can be added.|
 
 ```swift
 var customFields = [String: String]()
@@ -185,8 +190,9 @@ customFields["product"] = "desk"
 customFields["line"] = "14"
 customFields["select"] = "option2"
 
-SBDSKTicket.createTicket(withTitle: TICKET_TITLE, userName: USER_NAME, groupKey: "cs-team-1", customFields: customFields, priority: PRIORITY, relatedChannels: RELATED_CHANNEL_URLS) { (ticket, error) in
-    guard error == nil else {   // Error.
+SBDSKTicket.createTicket(with: TICKET_TITLE, userName: USER_NAME, groupKey: GROUP_KEY customFields: customFields, priority: PRIORITY, relatedChannels: RELATED_CHANNEL_URLS) { (ticket, error) in
+    guard error == nil else {   
+        // Handle error.
         return 
     }
     
@@ -210,7 +216,8 @@ customFields["product"] = "Desk"
 customFields["line"] = "\(30)"
 
 ticket.setCustomFields(customFields) { (error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {   
+        // Handle error.
         return 
     }
     
@@ -231,7 +238,8 @@ customFields["gender"] = "Female"
 customFields["age"] = "\(30)"
 
 SBDSKMain.setCustomerCustomFields(customFields) { (error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {   
+        // Handle error.
         return 
     }
 }
@@ -248,7 +256,8 @@ Related channels indicate group channels in Sendbird Chat platform that are rela
 
 ```swift
 SBDSKTicket.createTicket(withTitle: TITLE, userName: USER_NAME) { (ticket, error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {   
+        // Handle error.
         return
     }
     
@@ -256,8 +265,9 @@ SBDSKTicket.createTicket(withTitle: TITLE, userName: USER_NAME) { (ticket, error
    ...
 
    ticket.setRelatedChannels(RELATED_CHANNEL_URLS) { (error) in
-        guard error == nil else {   // Error.
-           return 
+        guard error == nil else {   
+            // Handle error.
+            return 
        }
             
     // The ticket.relatedChannels property has been updated.
@@ -271,11 +281,12 @@ SBDSKTicket.createTicket(withTitle: TITLE, userName: USER_NAME) { (ticket, error
 
 With URL previews, your application users can meet their expectations of what they’re going to get before they open the link during the conversations.
 
-To use URL previews, every text message should be checked if it includes any URLs. Second, parse the HTML source of the URL to look for OpenGraph meta tags. Then, set the extracted OG meta data as a `JSON` object and stringify the object to pass it as an argument to a data parameter in the `SBDGroupChannel.update(userMessage, messageText, data, customType, completionHandler)` method. The updated message with URL preview is delivered to the client app through the `channel(_ sender: SBDBaseChannel, didUpdate message:SBDBaseMessage)` delegate method of the `SBDChannelDelegate`.
+To use URL previews, every text message should be checked if it includes any URLs. Second, parse the HTML source of the URL to look for OpenGraph meta tags. Then, set the extracted OG meta data as a `JSON` object and stringify the object to pass it as an argument to a data property in `UserMessageUpdateParams` class which is used as a parameter in the `GroupChannel updateUserMessage(messageId:params:data:completionHandler:)` method. The updated message with URL preview is delivered to the client app through the `channel(_:didUpdate:)` delegate method of the `BaseChannelDelegate`.
 
 ```swift
 ticket.channel?.sendUserMessage(TEXT, completionHandler: { userMessage, error in
-    guard let userMessage = userMessage, error == nil else {    // Error
+    guard let userMessage = userMessage, error == nil else {    
+        // Handle error.
         return 
     }
             
@@ -286,7 +297,8 @@ ticket.channel?.sendUserMessage(TEXT, completionHandler: { userMessage, error in
     }
          
     URLSession().dataTask(with: url) { (data, response, error) in
-        guard error == nil, let data = data else {  // Error.
+        guard error == nil, let data = data else {  
+            // Handle error.
             return 
         }
                 
@@ -309,12 +321,17 @@ ticket.channel?.sendUserMessage(TEXT, completionHandler: { userMessage, error in
         ] as [String: Any]
         // Stringified JSON object let jsonData = try? JSONSerialization.data(withJSONObject: urlPreview, options: [])
 
-        ticket.channel?.update(userMessage, messageText: userMessage.message, data: jsonData?.base64EncodedString(), customType: "SENDBIRD_DESK_RICH_MESSAGE", completionHandler: { (userMessage, error) in
-            guard error == nil else {   // Error.
+        let params = UserMessageUpdateParams()
+        params.message = userMessage.message
+        params.data = jsonData?.base64EncodedString()
+        params.customType =  "SENDBIRD_DESK_RICH_MESSAGE"
+        ticket.channel?.update(messageId: userMessage.messageId, params: params, completionHandler: { (userMessage, error) in
+            guard error == nil else {   
+                // Handle error.
                 return 
             }
             ...
-            // Pass data to SBDGroupChannel.update(userMessage, messageText, data, customType, completionHandler) method. 
+            // Pass data to update(messageId:params:completionHandler:) method in the GroupChannel. 
         })
     }
 })
@@ -322,7 +339,7 @@ ticket.channel?.sendUserMessage(TEXT, completionHandler: { userMessage, error in
 
 There are various methods to extract OG meta data from the html body. You can also refer to our Github repository for the method we're using. 
 
-In the `SBDChannelDelegate`s’ `channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage)` delegate method, you can find the data for URL preview in the `UserMessage.data` property as below.
+In the `BaseChannelDelegate`s’ `channel(_:didUpdate:)` delegate method, you can find the data for URL preview in the `UserMessage data` property as below.
 
 ```json
 {
@@ -343,7 +360,7 @@ Admin messages are customizable messages that are sent by the system, and there 
 
 > **Note**: You can customize notifications in **Desk** > **Settings** > **Triggers**, and system messages in **Desk** > **Settings** > **System messages** in your dashboard.
 
-When the client app receives the message through the `channel(_ sender:SBDBaseChannel, didReceive message: SBDBaseMessage)` method of the `SBDChannelDelegate`, system messages are distinguished from notification messages by the value of the `message.custom_type`, and their subtype is specified in the `message.data` as below.
+When the client app receives the message through the `channel(_:didReceive:)` method of the `BaseChannelDelegate`, system messages are distinguished from notification messages by the value of the `custom_type`, and their subtype is specified in the `data` as below.
 
 ```json
 {
@@ -360,8 +377,8 @@ When the client app receives the message through the `channel(_ sender:SBDBaseCh
 System messages are intended to be displayed for agents only. Refer to the following sample code to avoid displaying them to your customers.
 
 ```swift
-public static func isVisible(message: SBDBaseMessage) -> Bool {
-    if let message = message as? SBDAdminMessage, let data = Data(base64Encoded: message.data), data.isEmpty == false {
+public static func isVisible(message: BaseMessage) -> Bool {
+    if let message = message as? AdminMessage, let data = Data(base64Encoded: message.data), data.isEmpty == false {
         let isSystemMessage = (message.customType == "ADMIN_MESSAGE_CUSTOM_TYPE")
             
         let dataObject = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
@@ -390,7 +407,8 @@ When a customer replies to the message, the response true (agree) or false (decl
 
 ```swift
 SBDSKTicket.confirmEndOfChat(with: USER_MESSAGE, confirm: true|false) { (ticket, error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {   
+        // Handle error.
         return 
     }
             
@@ -398,12 +416,13 @@ SBDSKTicket.confirmEndOfChat(with: USER_MESSAGE, confirm: true|false) { (ticket,
 }
 ```
 
-Sendbird server notifies the customer’s client app of updates through the `channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage)` method of `SBDChannelDelegate`.
+Sendbird server notifies the customer’s client app of updates through the `channel(_:didUpdate:)` method of `BaseChannelDelegate`.
 
 ```swift
-func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
-    SBDSKTicket.getByChannelUrl(sender.channelUrl) { (ticket, error) in
-        guard error == nil else {   // Error
+func channel(_ channel: BaseChannel, didUpdate message: BaseMessage) {
+    SBDSKTicket.getByChannelUrl(channel.channelURL) { (ticket, error) in
+        guard error == nil else {   
+            // Handle error
             return 
         }
         
@@ -431,7 +450,7 @@ func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
 }
 ```
 
-> **Note**: You can find the stringified `JSON` object of the following in the `message.data` property within the `channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage)` delegate method of the `SBDChannelDelegate`.
+> **Note**: You can find the stringified `JSON` object of the following in the `message.data` property within the `channel(_:didUpdate:)` delegate method of the `BaseChannelDelegate`.
 
 ```json
 {
@@ -455,19 +474,21 @@ When a customer replies to the message, the score and comment are sent to the De
 
 ```swift
 ticket.submitFeedback(with: USER_MESSAGE, score: SCORE, comment: COMMENT) { (ticket, error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {   
+        // Handle error.
         return 
     }
     ...
 }
 ```
 
-Sendbird Desk server notifies the customer’s client app of updates through the `channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage)` delegate method of the `SBDChannelDelegate`.
+Sendbird Desk server notifies the customer’s client app of updates through the `channel(_:didUpdate:)` delegate method of the `BaseChannelDelegate`.
 
 ```swift
-func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
-    SBDSKTicket.getByChannelUrl(sender.channelUrl) { (ticket, error) in
-        guard error == nil else {   // Error.
+func channel(_ channel: BaseChannel, didUpdate message: BaseMessage) {
+    SBDSKTicket.getByChannelUrl(channel.channelURL) { (ticket, error) in
+        guard error == nil else {   
+            // Handle error.
             return 
         }
                 
@@ -493,7 +514,7 @@ func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
 }
 ```
 
-> **Note**: You can find the stringified `JSON` object of the following in the `message.data` property within the `channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage)` delegate method of `SBDChannelDelegate`.
+> **Note**: You can find the stringified `JSON` object of the following in the `message.data` property within the `channel(_:didUpdate:)` delegate method of `BaseChannelDelegate`.
 
 ```json
 {
@@ -508,11 +529,12 @@ func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
 
 ### Reopen a closed ticket
 
-A closed ticket can be reopened by using the ‘ticket.reopen()’ method.
+A closed ticket can be reopened by using the `ticket.reopen()` method.
 
 ```swift
 ticket.reopen { (ticket, error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {   
+        // Handle error.
         return 
     }
     ...
@@ -529,7 +551,8 @@ You can retrieve a list of the current customer’s open and closed tickets by u
 ```swift
 // getOpenedList()
 SBDSKTicket.getOpenedList(withOffset: OFFSET) { (tickets, hasNext, error) in
-    guard error == nil else {   // Error. 
+    guard error == nil else {   
+        // Handle error. 
         return 
     }
             
@@ -541,7 +564,8 @@ SBDSKTicket.getOpenedList(withOffset: OFFSET) { (tickets, hasNext, error) in
 ```swift
 // getClosedList() 
 SBDSKTicket.getClosedList(withOffset: OFFSET) { (tickets, hasNext, error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {
+        // Handle error. 
         return 
     }
             
@@ -556,7 +580,8 @@ For tickets set with custom fields, you can add a filter to the `getOpenList()` 
 let customFieldFilter = ["subject": "doggy_doggy"]
 
 SBDSKTicket.getOpenedList(withOffset: OFFSET, customFieldFilter: CUSTOM_FIELD_FILTER) { (tickets, hasNext, error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {   
+        // Handle error.
         return
     }
 
@@ -570,8 +595,9 @@ SBDSKTicket.getOpenedList(withOffset: OFFSET, customFieldFilter: CUSTOM_FIELD_FI
 You can retrieve a specific ticket with its channel URL.
 
 ```swift
-SBDSKTicket.getByChannelUrl(channel.channelUrl) { (ticket, error) in
-    guard error == nil else {   // Error.
+SBDSKTicket.getByChannelUrl(channel.channelURL) { (ticket, error) in
+    guard error == nil else {   
+        // Handle error.
         return
     }
     ...
@@ -584,7 +610,8 @@ You can display the number of open tickets on your client app by using the `SBDS
 
 ```swift
 SBDSKTicket.getOpenCount { (count, error) in
-    guard error == nil else {   // Error.
+    guard error == nil else {   
+        // Handle rror.
         return 
     }
             

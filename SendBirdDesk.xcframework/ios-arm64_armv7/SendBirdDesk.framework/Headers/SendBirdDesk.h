@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SendBirdSDK/SendBirdSDK.h>
+#import <SendbirdChatSDK/SendbirdChatSDK.h>
 
 //! Project version number for SendBirdDesk.
 FOUNDATION_EXPORT double SendBirdDeskVersionNumber;

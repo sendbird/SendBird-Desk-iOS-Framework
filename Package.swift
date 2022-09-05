@@ -12,16 +12,16 @@ let package = Package(
             targets: ["SendBirdDeskTarget"]),
     ],
     dependencies: [
-        .package(name: "SendBirdSDK",
-                 url: "https://github.com/sendbird/sendbird-ios-framework",
-                 from: "3.0.221"),
+        .package(name: "SendbirdChatSDK",
+                 url: "https://github.com/sendbird/sendbird-chat-sdk-ios",
+                 from: "4.0.9"),
     ],
     targets: [
         .binaryTarget(name: "SendBirdDesk", path: "SendBirdDesk.xcframework"),
         .target(name: "SendBirdDeskTarget",
                 dependencies: [
                     .target(name: "SendBirdDesk"),
-                    .product(name: "SendBirdSDK", package: "SendBirdSDK")
+                    .product(name: "SendbirdChatSDK", package: "SendbirdChatSDK")
                 ],
                 path: "Sources"),
         .testTarget(

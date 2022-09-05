@@ -291,7 +291,7 @@ SWIFT_CLASS("_TtCC12SendBirdDesk12SBDSKFAQData14SBDSKFAQResult")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class SBDError;
+@class SBError;
 @class SBDBaseChannel;
 
 /// This class is a main class of Sendbird Desk.
@@ -319,7 +319,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 ///
 /// \param completionHandler The handler block to execute. If the method updates this ticket successfully, the <code>error</code> will be nil.
 ///
-+ (void)authenticateWithUserId:(NSString * _Nonnull)userId accessToken:(NSString * _Nullable)accessToken completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
++ (void)authenticateWithUserId:(NSString * _Nonnull)userId accessToken:(NSString * _Nullable)accessToken completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 /// Checks whether the <code>channel</code> is a desk channel or not.
 /// \param channel The channel instance that is necessary to check.
 ///
@@ -334,7 +334,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-+ (void)setCustomerCustomFields:(NSDictionary<NSString *, NSString *> * _Nonnull)customFields completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
++ (void)setCustomerCustomFields:(NSDictionary<NSString *, NSString *> * _Nonnull)customFields completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -388,7 +388,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// Refreshes this ticket. After invoking this method, this ticket is updated with the latest data.
 /// \param completionHandler The handler block to execute. If the method updates this ticket successfully, the <code>error</code> will be nil.
 ///
-- (void)refreshWithCompletionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
+- (void)refreshWithCompletionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Closes this ticket.
 /// since:
 /// 1.0.11
@@ -396,7 +396,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler Callback handler.
 ///
-- (void)closeWithComment:(NSString * _Nullable)comment completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
+- (void)closeWithComment:(NSString * _Nullable)comment completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Confirms the end of the chat.
 /// \param message The message object.
 ///
@@ -404,7 +404,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method confirms the end of this ticket, the <code>error</code> will be nil.
 ///
-+ (void)confirmEndOfChatWithMessage:(SBDUserMessage * _Nonnull)message confirm:(BOOL)confirm completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)confirmEndOfChatWithMessage:(SBDUserMessage * _Nonnull)message confirm:(BOOL)confirm completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// \param title The title of a new ticket.
 ///
@@ -412,7 +412,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.6
@@ -424,7 +424,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName priority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName priority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.4
@@ -448,7 +448,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///     completionHandler: The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///   </li>
 /// </ul>
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.6
@@ -464,7 +464,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.7
@@ -476,7 +476,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.7
@@ -493,7 +493,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// \param relatedChannels List of Urls of the channels related with the ticket.
 /// - completionHandler: The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.7
@@ -512,11 +512,11 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// \param botKey Key of a bot to assign to.
 /// - completionHandler: The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels botKey:(NSString * _Nullable)botKey completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels botKey:(NSString * _Nullable)botKey completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Gets the count of the opened tickets.
 /// \param completionHandler The handler block to execute. The <code>count</code> is the count of the opened tickets. If the method gets the count successfully, the <code>error</code> will be nil.
 ///
-+ (void)getOpenCountWithCompletionHandler:(void (^ _Nullable)(NSInteger, SBDError * _Nullable))completionHandler;
++ (void)getOpenCountWithCompletionHandler:(void (^ _Nullable)(NSInteger, SBError * _Nullable))completionHandler;
 /// Gets the list of the opened tickets with the offset and custom data filter.
 /// since:
 /// 1.0.3
@@ -524,7 +524,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. The <code>tickets</code> is the array of the opened tickets. The array can be empty, but it doesn’t mean that there is an error. If there is the next page of the list, the <code>hasNext</code> will be YES. If the method gets the list
 ///
-+ (void)getOpenedListWithOffset:(NSInteger)offset completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBDError * _Nullable))completionHandler;
++ (void)getOpenedListWithOffset:(NSInteger)offset completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBError * _Nullable))completionHandler;
 /// Gets the list of the opened tickets with the offset and custom data filter.
 /// since:
 /// 1.0.3
@@ -534,13 +534,13 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. The <code>tickets</code> is the array of the opened tickets. The array can be empty, but it doesn’t mean that there is an error. If there is the next page of the list, the <code>hasNext</code> will be YES. If the method gets the list
 ///
-+ (void)getOpenedListWithOffset:(NSInteger)offset customFieldFilter:(NSDictionary<NSString *, NSString *> * _Nullable)customFieldFilter completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBDError * _Nullable))completionHandler;
++ (void)getOpenedListWithOffset:(NSInteger)offset customFieldFilter:(NSDictionary<NSString *, NSString *> * _Nullable)customFieldFilter completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBError * _Nullable))completionHandler;
 /// Gets the list of the closed tickets with the offset.
 /// \param offset The offset that represents the position of the full list.
 ///
 /// \param completionHandler The handler block to execute. The <code>tickets</code> is the array of the closed tickets. The array can be empty, but it doesn’t mean that there is an error. If there is the next page of the list, the <code>hasNext</code> will be YES. If the method gets the list successfully, the <code>error</code> will be nil.
 ///
-+ (void)getClosedListWithOffset:(NSInteger)offset completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBDError * _Nullable))completionHandler;
++ (void)getClosedListWithOffset:(NSInteger)offset completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBError * _Nullable))completionHandler;
 /// Gets the list of the closed tickets with the offset.
 /// \param offset The offset that represents the position of the full list.
 ///
@@ -548,18 +548,18 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. The <code>tickets</code> is the array of the closed tickets. The array can be empty, but it doesn’t mean that there is an error. If there is the next page of the list, the <code>hasNext</code> will be YES. If the method gets the list successfully, the <code>error</code> will be nil.
 ///
-+ (void)getClosedListWithOffset:(NSInteger)offset customFieldFilter:(NSDictionary<NSString *, NSString *> * _Nullable)customFieldFilter completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBDError * _Nullable))completionHandler;
++ (void)getClosedListWithOffset:(NSInteger)offset customFieldFilter:(NSDictionary<NSString *, NSString *> * _Nullable)customFieldFilter completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBError * _Nullable))completionHandler;
 /// Gets a ticket by the group <span>channel</span> URL.
 /// \param channelUrl The group <span>channel</span> URL that is connected with a ticket.
 ///
 /// \param completionHandler The handler block to execute. If the method gets a ticket successfully, the <code>error</code> will be nil.
 ///
-+ (void)getByChannelUrl:(NSString * _Nonnull)channelUrl completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)getByChannelUrl:(NSString * _Nonnull)channelUrl completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Reopens the ticket.
 /// @since 1.0.3
 /// \param completionHandler The handler block to execute. If the method gets a ticket successfully, the <code>error</code> will be nil.
 ///
-- (void)reopenWithCompletionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
+- (void)reopenWithCompletionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Submits the customer’s feedback.
 /// since:
 /// 1.0.5
@@ -571,7 +571,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method submits the feedback, the <code>error</code> will be nil.
 ///
-+ (void)submitFeedbackWithMessage:(SBDUserMessage * _Nonnull)message score:(NSInteger)score comment:(NSString * _Nullable)comment completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)submitFeedbackWithMessage:(SBDUserMessage * _Nonnull)message score:(NSInteger)score comment:(NSString * _Nullable)comment completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Sets the specific ticket’s custom fields. The custom fields has a key and a value in string type.
 /// since:
 /// 1.0.6
@@ -579,7 +579,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)setCustomFields:(NSDictionary<NSString *, NSString *> * _Nonnull)customFields completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
+- (void)setCustomFields:(NSDictionary<NSString *, NSString *> * _Nonnull)customFields completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 /// Sets the specific ticket’s priority. The priority has a string type key and a <code>SBDSKTicketPriority</code> type value
 /// since:
 /// 1.0.6
@@ -587,7 +587,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)setPriority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
+- (void)setPriority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 /// Sets the specific ticket’s related channels. The method accepts an array of string, and updates the <code>SBDSKRelatedChannel</code> array of the ticket.
 /// since:
 /// 1.0.7
@@ -595,7 +595,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)setRelatedChannels:(NSArray<NSString *> * _Nonnull)relatedChannels completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
+- (void)setRelatedChannels:(NSArray<NSString *> * _Nonnull)relatedChannels completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 /// Cancel a ticket.
 /// since:
 /// 1.0.14
@@ -603,7 +603,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)cancelWithGroupKeyForTransfer:(NSString * _Nullable)groupKeyForTransfer completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
+- (void)cancelWithGroupKeyForTransfer:(NSString * _Nullable)groupKeyForTransfer completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Select a question
 /// since:
 /// 1.0.14
@@ -613,7 +613,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)selectQuestionWithFaqFileId:(int64_t)faqFileId question:(NSString * _Nonnull)question completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
+- (void)selectQuestionWithFaqFileId:(int64_t)faqFileId question:(NSString * _Nonnull)question completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 @end
 
 typedef SWIFT_ENUM(NSInteger, SBDSKTicketPriority, open) {
@@ -921,7 +921,7 @@ SWIFT_CLASS("_TtCC12SendBirdDesk12SBDSKFAQData14SBDSKFAQResult")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class SBDError;
+@class SBError;
 @class SBDBaseChannel;
 
 /// This class is a main class of Sendbird Desk.
@@ -949,7 +949,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 ///
 /// \param completionHandler The handler block to execute. If the method updates this ticket successfully, the <code>error</code> will be nil.
 ///
-+ (void)authenticateWithUserId:(NSString * _Nonnull)userId accessToken:(NSString * _Nullable)accessToken completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
++ (void)authenticateWithUserId:(NSString * _Nonnull)userId accessToken:(NSString * _Nullable)accessToken completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 /// Checks whether the <code>channel</code> is a desk channel or not.
 /// \param channel The channel instance that is necessary to check.
 ///
@@ -964,7 +964,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-+ (void)setCustomerCustomFields:(NSDictionary<NSString *, NSString *> * _Nonnull)customFields completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
++ (void)setCustomerCustomFields:(NSDictionary<NSString *, NSString *> * _Nonnull)customFields completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1018,7 +1018,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// Refreshes this ticket. After invoking this method, this ticket is updated with the latest data.
 /// \param completionHandler The handler block to execute. If the method updates this ticket successfully, the <code>error</code> will be nil.
 ///
-- (void)refreshWithCompletionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
+- (void)refreshWithCompletionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Closes this ticket.
 /// since:
 /// 1.0.11
@@ -1026,7 +1026,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler Callback handler.
 ///
-- (void)closeWithComment:(NSString * _Nullable)comment completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
+- (void)closeWithComment:(NSString * _Nullable)comment completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Confirms the end of the chat.
 /// \param message The message object.
 ///
@@ -1034,7 +1034,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method confirms the end of this ticket, the <code>error</code> will be nil.
 ///
-+ (void)confirmEndOfChatWithMessage:(SBDUserMessage * _Nonnull)message confirm:(BOOL)confirm completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)confirmEndOfChatWithMessage:(SBDUserMessage * _Nonnull)message confirm:(BOOL)confirm completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// \param title The title of a new ticket.
 ///
@@ -1042,7 +1042,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.6
@@ -1054,7 +1054,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName priority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName priority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.4
@@ -1078,7 +1078,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///     completionHandler: The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///   </li>
 /// </ul>
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.6
@@ -1094,7 +1094,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.7
@@ -1106,7 +1106,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.7
@@ -1123,7 +1123,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// \param relatedChannels List of Urls of the channels related with the ticket.
 /// - completionHandler: The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Creates a new ticket with information.
 /// since:
 /// 1.0.7
@@ -1142,11 +1142,11 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// \param botKey Key of a bot to assign to.
 /// - completionHandler: The handler block to execute. If the method creates a ticket successfully, the <code>ticket</code> object will be valid and the <code>error</code> will be nil.
 ///
-+ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels botKey:(NSString * _Nullable)botKey completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)createTicketWithTitle:(NSString * _Nullable)title userName:(NSString * _Nullable)userName groupKey:(NSString * _Nullable)groupKey customFields:(NSDictionary<NSString *, NSString *> * _Nullable)customFields priority:(enum SBDSKTicketPriority)priority relatedChannels:(NSArray<NSString *> * _Nullable)relatedChannels botKey:(NSString * _Nullable)botKey completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Gets the count of the opened tickets.
 /// \param completionHandler The handler block to execute. The <code>count</code> is the count of the opened tickets. If the method gets the count successfully, the <code>error</code> will be nil.
 ///
-+ (void)getOpenCountWithCompletionHandler:(void (^ _Nullable)(NSInteger, SBDError * _Nullable))completionHandler;
++ (void)getOpenCountWithCompletionHandler:(void (^ _Nullable)(NSInteger, SBError * _Nullable))completionHandler;
 /// Gets the list of the opened tickets with the offset and custom data filter.
 /// since:
 /// 1.0.3
@@ -1154,7 +1154,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. The <code>tickets</code> is the array of the opened tickets. The array can be empty, but it doesn’t mean that there is an error. If there is the next page of the list, the <code>hasNext</code> will be YES. If the method gets the list
 ///
-+ (void)getOpenedListWithOffset:(NSInteger)offset completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBDError * _Nullable))completionHandler;
++ (void)getOpenedListWithOffset:(NSInteger)offset completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBError * _Nullable))completionHandler;
 /// Gets the list of the opened tickets with the offset and custom data filter.
 /// since:
 /// 1.0.3
@@ -1164,13 +1164,13 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. The <code>tickets</code> is the array of the opened tickets. The array can be empty, but it doesn’t mean that there is an error. If there is the next page of the list, the <code>hasNext</code> will be YES. If the method gets the list
 ///
-+ (void)getOpenedListWithOffset:(NSInteger)offset customFieldFilter:(NSDictionary<NSString *, NSString *> * _Nullable)customFieldFilter completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBDError * _Nullable))completionHandler;
++ (void)getOpenedListWithOffset:(NSInteger)offset customFieldFilter:(NSDictionary<NSString *, NSString *> * _Nullable)customFieldFilter completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBError * _Nullable))completionHandler;
 /// Gets the list of the closed tickets with the offset.
 /// \param offset The offset that represents the position of the full list.
 ///
 /// \param completionHandler The handler block to execute. The <code>tickets</code> is the array of the closed tickets. The array can be empty, but it doesn’t mean that there is an error. If there is the next page of the list, the <code>hasNext</code> will be YES. If the method gets the list successfully, the <code>error</code> will be nil.
 ///
-+ (void)getClosedListWithOffset:(NSInteger)offset completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBDError * _Nullable))completionHandler;
++ (void)getClosedListWithOffset:(NSInteger)offset completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBError * _Nullable))completionHandler;
 /// Gets the list of the closed tickets with the offset.
 /// \param offset The offset that represents the position of the full list.
 ///
@@ -1178,18 +1178,18 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. The <code>tickets</code> is the array of the closed tickets. The array can be empty, but it doesn’t mean that there is an error. If there is the next page of the list, the <code>hasNext</code> will be YES. If the method gets the list successfully, the <code>error</code> will be nil.
 ///
-+ (void)getClosedListWithOffset:(NSInteger)offset customFieldFilter:(NSDictionary<NSString *, NSString *> * _Nullable)customFieldFilter completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBDError * _Nullable))completionHandler;
++ (void)getClosedListWithOffset:(NSInteger)offset customFieldFilter:(NSDictionary<NSString *, NSString *> * _Nullable)customFieldFilter completionHandler:(void (^ _Nullable)(NSArray<SBDSKTicket *> * _Nullable, BOOL, SBError * _Nullable))completionHandler;
 /// Gets a ticket by the group <span>channel</span> URL.
 /// \param channelUrl The group <span>channel</span> URL that is connected with a ticket.
 ///
 /// \param completionHandler The handler block to execute. If the method gets a ticket successfully, the <code>error</code> will be nil.
 ///
-+ (void)getByChannelUrl:(NSString * _Nonnull)channelUrl completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)getByChannelUrl:(NSString * _Nonnull)channelUrl completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Reopens the ticket.
 /// @since 1.0.3
 /// \param completionHandler The handler block to execute. If the method gets a ticket successfully, the <code>error</code> will be nil.
 ///
-- (void)reopenWithCompletionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
+- (void)reopenWithCompletionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Submits the customer’s feedback.
 /// since:
 /// 1.0.5
@@ -1201,7 +1201,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method submits the feedback, the <code>error</code> will be nil.
 ///
-+ (void)submitFeedbackWithMessage:(SBDUserMessage * _Nonnull)message score:(NSInteger)score comment:(NSString * _Nullable)comment completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
++ (void)submitFeedbackWithMessage:(SBDUserMessage * _Nonnull)message score:(NSInteger)score comment:(NSString * _Nullable)comment completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Sets the specific ticket’s custom fields. The custom fields has a key and a value in string type.
 /// since:
 /// 1.0.6
@@ -1209,7 +1209,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)setCustomFields:(NSDictionary<NSString *, NSString *> * _Nonnull)customFields completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
+- (void)setCustomFields:(NSDictionary<NSString *, NSString *> * _Nonnull)customFields completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 /// Sets the specific ticket’s priority. The priority has a string type key and a <code>SBDSKTicketPriority</code> type value
 /// since:
 /// 1.0.6
@@ -1217,7 +1217,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)setPriority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
+- (void)setPriority:(enum SBDSKTicketPriority)priority completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 /// Sets the specific ticket’s related channels. The method accepts an array of string, and updates the <code>SBDSKRelatedChannel</code> array of the ticket.
 /// since:
 /// 1.0.7
@@ -1225,7 +1225,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)setRelatedChannels:(NSArray<NSString *> * _Nonnull)relatedChannels completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
+- (void)setRelatedChannels:(NSArray<NSString *> * _Nonnull)relatedChannels completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 /// Cancel a ticket.
 /// since:
 /// 1.0.14
@@ -1233,7 +1233,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)cancelWithGroupKeyForTransfer:(NSString * _Nullable)groupKeyForTransfer completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBDError * _Nullable))completionHandler;
+- (void)cancelWithGroupKeyForTransfer:(NSString * _Nullable)groupKeyForTransfer completionHandler:(void (^ _Nullable)(SBDSKTicket * _Nullable, SBError * _Nullable))completionHandler;
 /// Select a question
 /// since:
 /// 1.0.14
@@ -1243,7 +1243,7 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 ///
 /// \param completionHandler The handler block to execute. If the method sets successfully, the <code>error</code> will be nil.
 ///
-- (void)selectQuestionWithFaqFileId:(int64_t)faqFileId question:(NSString * _Nonnull)question completionHandler:(void (^ _Nullable)(SBDError * _Nullable))completionHandler;
+- (void)selectQuestionWithFaqFileId:(int64_t)faqFileId question:(NSString * _Nonnull)question completionHandler:(void (^ _Nullable)(SBError * _Nullable))completionHandler;
 @end
 
 typedef SWIFT_ENUM(NSInteger, SBDSKTicketPriority, open) {

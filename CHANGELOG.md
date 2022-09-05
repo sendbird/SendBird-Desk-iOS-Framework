@@ -1,5 +1,12 @@
 # Change Log
 
+### v1.1.0 (Sep 2, 2022) with Chat SDK **v4.0.9**
+* Raised minimum dependency version of `SendbirdChatSDK` to `4.0.9`
+  * Modified handlers' error parameter type to `SBError`
+  * (*Swift only*) Modified channel parameter type to `BaseChannel` in `SBDSKMain isDeskChannel(_:)`
+  * (*Swift only*) Modified user message parameter type to `UserMessage` in `SBDSKTicket submitFeedback(with:score:)`
+  * (*Swift only*) Modified message parameter type to `BaseMessage` in `SBDSKAdminMessage isAdminMesasge(_:)`
+  
 ### v1.0.18 (Jun 30, 2022)
 * Updated podspec to set dependency to SendbirdChatSDK as “up to next major version”
 
