@@ -307,7 +307,6 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 /// returns:
 /// The version of Sendbird Desk.
 + (NSString * _Nonnull)getSDKVersion SWIFT_WARN_UNUSED_RESULT;
-+ (NSString * _Nonnull)getSdkVersion SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("Deprecated in 1.0.17", "getSDKVersion");
 /// Sets a dispatch queue for every completion handler in Sendbird Desk.
 /// \param queue A dispatch queue that will be used for every completion handler.
 ///
@@ -937,7 +936,6 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 /// returns:
 /// The version of Sendbird Desk.
 + (NSString * _Nonnull)getSDKVersion SWIFT_WARN_UNUSED_RESULT;
-+ (NSString * _Nonnull)getSdkVersion SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("Deprecated in 1.0.17", "getSDKVersion");
 /// Sets a dispatch queue for every completion handler in Sendbird Desk.
 /// \param queue A dispatch queue that will be used for every completion handler.
 ///
@@ -1567,7 +1565,6 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 /// returns:
 /// The version of Sendbird Desk.
 + (NSString * _Nonnull)getSDKVersion SWIFT_WARN_UNUSED_RESULT;
-+ (NSString * _Nonnull)getSdkVersion SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("Deprecated in 1.0.17", "getSDKVersion");
 /// Sets a dispatch queue for every completion handler in Sendbird Desk.
 /// \param queue A dispatch queue that will be used for every completion handler.
 ///

@@ -36,8 +36,6 @@ import _Concurrency
   @discardableResult
   @objc public static func initializeDesk() -> Swift.Bool
   @objc public static func getSDKVersion() -> Swift.String
-  @available(*, deprecated, renamed: "getSDKVersion()", message: "Deprecated in 1.0.17")
-  @objc public static func getSdkVersion() -> Swift.String
   @objc public static func setCompletionHandlerDelegateQueue(_ queue: Dispatch.DispatchQueue)
   @objc(authenticateWithUserId:accessToken:completionHandler:) public static func authenticate(withUserId userId: Swift.String, accessToken: Swift.String? = nil, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
   @objc public static func isDeskChannel(_ channel: SendbirdChatSDK.BaseChannel) -> Swift.Bool

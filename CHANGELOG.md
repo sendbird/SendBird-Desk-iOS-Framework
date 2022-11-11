@@ -1,5 +1,9 @@
 # Change Log
 
+### v1.1.1 (Nov 11, 2022)
+* Fixed bug that refreshed ticket has no channel
+* Improved stabilities
+
 ### v1.1.0 (Sep 2, 2022) with Chat SDK **v4.0.9**
 * Raised minimum dependency version of `SendbirdChatSDK` to `4.0.9`
   * Modified handlers' error parameter type to `SBError`

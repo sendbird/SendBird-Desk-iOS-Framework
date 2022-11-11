@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SendBirdDesk-Swift.h</key>
 		<data>
-		4atS/AwjdbwnkgYHE3YRNauTT14=
+		c2UBQl/jL783zPtcsIQcIPzfLPE=
 		</data>
 		<key>Headers/SendBirdDesk.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		P7KIGv3p7XElT4/sLDwbOEgzOUg=
+		37PEPNGl2BJ4u75nAT/qpPGu1ZY=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		z4p/YQnh5WRW+S4eXc40/ad9DVM=
+		Ir0wJ8qzo3A93TZYzJHq3H9/lLs=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vX/EbiUGKa7tgl2BYDDXwr3heS8=
+		nXhzzKCRa3j9TOIf+iY5us5/EbE=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jGvQRODc4gCIvLWpg+u3112diD0=
+		+AQsxjuV4IJO7x/7V2osFgbYjYQ=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6YlqYixlWABlYcmlE4E1+6rE7qI=
+		sVU0X8FLYWCVDM327vM8YkXDvrE=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		7qxG5NwIXbYNvb4PURBC2KSe9Ng=
+		rIdcV914Qqu3N9o+713Ah45166k=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JvyJWCRXZ1qVJBr4s+wczWCHSvw=
+		zSHnKh0V+v4DH+t888OSenf2VhQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,11 +63,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4atS/AwjdbwnkgYHE3YRNauTT14=
+			c2UBQl/jL783zPtcsIQcIPzfLPE=
 			</data>
 			<key>hash2</key>
 			<data>
-			jBDhMMHg3LfxQ4gQcvYNXuBOzNVYBZP7+JVLXmthPqE=
+			sjdbHTMFGqcVrtAXhThErxGQxR8LvGCi5lh0N/GvhjQ=
 			</data>
 		</dict>
 		<key>Headers/SendBirdDesk.h</key>
@@ -96,22 +96,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			z4p/YQnh5WRW+S4eXc40/ad9DVM=
+			Ir0wJ8qzo3A93TZYzJHq3H9/lLs=
 			</data>
 			<key>hash2</key>
 			<data>
-			7uiT2QDKGoQev3k6dLVl8tdCBzYr8H65ze1pdfWddKk=
+			ClqL5ECCQcy4h8ZjBUUckgFjzdnNo001s5m+4S5W1Ec=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vX/EbiUGKa7tgl2BYDDXwr3heS8=
+			nXhzzKCRa3j9TOIf+iY5us5/EbE=
 			</data>
 			<key>hash2</key>
 			<data>
-			rSSHJOkGceULr122Rm8kVkFrBJwNx+dtcb6BC6faIb8=
+			q1/g3mqjILn2sdtXLKcO03VId4SqcrWojW5wPH6tYUg=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -129,22 +129,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jGvQRODc4gCIvLWpg+u3112diD0=
+			+AQsxjuV4IJO7x/7V2osFgbYjYQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			vR9LCSEH7NQkqhb/JrvVKR2k5h8yPDnl8uvb7emc2gw=
+			LJlcZrJEt2F2kecaOW5+aap230iY1FApQNTMewA2Jr8=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6YlqYixlWABlYcmlE4E1+6rE7qI=
+			sVU0X8FLYWCVDM327vM8YkXDvrE=
 			</data>
 			<key>hash2</key>
 			<data>
-			V2KZ6rwV1I50xN3IdP9WnfwhW5NHyWvhooyG5oAnAqo=
+			DmFPLR5hJRlwymcgCtlDn2ATbGcbunj8VcDpeujjpcM=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -162,22 +162,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7qxG5NwIXbYNvb4PURBC2KSe9Ng=
+			rIdcV914Qqu3N9o+713Ah45166k=
 			</data>
 			<key>hash2</key>
 			<data>
-			J25SQOSBFqT9ue9Cz22rNxTu3eLTiBeA/fOCavzAYZk=
+			qGy/f3bx1S91MzQUL6/eMXSuT7JaLBn7iDSEdz3npRY=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JvyJWCRXZ1qVJBr4s+wczWCHSvw=
+			zSHnKh0V+v4DH+t888OSenf2VhQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			g67LxKaj0JtJkGbh74Qb0DpIr3X6HdXAg2M8sRobNJk=
+			Jq2oHPdzEpzkU6tF3fCDFEGm2JbVfFbZBt4QvG7KeAs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
