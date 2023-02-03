@@ -364,7 +364,11 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// The title of this ticket.
 @property (nonatomic, readonly, copy) NSString * _Nullable title;
 /// The status of this ticket.
-@property (nonatomic, readonly, copy) NSString * _Nullable status;
+@property (nonatomic, readonly, copy) NSString * _Nullable status SWIFT_DEPRECATED_MSG("This property has been deprecated. Please use `status2` instead.");
+/// The status2 of this ticket.
+/// since:
+/// 1.1.2
+@property (nonatomic, readonly, copy) NSString * _Nullable status2;
 /// The agent who is in charge of this ticket.
 @property (nonatomic, readonly, strong) SBDSKAgent * _Nullable agent;
 /// The channel where the <span>agent</span> and the customer are chatting.
@@ -993,7 +997,11 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// The title of this ticket.
 @property (nonatomic, readonly, copy) NSString * _Nullable title;
 /// The status of this ticket.
-@property (nonatomic, readonly, copy) NSString * _Nullable status;
+@property (nonatomic, readonly, copy) NSString * _Nullable status SWIFT_DEPRECATED_MSG("This property has been deprecated. Please use `status2` instead.");
+/// The status2 of this ticket.
+/// since:
+/// 1.1.2
+@property (nonatomic, readonly, copy) NSString * _Nullable status2;
 /// The agent who is in charge of this ticket.
 @property (nonatomic, readonly, strong) SBDSKAgent * _Nullable agent;
 /// The channel where the <span>agent</span> and the customer are chatting.
@@ -1622,7 +1630,11 @@ SWIFT_CLASS("_TtC12SendBirdDesk11SBDSKTicket")
 /// The title of this ticket.
 @property (nonatomic, readonly, copy) NSString * _Nullable title;
 /// The status of this ticket.
-@property (nonatomic, readonly, copy) NSString * _Nullable status;
+@property (nonatomic, readonly, copy) NSString * _Nullable status SWIFT_DEPRECATED_MSG("This property has been deprecated. Please use `status2` instead.");
+/// The status2 of this ticket.
+/// since:
+/// 1.1.2
+@property (nonatomic, readonly, copy) NSString * _Nullable status2;
 /// The agent who is in charge of this ticket.
 @property (nonatomic, readonly, strong) SBDSKAgent * _Nullable agent;
 /// The channel where the <span>agent</span> and the customer are chatting.

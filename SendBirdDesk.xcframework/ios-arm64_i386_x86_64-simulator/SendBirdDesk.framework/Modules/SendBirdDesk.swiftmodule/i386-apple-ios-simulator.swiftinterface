@@ -60,13 +60,27 @@ public typealias SBDSKErrorHandler = (_ error: SendbirdChatSDK.SBError?) -> Swif
 public typealias SBDSKTicketHandler = (_ ticket: SendBirdDesk.SBDSKTicket?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
 public typealias SBDSKTicketListHandler = (_ tickets: [SendBirdDesk.SBDSKTicket]?, _ hasNext: Swift.Bool, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
 @objc public class SBDSKTicket : ObjectiveC.NSObject, Swift.Codable {
+  public struct Constants {
+    public struct Status2 {
+      public static let procative: Swift.String
+      public static let pending: Swift.String
+      public static let workInProgress: Swift.String
+      public static let active: Swift.String
+      public static let idle: Swift.String
+      public static let closed: Swift.String
+    }
+  }
   @objc public var ticketId: Swift.Int64 {
     get
   }
   @objc public var title: Swift.String? {
     get
   }
+  @available(*, deprecated, message: "This property has been deprecated. Please use `status2` instead.")
   @objc public var status: Swift.String? {
+    get
+  }
+  @objc public var status2: Swift.String? {
     get
   }
   @objc public var agent: SendBirdDesk.SBDSKAgent? {
@@ -120,6 +134,8 @@ extension SendBirdDesk.SBDSKTicket {
   @objc(getOpenedListWithOffset:customFieldFilter:completionHandler:) public static func getOpenedList(withOffset offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
   @objc(getClosedListWithOffset:completionHandler:) public static func getClosedList(withOffset offset: Swift.Int, completionHandler: SendBirdDesk.SBDSKTicketListHandler?)
   @objc(getClosedListWithOffset:customFieldFilter:completionHandler:) public static func getClosedList(withOffset offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
+  public static func getAllTicketList(offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
+  public static func getTicketList(offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, status2: [Swift.String], completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
   @objc(getByChannelUrl:completionHandler:) public static func getByChannelURL(_ channelUrl: Swift.String, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
   @objc dynamic public func reopen(completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
   @objc(submitFeedbackWithMessage:score:comment:completionHandler:) public static func submitFeedback(with message: SendbirdChatSDK.UserMessage, score: Swift.Int, comment: Swift.String? = nil, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)

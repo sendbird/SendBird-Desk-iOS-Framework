@@ -1,5 +1,12 @@
 # Change Log
 
+### v1.1.2 (Feb 3, 2023)
+* Added status2 features
+    * Added `SBDSKTicket.Constants.Status2` constants
+    * Added `status2` property in `SBDSKTicket` class
+    * Added `getAllTicketList(offset:customFieldFilter:completionHandler:)` function in `SBDSKTicket` class
+    * Added `getTicketList(offset:customFieldFilter:status2:completionHandler:)` function in `SBDSKTicket` class
+
 ### v1.1.1 (Nov 11, 2022)
 * Fixed bug that refreshed ticket has no channel
 * Improved stabilities
