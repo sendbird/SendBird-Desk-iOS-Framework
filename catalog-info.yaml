@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: SendBird-Desk-iOS-Framework
+  description: Sendbird Desk SDK for iOS
+  annotations:
+    github.com/project-slug: sendbird/SendBird-Desk-iOS-Framework
+spec:
+  type: library
+  lifecycle: production
+  owner: dep-client-platform
+  system: sendbird-desk
