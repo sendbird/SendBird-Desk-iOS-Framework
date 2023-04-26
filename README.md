@@ -51,8 +51,8 @@ This section shows the prerequisites you need to check to use Sendbird Desk SDK 
 
 The minimum requirements for Sendbird Desk SDK for iOS are:
 
-- iOS 9+
-- Sendbird Chat SDK for iOS 4.0.9+
+- iOS 11+
+- Sendbird Chat SDK for iOS 4.6.7+
 
 <br />
 
@@ -85,7 +85,7 @@ Installing the Desk SDK is simple if you’re familiar with using external libra
 1. Create or edit your `Podfile` file.
 ```bash
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'YourTarget' do
     # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
