@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.1.3 (Apr 26, 2023) with Chat SDK **v4.6.7**
+* Update iOS deployment target to 11.0 for Xcode 14.1+
+
 ### v1.1.2 (Feb 3, 2023)
 * Added status2 features
     * Added `SBDSKTicket.Constants.Status2` constants
