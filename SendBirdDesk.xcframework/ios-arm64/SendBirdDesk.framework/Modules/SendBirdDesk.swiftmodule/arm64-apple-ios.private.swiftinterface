@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SendBirdDesk
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
@@ -13,15 +13,15 @@ import _StringProcessing
   @objc public var name: Swift.String
   @objc public var channelUrl: Swift.String
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SBDSKFAQData : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let faqFileId: Swift.Int64
   @objc final public let type: Swift.String
   @objc final public let faqResults: [SendBirdDesk.SBDSKFAQData.SBDSKFAQResult]
   @objc(initWithMessage:) public init?(with message: SendbirdChatSDK.BaseMessage)
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc public class SBDSKFAQResult : ObjectiveC.NSObject, Swift.Decodable {
     @objc final public let category: Swift.String?
     @objc final public let question: Swift.String?
@@ -29,7 +29,7 @@ import _StringProcessing
     @objc final public let keyword: Swift.String?
     @objc final public let url: Swift.String?
     @objc final public let imageURL: Swift.String?
-    required public init(from decoder: Swift.Decoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
     @objc deinit
   }
   @objc deinit
@@ -50,8 +50,8 @@ import _StringProcessing
   case medium = 1
   case high = 2
   case urgent = 3
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -100,8 +100,14 @@ public typealias SBDSKTicketListHandler = (_ tickets: [SendBirdDesk.SBDSKTicket]
   @objc public var relatedChannels: [SendBirdDesk.SBDSKRelatedChannel] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  @objc public var firstResponseTime: Swift.Int64 {
+    get
+  }
+  @objc public var issuedAt: Swift.String {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 extension SendBirdDesk.SBDSKTicket {
@@ -158,8 +164,8 @@ extension SendBirdDesk.SBDSKTicket {
     get
   }
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 extension SendBirdDesk.SBDSKTicketPriority : Swift.Equatable {}
 extension SendBirdDesk.SBDSKTicketPriority : Swift.Hashable {}
