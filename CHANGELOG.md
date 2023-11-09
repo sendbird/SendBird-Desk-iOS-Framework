@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.1.4 (Nov 9, 2023)
+* Added `firstResponseTime`, `issuedAt` properties in `SBDSKTicket`
+
 ### v1.1.3 (Apr 26, 2023) with Chat SDK **v4.6.7**
 * Update iOS deployment target to 11.0 for Xcode 14.1+
 
