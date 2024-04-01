@@ -1,5 +1,10 @@
 # Change Log
 
+### v1.1.5 (Apr 1, 2024)  
+* Added `PrivacyInfo.xcprivacy` for [Apple Privacy Manifest](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files)
+* Updated iOS deployment target to 12.0
+* Updated Xcode version to 15.0 for building SendbirdDeskSDK framework
+
 ### v1.1.4 (Nov 9, 2023)
 * Added `firstResponseTime`, `issuedAt` properties in `SBDSKTicket`
 
