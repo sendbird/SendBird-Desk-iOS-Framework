@@ -1,6 +1,6 @@
 ---
 triple:          'x86_64-apple-darwin'
-binary-path:     '/Users/tez.park/Library/Developer/Xcode/DerivedData/SendBirdDesk-elxcfmklyfcdiccjyayujjgowuad/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/InstallationBuildProductsLocation/Library/Frameworks/SendBirdDesk.framework/SendBirdDesk'
+binary-path:     '/Users/kai.lee/Library/Developer/Xcode/DerivedData/SendBirdDesk-ctlntzmhhcsmatdjbrbpomdsyosz/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/InstallationBuildProductsLocation/Library/Frameworks/SendBirdDesk.framework/SendBirdDesk'
 relocations:
   - { offsetInCU: 0x33, offset: 0x762, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionString, symObjAddr: 0x0, symBinAddr: 0x2E2E0, symSize: 0x0 }
   - { offsetInCU: 0x67, offset: 0x796, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionNumber, symObjAddr: 0x38, symBinAddr: 0x2E318, symSize: 0x0 }
