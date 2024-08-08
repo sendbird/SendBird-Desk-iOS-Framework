@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/tez.park/Library/Developer/Xcode/DerivedData/SendBirdDesk-elxcfmklyfcdiccjyayujjgowuad/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/InstallationBuildProductsLocation/Library/Frameworks/SendBirdDesk.framework/SendBirdDesk'
+binary-path:     '/Users/kai.lee/Library/Developer/Xcode/DerivedData/SendBirdDesk-ctlntzmhhcsmatdjbrbpomdsyosz/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/InstallationBuildProductsLocation/Library/Frameworks/SendBirdDesk.framework/SendBirdDesk'
 relocations:
   - { offsetInCU: 0x33, offset: 0x72C, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionString, symObjAddr: 0x0, symBinAddr: 0x2CB00, symSize: 0x0 }
   - { offsetInCU: 0x67, offset: 0x760, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionNumber, symObjAddr: 0x38, symBinAddr: 0x2CB38, symSize: 0x0 }
@@ -257,8 +257,8 @@ relocations:
   - { offsetInCU: 0x7BD, offset: 0x464B, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10CodingKeysOs28CustomDebugStringConvertibleAAsADP16debugDescriptionSSvgTW', symObjAddr: 0xA74, symBinAddr: 0x79F0, symSize: 0x28 }
   - { offsetInCU: 0x7D8, offset: 0x4666, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10CodingKeysOs23CustomStringConvertibleAAsADP11descriptionSSvgTW', symObjAddr: 0xA9C, symBinAddr: 0x7A18, symSize: 0x28 }
   - { offsetInCU: 0x87D, offset: 0x470B, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10CodingKeysO8rawValueSSvg', symObjAddr: 0x2E0, symBinAddr: 0x725C, symSize: 0x284 }
-  - { offsetInCU: 0x49, offset: 0x47F3, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC6sharedA2ACSgvpZ', symObjAddr: 0x6080, symBinAddr: 0x3E710, symSize: 0x0 }
-  - { offsetInCU: 0xB7, offset: 0x4861, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC6workerAA15OperationWorkerCvpZ', symObjAddr: 0x6088, symBinAddr: 0x3E718, symSize: 0x0 }
+  - { offsetInCU: 0x49, offset: 0x47F3, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC6sharedA2ACSgvpZ', symObjAddr: 0x6088, symBinAddr: 0x3E710, symSize: 0x0 }
+  - { offsetInCU: 0xB7, offset: 0x4861, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC6workerAA15OperationWorkerCvpZ', symObjAddr: 0x6090, symBinAddr: 0x3E718, symSize: 0x0 }
   - { offsetInCU: 0x147, offset: 0x48F1, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC010initializeC0SbyFZTo', symObjAddr: 0x48, symBinAddr: 0x7C28, symSize: 0x18 }
   - { offsetInCU: 0x177, offset: 0x4921, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC13getSDKVersionSSyFZTo', symObjAddr: 0x60, symBinAddr: 0x7C40, symSize: 0x24 }
   - { offsetInCU: 0x1AC, offset: 0x4956, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC33setCompletionHandlerDelegateQueueyySo17OS_dispatch_queueCFZTo', symObjAddr: 0xE4, symBinAddr: 0x7CC4, symSize: 0x5C }

@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.1.6 (Aug 8, 2024) with Chat SDK **v4.20.0**
+* ChatSDK dependency version has been updated to v4.20.0
+
 ### v1.1.5 (Apr 1, 2024)  
 * Added `PrivacyInfo.xcprivacy` for [Apple Privacy Manifest](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files)
 * Updated iOS deployment target to 12.0
