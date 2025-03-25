@@ -1,5 +1,11 @@
 # Change Log
 
+### v1.1.7 (Mar 25, 2025) with Chat SDK **v4.25.0**
+
+#### Minimum iOS Version Requirement Updated
+* The minimum supported iOS version has been raised from iOS 12 to **iOS 13**.
+* No changes to functionality—just ensuring compatibility with modern iOS environments.
+
 ### v1.1.6 (Aug 8, 2024) with Chat SDK **v4.20.0**
 * ChatSDK dependency version has been updated to v4.20.0
 
