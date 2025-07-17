@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(name: "SendbirdChatSDK",
                  url: "https://github.com/sendbird/sendbird-chat-sdk-ios",
-                 from: "4.25.0"),
+                 from: "4.28.0"),
     ],
     targets: [
         .binaryTarget(name: "SendBirdDesk", path: "SendBirdDesk.xcframework"),
