@@ -1,5 +1,17 @@
 # Change Log
 
+### v1.1.8 (Jul 17, 2025) with Chat SDK **v4.28.0**
+* Authenticate user with optional language parameter
+  * `authenticate(withUserId:accessToken:language:completionHandler:)`
+* Update customer's language setting after authentication
+  * `setCustomerLanguage(language:completionHandler:)`
+* Language format: IETF BCP 47 standard ("en", "ko", "ja")
+
+#### Minimum iOS Version Requirement Updated
+* The minimum supported iOS version has been raised from iOS 12 to **iOS 13**.
+* No changes to functionality—just ensuring compatibility with modern iOS environments.
+
+
 ### v1.1.7 (Mar 25, 2025) with Chat SDK **v4.25.0**
 
 #### Minimum iOS Version Requirement Updated

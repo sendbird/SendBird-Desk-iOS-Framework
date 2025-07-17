@@ -62,6 +62,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "SBDSKRelatedChannel",
         "printedName": "SBDSKRelatedChannel",
@@ -419,6 +429,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdChatSDK",
+        "printedName": "SendbirdChatSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk"
       },
       {
         "kind": "TypeDecl",
@@ -1557,6 +1574,101 @@
           },
           {
             "kind": "Function",
+            "name": "authenticate",
+            "printedName": "authenticate(withUserId:accessToken:language:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((SendbirdChatSDK.SBError?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SendbirdChatSDK.SBError?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SendbirdChatSDK.SBError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SBError",
+                            "printedName": "SendbirdChatSDK.SBError",
+                            "usr": "c:@M@SendbirdChatSDK@objc(cs)SBError"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKMain(cm)authenticateWithUserId:accessToken:language:completionHandler:",
+            "mangledName": "$s12SendBirdDesk9SBDSKMainC12authenticate10withUserId11accessToken8language17completionHandlerySS_SSSgAIy15SendbirdChatSDK7SBErrorCSgcSgtFZ",
+            "moduleName": "SendBirdDesk",
+            "static": true,
+            "objc_name": "authenticateWithUserId:accessToken:language:completionHandler:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "isDeskChannel",
             "printedName": "isDeskChannel(_:)",
             "children": [
@@ -1660,6 +1772,69 @@
               "Final",
               "AccessControl",
               "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCustomerLanguage",
+            "printedName": "setCustomerLanguage(language:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((SendbirdChatSDK.SBError?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SendbirdChatSDK.SBError?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SendbirdChatSDK.SBError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SBError",
+                            "printedName": "SendbirdChatSDK.SBError",
+                            "usr": "c:@M@SendbirdChatSDK@objc(cs)SBError"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SendBirdDesk9SBDSKMainC19setCustomerLanguage8language17completionHandlerySS_y15SendbirdChatSDK7SBErrorCSgcSgtFZ",
+            "mangledName": "$s12SendBirdDesk9SBDSKMainC19setCustomerLanguage8language17completionHandlerySS_y15SendbirdChatSDK7SBErrorCSgcSgtFZ",
+            "moduleName": "SendBirdDesk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -7864,6 +8039,13 @@
       "value": "\"\/customers\/auth\/\""
     },
     {
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/SetCustomerLanguageRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 230,
+      "length": 21,
+      "value": "\"\/customers\/language\""
+    },
+    {
       "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetOpenTicketCountRequest.swift",
       "kind": "StringLiteral",
       "offset": 232,
@@ -7908,21 +8090,21 @@
     {
       "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
       "kind": "StringLiteral",
-      "offset": 581,
+      "offset": 604,
       "length": 13,
       "value": "\"faq_file_id\""
     },
     {
       "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
       "kind": "StringLiteral",
-      "offset": 639,
+      "offset": 662,
       "length": 9,
       "value": "\"results\""
     },
     {
       "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
       "kind": "StringLiteral",
-      "offset": 2754,
+      "offset": 2777,
       "length": 11,
       "value": "\"image_url\""
     },
@@ -8181,21 +8363,21 @@
     {
       "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
       "kind": "StringLiteral",
-      "offset": 912,
+      "offset": 916,
       "length": 12,
       "value": "\"sendbirdId\""
     },
     {
       "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
       "kind": "StringLiteral",
-      "offset": 945,
+      "offset": 949,
       "length": 13,
       "value": "\"displayName\""
     },
     {
       "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
       "kind": "StringLiteral",
-      "offset": 985,
+      "offset": 989,
       "length": 19,
       "value": "\"photoThumbnailUrl\""
     },
