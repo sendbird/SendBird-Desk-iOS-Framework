@@ -1,9 +1,9 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/tez.park/Library/Developer/Xcode/DerivedData/SendBirdDesk-elxcfmklyfcdiccjyayujjgowuad/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/InstallationBuildProductsLocation/Library/Frameworks/SendBirdDesk.framework/SendBirdDesk'
+binary-path:     '/Users/tez.park/Library/Developer/Xcode/DerivedData/SendBirdDesk-ghqksrrixtvphcbidhpjqbjurojn/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/InstallationBuildProductsLocation/Library/Frameworks/SendBirdDesk.framework/SendBirdDesk'
 relocations:
-  - { offset: 0x778, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionString, symObjAddr: 0x0, symBinAddr: 0x337B0, symSize: 0x0 }
-  - { offset: 0x7AC, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionNumber, symObjAddr: 0x38, symBinAddr: 0x337E8, symSize: 0x0 }
+  - { offset: 0x778, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionString, symObjAddr: 0x0, symBinAddr: 0x34750, symSize: 0x0 }
+  - { offset: 0x7AC, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionNumber, symObjAddr: 0x38, symBinAddr: 0x34788, symSize: 0x0 }
   - { offset: 0x7E8, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk19AuthenticateRequestVwCP', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x2C }
   - { offset: 0x7FE, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk19AuthenticateRequestVwCP', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x2C }
   - { offset: 0x811, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk19AuthenticateRequestVwxx', symObjAddr: 0x2C, symBinAddr: 0x402C, symSize: 0x30 }
@@ -259,7 +259,7 @@ relocations:
   - { offset: 0x4B67, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10CodingKeysOs0D3KeyAAsADP8intValuexSgSi_tcfCTW', symObjAddr: 0xA74, symBinAddr: 0x9730, symSize: 0xC }
   - { offset: 0x4B80, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10HTTPMethodO8rawValueACSgSS_tcfCTf4nd_n', symObjAddr: 0xB9C, symBinAddr: 0x9858, symSize: 0x5C }
   - { offset: 0x4BB4, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10CodingKeysO8rawValueACSgSS_tcfCTf4nd_n', symObjAddr: 0xBF8, symBinAddr: 0x98B4, symSize: 0x64 }
-  - { offset: 0x4CAB, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC6sharedA2ACSgvpZ', symObjAddr: 0x433E0, symBinAddr: 0x46FD0, symSize: 0x0 }
+  - { offset: 0x4CAB, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC6sharedA2ACSgvpZ', symObjAddr: 0x43528, symBinAddr: 0x470E8, symSize: 0x0 }
   - { offset: 0x4DA2, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk7RequestPAAE03urlD00E010Foundation10URLRequestVSgAF3URLV_tFAA012AuthenticateD0V_Tg5', symObjAddr: 0x0, symBinAddr: 0x9918, symSize: 0x34C }
   - { offset: 0x4E90, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk7RequestPAAE03urlD00E010Foundation10URLRequestVSgAF3URLV_tFAA023SetCustomerCustomFieldsD0V_Tg5', symObjAddr: 0x34C, symBinAddr: 0x9C64, symSize: 0x3A8 }
   - { offset: 0x4F6A, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk7RequestPAAE03urlD00E010Foundation10URLRequestVSgAF3URLV_tFAA019SetCustomerLanguageD0V_Tg5', symObjAddr: 0x6F4, symBinAddr: 0xA00C, symSize: 0x364 }
@@ -429,8 +429,8 @@ relocations:
   - { offset: 0xD814, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk28SetTicketCustomFieldsRequestV6encode2toys7Encoder_p_tKF', symObjAddr: 0x0, symBinAddr: 0x1E278, symSize: 0x39C }
   - { offset: 0xD8A8, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk28SetTicketCustomFieldsRequestVSEAASE6encode2toys7Encoder_p_tKFTW', symObjAddr: 0x39C, symBinAddr: 0x1E614, symSize: 0x18 }
   - { offset: 0xD8CD, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk28SetTicketCustomFieldsRequestV7urlPathSSvgTf4x_n', symObjAddr: 0x3B4, symBinAddr: 0x1E62C, symSize: 0xB8 }
-  - { offset: 0xD9F6, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC9apiClientAA08SBDSKApiF0CSgvpZ', symObjAddr: 0x47188, symBinAddr: 0x46FD8, symSize: 0x0 }
-  - { offset: 0xDA0F, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC13cachedTicketsSDySSACGvpZ', symObjAddr: 0x47190, symBinAddr: 0x46FE0, symSize: 0x0 }
+  - { offset: 0xD9F6, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC9apiClientAA08SBDSKApiF0CSgvpZ', symObjAddr: 0x472A0, symBinAddr: 0x470F0, symSize: 0x0 }
+  - { offset: 0xDA0F, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC13cachedTicketsSDySSACGvpZ', symObjAddr: 0x472A8, symBinAddr: 0x470F8, symSize: 0x0 }
   - { offset: 0xE111, size: 0x8, addend: 0x0, symName: '_$s15SendbirdChatSDK7SBErrorCSgIeyBy_ADIegg_TR', symObjAddr: 0x0, symBinAddr: 0x1E87C, symSize: 0x14 }
   - { offset: 0xE125, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC13cachedTickets_WZ', symObjAddr: 0x9C, symBinAddr: 0x1E918, symSize: 0x24 }
   - { offset: 0xE15A, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC8issuedAtSSvpACTk', symObjAddr: 0xC80, symBinAddr: 0x1F444, symSize: 0x68 }
