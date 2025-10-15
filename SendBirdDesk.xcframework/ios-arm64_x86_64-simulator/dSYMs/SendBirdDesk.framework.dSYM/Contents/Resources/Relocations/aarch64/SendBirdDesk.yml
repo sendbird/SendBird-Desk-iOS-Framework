@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/tez.park/Library/Developer/Xcode/DerivedData/SendBirdDesk-elxcfmklyfcdiccjyayujjgowuad/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/InstallationBuildProductsLocation/Library/Frameworks/SendBirdDesk.framework/SendBirdDesk'
+binary-path:     '/Users/tez.park/Library/Developer/Xcode/DerivedData/SendBirdDesk-ghqksrrixtvphcbidhpjqbjurojn/Build/Intermediates.noindex/ArchiveIntermediates/SendBirdDesk/InstallationBuildProductsLocation/Library/Frameworks/SendBirdDesk.framework/SendBirdDesk'
 relocations:
   - { offset: 0x778, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionString, symObjAddr: 0x0, symBinAddr: 0x30300, symSize: 0x0 }
   - { offset: 0x7AC, size: 0x8, addend: 0x0, symName: _SendBirdDeskVersionNumber, symObjAddr: 0x38, symBinAddr: 0x30338, symSize: 0x0 }
@@ -258,7 +258,7 @@ relocations:
   - { offset: 0x4B54, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10CodingKeysOs0D3KeyAAsADP8intValuexSgSi_tcfCTW', symObjAddr: 0xA74, symBinAddr: 0x6CD4, symSize: 0xC }
   - { offset: 0x4B6D, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10HTTPMethodO8rawValueACSgSS_tcfCTf4nd_n', symObjAddr: 0xB9C, symBinAddr: 0x6DFC, symSize: 0x5C }
   - { offset: 0x4BA1, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk10CodingKeysO8rawValueACSgSS_tcfCTf4nd_n', symObjAddr: 0xBF8, symBinAddr: 0x6E58, symSize: 0x64 }
-  - { offset: 0x4C98, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC6sharedA2ACSgvpZ', symObjAddr: 0x42860, symBinAddr: 0x42730, symSize: 0x0 }
+  - { offset: 0x4C98, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk9SBDSKMainC6sharedA2ACSgvpZ', symObjAddr: 0x429B8, symBinAddr: 0x42730, symSize: 0x0 }
   - { offset: 0x4D8F, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk7RequestPAAE03urlD00E010Foundation10URLRequestVSgAF3URLV_tFAA012AuthenticateD0V_Tg5', symObjAddr: 0x0, symBinAddr: 0x6EBC, symSize: 0x2FC }
   - { offset: 0x4E7D, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk7RequestPAAE03urlD00E010Foundation10URLRequestVSgAF3URLV_tFAA023SetCustomerCustomFieldsD0V_Tg5', symObjAddr: 0x2FC, symBinAddr: 0x71B8, symSize: 0x364 }
   - { offset: 0x4F57, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk7RequestPAAE03urlD00E010Foundation10URLRequestVSgAF3URLV_tFAA019SetCustomerLanguageD0V_Tg5', symObjAddr: 0x660, symBinAddr: 0x751C, symSize: 0x314 }
@@ -426,8 +426,8 @@ relocations:
   - { offset: 0xD7DB, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk28SetTicketCustomFieldsRequestV6encode2toys7Encoder_p_tKF', symObjAddr: 0x0, symBinAddr: 0x1AB38, symSize: 0x37C }
   - { offset: 0xD86F, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk28SetTicketCustomFieldsRequestVSEAASE6encode2toys7Encoder_p_tKFTW', symObjAddr: 0x37C, symBinAddr: 0x1AEB4, symSize: 0x18 }
   - { offset: 0xD894, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk28SetTicketCustomFieldsRequestV7urlPathSSvgTf4x_n', symObjAddr: 0x394, symBinAddr: 0x1AECC, symSize: 0xB8 }
-  - { offset: 0xD9BD, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC9apiClientAA08SBDSKApiF0CSgvpZ', symObjAddr: 0x471B0, symBinAddr: 0x42738, symSize: 0x0 }
-  - { offset: 0xD9D6, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC13cachedTicketsSDySSACGvpZ', symObjAddr: 0x471B8, symBinAddr: 0x42740, symSize: 0x0 }
+  - { offset: 0xD9BD, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC9apiClientAA08SBDSKApiF0CSgvpZ', symObjAddr: 0x472E0, symBinAddr: 0x42738, symSize: 0x0 }
+  - { offset: 0xD9D6, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC13cachedTicketsSDySSACGvpZ', symObjAddr: 0x472E8, symBinAddr: 0x42740, symSize: 0x0 }
   - { offset: 0xE0D8, size: 0x8, addend: 0x0, symName: '_$s15SendbirdChatSDK7SBErrorCSgIeyBy_ADIegg_TR', symObjAddr: 0x0, symBinAddr: 0x1B11C, symSize: 0x14 }
   - { offset: 0xE0EC, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC13cachedTickets_WZ', symObjAddr: 0x9C, symBinAddr: 0x1B1B8, symSize: 0x24 }
   - { offset: 0xE121, size: 0x8, addend: 0x0, symName: '_$s12SendBirdDesk11SBDSKTicketC8issuedAtSSvpACTk', symObjAddr: 0xC80, symBinAddr: 0x1BCE4, symSize: 0x68 }

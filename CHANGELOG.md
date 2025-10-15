@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.1.9 (Oct 17, 2025) with Chat SDK **v4.30.0**
+* Fixed build environment issues related to ChatSDK and other frameworks.
+
 ### v1.1.8 (Jul 17, 2025) with Chat SDK **v4.28.0**
 * Authenticate user with optional language parameter
   * `authenticate(withUserId:accessToken:language:completionHandler:)`
