@@ -1,13 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "SendBirdDesk"
-  s.version      = "1.1.10"
+  s.version      = "1.1.11"
   s.summary      = "SendBird Desk iOS Framework"
   s.homepage     = "https://sendbird.com"
   s.license      = "Commercial"
   s.author       = { 
     "Jed Gyeong" => "jed.gyeong@sendbird.com", 
-    "Tez Park" => "tez.park@sendbird.com", 
-    "Minhyuk Kim" => "minhyuk.kim@sendbird.com", 
+    "Tez Park" => "tez.park@sendbird.com",  
     'Sendbird' => 'sha.sdk_deployment@sendbird.com',
     'Celine Moon' => 'celine.moon@sendbird.com',
     "Damon Park" => "damon.park@sendbird.com",
