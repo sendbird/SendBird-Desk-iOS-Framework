@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7wOqcaC3frL9rOx67dMuedaJSss=
+		seFILJCHjtmZn/xNg/biztXCaCw=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		K50pxygPYzNYxGkU9l8rn7JJH/Y=
+		I11FrPi43idSOQbzeLctyu8Bl7o=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3x01b6lNFiM/QmiddLbh2BN0wW4=
+		K2Z1kujwTxTrF8G7gl8DQ4SxV04=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -113,7 +113,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e9uZdyi3e5P0hioGrD4lnyNuAXJrpYaxdWr5V+Gt7Ho=
+			Vb6M4wnEyQRZITnA++4U2YwxqywDLhtRLJeg7BAkAvg=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OjSnfCRO5dMdLup4eT3wVGfgb/O7VsdUFgEhr1WFxTo=
+			yS2+PEMkmKt8y94oQTrCs8F8BMyO7qLnqHk1I7CeBaQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
