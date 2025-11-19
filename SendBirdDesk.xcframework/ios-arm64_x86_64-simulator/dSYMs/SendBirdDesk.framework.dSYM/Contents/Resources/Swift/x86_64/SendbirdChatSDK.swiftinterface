@@ -5,7 +5,7 @@
 import CoreGraphics
 import Foundation
 import SQLite3
-@_exported import SendbirdAuth
+@_exported import SendbirdAuthSDK
 import Swift
 import SwiftUI
 import UIKit
@@ -147,6 +147,52 @@ extension SendbirdChatSDK.AIAgent {
   }
 }
 extension SendbirdChatSDK.AIAgent {
+  @objc(AIAgentBaseMessagesFeedbackParams) public class BaseMessagesFeedbackParams : ObjectiveC.NSObject, Swift.Codable, Foundation.NSCopying {
+    @objc public var channelURL: Swift.String
+    @objc public var messageId: Swift.Int64
+    @objc public init(channelURL: Swift.String, messageId: Swift.Int64)
+    required public init(from decoder: any Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+    @objc deinit
+  }
+  @objc(AIAgentCreateMessagesFeedbackParams) public class CreateMessagesFeedbackParams : SendbirdChatSDK.AIAgent.BaseMessagesFeedbackParams {
+    @objc public var rating: SendbirdChatSDK.AIAgent.MessagesFeedbackRating
+    @objc public var comment: Swift.String?
+    @objc public init(channelURL: Swift.String, messageId: Swift.Int64, rating: SendbirdChatSDK.AIAgent.MessagesFeedbackRating, comment: Swift.String?)
+    required public init(from decoder: any Swift.Decoder) throws
+    override public func encode(to encoder: any Swift.Encoder) throws
+    @objc override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(AIAgentUpdateMessagesFeedbackParams) public class UpdateMessagesFeedbackParams : SendbirdChatSDK.AIAgent.CreateMessagesFeedbackParams {
+    @objc override public init(channelURL: Swift.String, messageId: Swift.Int64, rating: SendbirdChatSDK.AIAgent.MessagesFeedbackRating, comment: Swift.String?)
+    required public init(from decoder: any Swift.Decoder) throws
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(AIAgentDeleteMessagesFeedbackParams) public class DeleteMessagesFeedbackParams : SendbirdChatSDK.AIAgent.BaseMessagesFeedbackParams {
+    @objc override public init(channelURL: Swift.String, messageId: Swift.Int64)
+    required public init(from decoder: any Swift.Decoder) throws
+    @objc deinit
+  }
+}
+extension SendbirdChatSDK.AIAgent {
+  @objc(AIAgentMessagesFeedbackRating) public enum MessagesFeedbackRating : Swift.Int, Swift.RawRepresentable, Swift.CustomStringConvertible, Swift.Codable {
+    public typealias RawValue = Swift.String
+    case good
+    case bad
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+}
+extension SendbirdChatSDK.AIAgent {
   @objc(SBDAIAgentMessengerSettingsParams) final public class MessengerSettingsParams : ObjectiveC.NSObject {
     @objc final public let aiAgentId: Swift.String
     @objc final public let userId: Swift.String?
@@ -184,6 +230,9 @@ extension SendbirdChatSDK.AIAgent {
   @objc public static func getMyGroupChannelChangeLogs(timestamp: Swift.Int64, params: SendbirdChatSDK.AIAgent.GroupChannelChangeLogsParams, completionHandler: @escaping SendbirdChatSDK.ChannelChangeLogsHandler)
   @objc public static func getMyGroupChannelChangeLogs(token: Swift.String, params: SendbirdChatSDK.AIAgent.GroupChannelChangeLogsParams, completionHandler: @escaping SendbirdChatSDK.ChannelChangeLogsHandler)
   @objc public static func getUnreadMessageCount(params: SendbirdChatSDK.AIAgent.GroupChannelUnreadMessageCountParams, completionHandler: @escaping SendbirdChatSDK.AIAgentUnreadMessageCountHandler)
+  @objc public static func createMessagesFeedback(params: SendbirdChatSDK.AIAgent.CreateMessagesFeedbackParams, completionHandler: @escaping SendbirdChatSDK.AIAgent.RawDataResultHandler)
+  @objc public static func updateMessagesFeedback(params: SendbirdChatSDK.AIAgent.UpdateMessagesFeedbackParams, completionHandler: @escaping SendbirdChatSDK.AIAgent.RawDataResultHandler)
+  @objc public static func deleteMessagesFeedback(params: SendbirdChatSDK.AIAgent.DeleteMessagesFeedbackParams, completionHandler: @escaping SendbirdChatSDK.AIAgent.RawDataResultHandler)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1074,6 +1123,7 @@ extension SendbirdChatSDK.ChannelType : Swift.RawRepresentable, Swift.CustomStri
   case reconnectLoginTimeout = 800191
   case webSocketConnectionClosed = 800200
   case webSocketConnectionFailed = 800210
+  case serverOverloaded = 800221
   case timerWasExpired = 800301
   case timerWasAlreadyDone = 800302
   case pendingError = 800400
@@ -1210,6 +1260,7 @@ public typealias SBObjectComparator = (_ obj1: Any?, _ obj2: Any?) -> Foundation
   @objc optional func didFailReconnection()
   @objc optional func didConnect(userId: Swift.String)
   @objc optional func didDisconnect(userId: Swift.String)
+  @objc optional func didDelayConnection(retryAfter: Swift.UInt)
 }
 @_hasMissingDesignatedInitializers @objc(SBDConversation) public class Conversation : ObjectiveC.NSObject, Swift.Codable, Swift.Identifiable {
   @objc public var id: Swift.Int64 {
@@ -5788,6 +5839,8 @@ extension SendbirdChatSDK.MemberListOrder : Swift.RawRepresentable, Swift.Codabl
 }
 extension SendbirdChatSDK.AIAgent.GroupChannelListQuery : Foundation.NSCopying {}
 extension SendbirdChatSDK.AIAgent.MessageTemplateResult : Swift.Decodable {}
+extension SendbirdChatSDK.AIAgent.MessagesFeedbackRating : Swift.Equatable {}
+extension SendbirdChatSDK.AIAgent.MessagesFeedbackRating : Swift.Hashable {}
 extension SendbirdChatSDK.AIAgent.UnreadMessageCount : Swift.Decodable {}
 extension SendbirdChatSDK.ApplicationUserListQuery : Foundation.NSCopying {}
 extension SendbirdChatSDK.BannedUserListQuery : Foundation.NSCopying {}
