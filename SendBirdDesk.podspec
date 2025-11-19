@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SendBirdDesk"
-  s.version      = "1.1.11"
+  s.version      = "1.1.12"
   s.summary      = "SendBird Desk iOS Framework"
   s.homepage     = "https://sendbird.com"
   s.license      = "Commercial"
@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'SendBirdDesk.xcframework'
   s.ios.frameworks = ["UIKit", "AVFoundation", "AVKit", "UserNotifications"]
 
-  s.dependency 'SendbirdChatSDK', ">= 4.32.0"
+  s.dependency 'SendbirdChatSDK', ">= 4.34.1"
 end

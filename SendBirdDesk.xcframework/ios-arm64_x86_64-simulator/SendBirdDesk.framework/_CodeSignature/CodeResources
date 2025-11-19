@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		seFILJCHjtmZn/xNg/biztXCaCw=
+		cETwkcJgZdW6cJPlj43f+5kokXM=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ymKycNqYPTAxyrffotu4tRYKUq8=
+		E2jfYtXx/+pLBs9/SKR1hVb4rh0=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		I11FrPi43idSOQbzeLctyu8Bl7o=
+		5Ba6YrKSrOvQQaWNUOkfOI8aGQs=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ymKycNqYPTAxyrffotu4tRYKUq8=
+		E2jfYtXx/+pLBs9/SKR1hVb4rh0=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		K2Z1kujwTxTrF8G7gl8DQ4SxV04=
+		Hz3BznQWE53/y85Y7y/0PK7XJbQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OBUUsvQ1kGU/xKoRs0dAWybJJGoiWj+VDzlaVGfySp8=
+			J9TklCTN93nxd+AbdhXSPZjUh0rBgJnVZPkbH99o59c=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -113,14 +113,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vb6M4wnEyQRZITnA++4U2YwxqywDLhtRLJeg7BAkAvg=
+			aX9BYFFTGxCNecu01le9obBaT3s4XqDmIaD4pYCwKSU=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OBUUsvQ1kGU/xKoRs0dAWybJJGoiWj+VDzlaVGfySp8=
+			J9TklCTN93nxd+AbdhXSPZjUh0rBgJnVZPkbH99o59c=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yS2+PEMkmKt8y94oQTrCs8F8BMyO7qLnqHk1I7CeBaQ=
+			Q4ifN9oNZkZKHXrQpVpbtQUQyPOBFhFg05TK3Jc/E+U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

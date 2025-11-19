@@ -1,5 +1,9 @@
 # Change Log
 
+### v1.1.12 (Nov 19, 2025) with Chat SDK **v4.34.1**
+* Updated dependency SDK versions to the latest stable releases
+  * SendbirdChatSDK: v4.34.1
+
 ### v1.1.11 (Nov 5, 2025) with Chat SDK **v4.32.0**
 * Fixed issue where referenced xcframework files were not being updated properly
   

@@ -8032,392 +8032,392 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/AuthenticateRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/AuthenticateRequest.swift",
       "kind": "StringLiteral",
       "offset": 221,
       "length": 18,
       "value": "\"\/customers\/auth\/\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/SetCustomerLanguageRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/SetCustomerLanguageRequest.swift",
       "kind": "StringLiteral",
       "offset": 230,
       "length": 21,
       "value": "\"\/customers\/language\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetOpenTicketCountRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetOpenTicketCountRequest.swift",
       "kind": "StringLiteral",
       "offset": 232,
       "length": 17,
       "value": "\"\/tickets\/count\/\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/SBDSKRelatedChannel.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKRelatedChannel.swift",
       "kind": "StringLiteral",
       "offset": 682,
       "length": 13,
       "value": "\"channel_url\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 286,
       "length": 5,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 301,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 318,
       "length": 4,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 332,
       "length": 5,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
       "kind": "StringLiteral",
       "offset": 604,
       "length": 13,
       "value": "\"faq_file_id\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
       "kind": "StringLiteral",
       "offset": 662,
       "length": 9,
       "value": "\"results\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
       "kind": "StringLiteral",
       "offset": 2777,
       "length": 11,
       "value": "\"image_url\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketByChannelURLRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketByChannelURLRequest.swift",
       "kind": "StringLiteral",
       "offset": 238,
       "length": 11,
       "value": "\"\/tickets\/\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketByChannelURLRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketByChannelURLRequest.swift",
       "kind": "IntegerLiteral",
       "offset": 271,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 169,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 191,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 213,
       "length": 5,
       "value": "\"PUT\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 237,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 263,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 554,
       "length": 20,
       "value": "\"relatedChannelUrls\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 705,
       "length": 13,
       "value": "\"customField\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 746,
       "length": 12,
       "value": "\"channelUrl\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Main\/SBDSKMain.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Main\/SBDSKMain.swift",
       "kind": "StringLiteral",
       "offset": 401,
       "length": 35,
       "value": "\"SENDBIRD_DESK_CHANNEL_CUSTOM_TYPE\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
       "kind": "StringLiteral",
       "offset": 222,
       "length": 11,
       "value": "\"\/tickets\/\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
       "kind": "IntegerLiteral",
       "offset": 255,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
       "kind": "StringLiteral",
       "offset": 274,
       "length": 18,
       "value": "\"-last_message_at\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
       "kind": "IntegerLiteral",
       "offset": 187,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
       "kind": "IntegerLiteral",
       "offset": 207,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
       "kind": "IntegerLiteral",
       "offset": 225,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
       "kind": "IntegerLiteral",
       "offset": 245,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 351,
       "length": 10,
       "value": "\"ASSIGNED\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 400,
       "length": 12,
       "value": "\"UNASSIGNED\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 450,
       "length": 11,
       "value": "\"PROACTIVE\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 496,
       "length": 8,
       "value": "\"CLOSED\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 537,
       "length": 11,
       "value": "\"CONFIRMED\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 579,
       "length": 10,
       "value": "\"DECLINED\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 673,
       "length": 11,
       "value": "\"PROCATIVE\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 725,
       "length": 9,
       "value": "\"PENDING\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 782,
       "length": 18,
       "value": "\"WORK_IN_PROGRESS\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 840,
       "length": 8,
       "value": "\"ACTIVE\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 886,
       "length": 6,
       "value": "\"IDLE\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 932,
       "length": 8,
       "value": "\"CLOSED\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "Dictionary",
       "offset": 1058,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 2875,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 2901,
       "length": 13,
       "value": "\"channelName\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 2937,
       "length": 8,
       "value": "\"status\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 2969,
       "length": 9,
       "value": "\"status2\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
       "kind": "StringLiteral",
       "offset": 3005,
       "length": 12,
       "value": "\"channelUrl\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
       "kind": "StringLiteral",
       "offset": 916,
       "length": 12,
       "value": "\"sendbirdId\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
       "kind": "StringLiteral",
       "offset": 949,
       "length": 13,
       "value": "\"displayName\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
       "kind": "StringLiteral",
       "offset": 989,
       "length": 19,
       "value": "\"photoThumbnailUrl\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/CreateTicketRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/CreateTicketRequest.swift",
       "kind": "StringLiteral",
       "offset": 221,
       "length": 11,
       "value": "\"\/tickets\/\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/CreateTicketRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/CreateTicketRequest.swift",
       "kind": "StringLiteral",
       "offset": 260,
       "length": 14,
       "value": "\"SENDBIRD_IOS\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Main\/SendBirdDesk.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Main\/SendBirdDesk.swift",
       "kind": "StringLiteral",
       "offset": 216,
       "length": 40,
       "value": "\"SENDBIRD_DESK_TICKET_HANDLER_ID_GLOBAL\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/Requests\/SetCustomerCustomFieldsRequest.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/Requests\/SetCustomerCustomFieldsRequest.swift",
       "kind": "StringLiteral",
       "offset": 244,
       "length": 26,
       "value": "\"\/customers\/custom_fields\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Client\/SBDSKAPIClient.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Client\/SBDSKAPIClient.swift",
       "kind": "StringLiteral",
       "offset": 219,
       "length": 12,
       "value": "\"desk401100\""
     },
     {
-      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/1_AIAgent\/desk-ios\/SendBirdDesk\/Model\/SBDSKAdminMessage.swift",
+      "filePath": "\/Users\/tez.park\/Documents\/1_Dev\/3_Desk\/desk-ios\/SendBirdDesk\/Model\/SBDSKAdminMessage.swift",
       "kind": "StringLiteral",
       "offset": 215,
       "length": 41,
