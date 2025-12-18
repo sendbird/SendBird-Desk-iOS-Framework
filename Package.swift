@@ -14,13 +14,13 @@ let package = Package(
     dependencies: [
         .package(name: "SendbirdChatSDK",
                  url: "https://github.com/sendbird/sendbird-chat-sdk-ios",
-                 from: "4.34.1"),
+                 from: "4.35.0"),
     ],
     targets: [
         .binaryTarget(
 	    name: "SendBirdDesk",
-            url: "https://github.com/sendbird/SendBird-Desk-iOS-Framework/releases/download/v1.1.12/SendBirdDesk.xcframework.zip",
-            checksum: "a33b41ccd8b237412471864fc9417a0cb4f1a18117e7039dc1729f222b80316f" // SendbirdDesk_CHECKSUM
+            url: "https://github.com/sendbird/SendBird-Desk-iOS-Framework/releases/download/v1.1.13/SendBirdDesk.xcframework.zip",
+            checksum: "6fa120d5723e7294e6ef494231ec9fa77f8b6efdc9d02259ec6aa8e5e4855f02" // SendbirdDesk_CHECKSUM
 	),
         .target(name: "SendBirdDeskTarget",
                 dependencies: [
