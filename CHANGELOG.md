@@ -1,5 +1,9 @@
 # Change Log
 
+### v1.1.13 (Dec 18, 2025) with Chat SDK **v4.35.0**
+* Updated dependency SDK versions to the latest stable releases
+  * SendbirdChatSDK: v4.35.0
+
 ### v1.1.12 (Nov 19, 2025) with Chat SDK **v4.34.1**
 * Updated dependency SDK versions to the latest stable releases
   * SendbirdChatSDK: v4.34.1
