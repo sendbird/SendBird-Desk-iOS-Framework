@@ -20,7 +20,7 @@ let package = Package(
         .binaryTarget(
 	    name: "SendBirdDesk",
             url: "https://github.com/sendbird/SendBird-Desk-iOS-Framework/releases/download/v1.1.13/SendBirdDesk.xcframework.zip",
-            checksum: "6fa120d5723e7294e6ef494231ec9fa77f8b6efdc9d02259ec6aa8e5e4855f02" // SendbirdDesk_CHECKSUM
+            checksum: "403cf658bc4e785b818dc8e10bb70572363920955ec7ee54bfd08d9e1010094e" // SendbirdDesk_CHECKSUM
 	),
         .target(name: "SendBirdDeskTarget",
                 dependencies: [

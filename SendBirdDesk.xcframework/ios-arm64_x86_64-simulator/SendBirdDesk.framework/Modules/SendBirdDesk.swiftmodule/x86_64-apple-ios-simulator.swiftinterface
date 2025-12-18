@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SendBirdDesk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import Foundation
 @_exported import SendBirdDesk
 import SendbirdChatSDK
@@ -21,9 +21,7 @@ import _SwiftConcurrencyShims
   @objc final public let faqFileId: Swift.Int64
   @objc final public let type: Swift.String
   @objc final public let faqResults: [SendBirdDesk.SBDSKFAQData.SBDSKFAQResult]
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(initWithMessage:) public init?(with message: SendbirdChatSDK.BaseMessage)
-  #endif
   required public init(from decoder: any Swift.Decoder) throws
   @objc public class SBDSKFAQResult : ObjectiveC.NSObject, Swift.Decodable {
     @objc final public let category: Swift.String?
@@ -42,19 +40,11 @@ import _SwiftConcurrencyShims
   @objc public static func initializeDesk() -> Swift.Bool
   @objc public static func getSDKVersion() -> Swift.String
   @objc public static func setCompletionHandlerDelegateQueue(_ queue: Dispatch.DispatchQueue)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(authenticateWithUserId:accessToken:completionHandler:) public static func authenticate(withUserId userId: Swift.String, accessToken: Swift.String? = nil, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(authenticateWithUserId:accessToken:language:completionHandler:) public static func authenticate(withUserId userId: Swift.String, accessToken: Swift.String? = nil, language: Swift.String? = nil, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
-  #endif
   @objc public static func isDeskChannel(_ channel: SendbirdChatSDK.BaseChannel) -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setCustomerCustomFields(_ customFields: [Swift.String : Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func setCustomerLanguage(language: Swift.String, completionHandler: SendBirdDesk.SBDSKErrorHandler?)
-  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -65,9 +55,7 @@ import _SwiftConcurrencyShims
   case urgent = 3
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -126,113 +114,47 @@ public typealias SBDSKTicketListHandler = (_ tickets: [SendBirdDesk.SBDSKTicket]
   @objc deinit
 }
 extension SendBirdDesk.SBDSKTicket {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func refresh(completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(closeWithComment:completionHandler:) dynamic public func close(with comment: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "close(with:completionHandler:)", message: "Deprecated in 1.0.17")
   public func close(withComment comment: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(confirmEndOfChatWithMessage:confirm:completionHandler:) public static func confirmEndOfChat(with message: SendbirdChatSDK.UserMessage, confirm: Swift.Bool, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(createTicketWithTitle:userName:completionHandler:) public static func createTicket(with title: Swift.String?, userName: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "createTicket(with:userName:completionHandler:)", message: "Deprecated in 1.0.17")
   public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(createTicketWithTitle:userName:priority:completionHandler:) public static func createTicket(with title: Swift.String?, userName: Swift.String?, priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "createTicket(with:userName:priority:completionHandler:)", message: "Deprecated in 1.0.17")
   public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(createTicketWithTitle:userName:groupKey:customFields:completionHandler:) public static func createTicket(with title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "createTicket(with:userName:groupKey:customFields:completionHandler:)", message: "Deprecated in 1.0.17")
   public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(createTicketWithTitle:userName:groupKey:customFields:priority:completionHandler:) public static func createTicket(with title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "createTicket(with:userName:groupKey:customFields:priority:completionHandler:)", message: "Deprecated in 1.0.17")
   public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(createTicketWithTitle:userName:relatedChannels:completionHandler:) public static func createTicket(with title: Swift.String?, userName: Swift.String?, relatedChannels: [Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "createTicket(with:userName:relatedChannels:completionHandler:)", message: "Deprecated in 1.0.17")
   public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, relatedChannels: [Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:completionHandler:) public static func createTicket(with title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, relatedChannels: [Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "createTicket(with:userName:groupKey:customFields:priority:relatedChannels:completionHandler:)", message: "Deprecated in 1.0.17")
   public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, relatedChannels: [Swift.String]?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(createTicketWithTitle:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:) public static func createTicket(with title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, relatedChannels: [Swift.String]?, botKey: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "createTicket(with:userName:groupKey:customFields:priority:relatedChannels:botKey:completionHandler:)", message: "Deprecated in 1.0.17")
   public static func createTicket(withTitle title: Swift.String?, userName: Swift.String?, groupKey: Swift.String?, customFields: [Swift.String : Swift.String]?, priority: SendBirdDesk.SBDSKTicketPriority, relatedChannels: [Swift.String]?, botKey: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getOpenCount(completionHandler: ((_ count: Swift.Int, _ error: SendbirdChatSDK.SBError?) -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(getOpenedListWithOffset:completionHandler:) public static func getOpenedList(withOffset offset: Swift.Int, completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(getOpenedListWithOffset:customFieldFilter:completionHandler:) public static func getOpenedList(withOffset offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(getClosedListWithOffset:completionHandler:) public static func getClosedList(withOffset offset: Swift.Int, completionHandler: SendBirdDesk.SBDSKTicketListHandler?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(getClosedListWithOffset:customFieldFilter:completionHandler:) public static func getClosedList(withOffset offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func getAllTicketList(offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func getTicketList(offset: Swift.Int, customFieldFilter: [Swift.String : Swift.String]? = nil, status2: [Swift.String], completionHandler: SendBirdDesk.SBDSKTicketListHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(getByChannelUrl:completionHandler:) public static func getByChannelURL(_ channelUrl: Swift.String, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func reopen(completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(submitFeedbackWithMessage:score:comment:completionHandler:) public static func submitFeedback(with message: SendbirdChatSDK.UserMessage, score: Swift.Int, comment: Swift.String? = nil, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func setCustomFields(_ customFields: [Swift.String : Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func setPriority(_ priority: SendBirdDesk.SBDSKTicketPriority, completionHandler: SendBirdDesk.SBDSKErrorHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func setRelatedChannels(_ relatedChannels: [Swift.String], completionHandler: SendBirdDesk.SBDSKErrorHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(cancelWithGroupKeyForTransfer:completionHandler:) dynamic public func cancel(groupKeyForTransfer: Swift.String?, completionHandler: SendBirdDesk.SBDSKTicketHandler? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func selectQuestion(faqFileId: Swift.Int64, question: Swift.String, completionHandler: SendBirdDesk.SBDSKErrorHandler? = nil)
-  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SBDSKAgent : ObjectiveC.NSObject, Swift.Codable {
   @objc public var sendBirdId: Swift.String? {
