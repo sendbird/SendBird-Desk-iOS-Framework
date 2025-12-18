@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SendBirdDesk-Swift.h</key>
 		<data>
-		YIh1LOSJ6Y3A8TuvFplRNqwH5tY=
+		8+UlfXEDk1XWXocr6Q/bRl/nEx0=
 		</data>
 		<key>Headers/SendBirdDesk.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yF+TIJ63tB+KQphRYdi1llWWeQ8=
+		A4awW5w1k/UIu2VPo28pe6meU1I=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		qPHPwpW0RCajTdE7iNyRz1i1gAA=
+		YA8OaKW7Ln0C2m+gZsn+T/Y/Dqs=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		PHziukjkVLDFT0McHwMrAOW3P5E=
+		RODFmBe+Ih07/DiGjWgSX/24ID4=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qPHPwpW0RCajTdE7iNyRz1i1gAA=
+		YA8OaKW7Ln0C2m+gZsn+T/Y/Dqs=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		gEwZTX7Cj+PI4QPuP+0opEG1d78=
+		vpMVvvs8SnCUrrF+b9pSVZ4vCt8=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		trNrMUZYKdETPlvBQ+sF6iDlur0=
+		tMukbuF0Qcmj7smoQCiYf21A+AI=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Rk/xmQwl1HolTMjz0qqPei5DBAM=
+		l44QbZEgZBr7MMIefaQ1KY3WIjA=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		trNrMUZYKdETPlvBQ+sF6iDlur0=
+		tMukbuF0Qcmj7smoQCiYf21A+AI=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Y5vFMFZr/J1EcspJNwgce1VOSrs=
+		+yzZZQN8gu+3jrKZqFosTf6yMjQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SU03UhuV1d3tToS9mtGH2B6Y4G/3Rl+elPysEsxXBJM=
+			49Lq0ozc7Cvt63pzpaa2MC6eUpRvKo4BV2peJw/m7a4=
 			</data>
 		</dict>
 		<key>Headers/SendBirdDesk.h</key>
@@ -92,28 +92,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DAfKlWiHLSb5Y6ehdVezXz2XXO8s58PWy54bCUbIwPM=
+			jKXSOZ+9jSF+tszH2PHBPhY0yTGO9uFGW0bqrHaXia0=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nQRrXM13P9UExUmoopyqNTskH9mZ9SwmdjmAIeNiLhg=
+			C2YK/huNgmtTW+phF9tplOwdwFGSyqdcdZmXy8aOAvg=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DAfKlWiHLSb5Y6ehdVezXz2XXO8s58PWy54bCUbIwPM=
+			jKXSOZ+9jSF+tszH2PHBPhY0yTGO9uFGW0bqrHaXia0=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kVC4jWWHMHGqUKfmMzQNTLxqZhFi2SP3WSmhs91kvXI=
+			4SsAH0DjYA0nxQRAEbuWAyB/5Nw7waUhQEeWYcsYdMg=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -127,28 +127,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zgTXlagrX3US5PN5v5ARRfAq81izh2Y677M6P5jj4eQ=
+			SEXNyzlXVmn3C9Qyj4OV2ns+3jLB3SKvEKmZJeDZDmw=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UJhBdZpbU9vOaewU+pN4WH4wr7uDtgSBQ+LeApELPy0=
+			r8cqq6tArL8elnvVsXh8WZ0Jtm9eVVcaUM475Vj/Lfk=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zgTXlagrX3US5PN5v5ARRfAq81izh2Y677M6P5jj4eQ=
+			SEXNyzlXVmn3C9Qyj4OV2ns+3jLB3SKvEKmZJeDZDmw=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3dZhBnuDCwhRdMtJrQ7m48MrN0rUF5u00m5u477PuRg=
+			zAhUsTz42Z5jcVFDnxIVdirOMbvZdDOxuC27GRnHGiU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
