@@ -651,13 +651,17 @@ extension SendbirdChatSDK.FileMessage {
   @objc(getMessageWithParams:completionHandler:) dynamic open class func getMessage(params: SendbirdChatSDK.MessageRetrievalParams, completionHandler: SendbirdChatSDK.BaseMessageHandler?)
   @objc(getThreadedMessagesWithTimestamp:params:completionHandler:) dynamic open func getThreadedMessages(timestamp: Swift.Int64, params: SendbirdChatSDK.ThreadedMessageListParams, completionHandler: SendbirdChatSDK.ThreadedMessageListHandler?)
   @objc(getScheduledMessageWithParams:completionHandler:) dynamic open class func getScheduledMessage(params: SendbirdChatSDK.ScheduledMessageRetrievalParams, completionHandler: SendbirdChatSDK.BaseMessageHandler?)
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   @objc(submitFeedbackWithRating:comment:completionHandler:) dynamic open func submitFeedback(rating: SendbirdChatSDK.Feedback.Rating, comment: Swift.String? = nil, completionHandler: SendbirdChatSDK.FeedbackHandler? = nil)
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   @objc(updateFeedbackWithRating:comment:completionHandler:) dynamic open func updateFeedback(rating: SendbirdChatSDK.Feedback.Rating, comment: Swift.String? = nil, completionHandler: SendbirdChatSDK.FeedbackHandler? = nil)
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   @objc(deleteFeedbackWithCompletionHandler:) dynamic open func deleteFeedback(completionHandler: SendbirdChatSDK.SBErrorHandler?)
   @available(*, deprecated, renamed: "submitMessageForm(form:completionHandler:)", message: "This method is deprecated in 4.14.1.")
   @objc(submitFormWithFormKey:answers:completionHandler:) dynamic open func submitForm(formKey: Swift.String, answers: [Swift.String : Swift.String], completionHandler: SendbirdChatSDK.SBErrorHandler?)
   @available(*, deprecated, renamed: "submitMessageForm(form:completionHandler:)", message: "This method is deprecated in 4.21.0.")
   @objc(submitFormWithForm:completionHandler:) dynamic open func submitForm(form: SendbirdChatSDK.Form, completionHandler: SendbirdChatSDK.SBErrorHandler?)
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   @objc(submitMessageFormWithCompletionHandler:) dynamic open func submitMessageForm(completionHandler: SendbirdChatSDK.SBErrorHandler?)
 }
 @_hasMissingDesignatedInitializers @objc(SBDBaseMessage) open class BaseMessage : ObjectiveC.NSObject, Swift.Codable, Foundation.NSCopying, Swift.Identifiable {
@@ -783,9 +787,11 @@ extension SendbirdChatSDK.FileMessage {
   open var $messageParams: SendbirdChatSDK.Atomic<SendbirdChatSDK.BaseMessageCreateParams?> {
     get
   }
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   @objc public var myFeedback: SendbirdChatSDK.Feedback? {
     @objc get
   }
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   @objc public var myFeedbackStatus: SendbirdChatSDK.Feedback.Status {
     @objc get
   }
@@ -796,6 +802,7 @@ extension SendbirdChatSDK.FileMessage {
   public var forms: [SendbirdChatSDK.Form]? {
     get
   }
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   final public let messageForm: SendbirdChatSDK.MessageForm?
   @objc public var inMemoryUserInfo: [Swift.String : Any]?
   @objc open var notificationPriority: SendbirdChatSDK.NotificationPriority {
@@ -1246,6 +1253,7 @@ extension SendbirdChatSDK.ChatError : Swift.Decodable {
   case eventPollVoted
   case eventPollChangeLog
   case eventPinnedMessageUpdated
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   case eventFeedbackMessageUpdated
   case eventNotificationMessageStatusUpdated
   case eventUserDidMarkAsRead
@@ -1625,6 +1633,7 @@ public struct WSError : Swift.Error {
     @objc override dynamic public init()
     @objc deinit
   }
+  @available(*, deprecated, message: "This property is deprecated in 4.36.0")
   @objc(SBDUpdateFeedbackMessage) public class UpdateFeedbackMessage : SendbirdChatSDK.EventDetail {
     final public let message: SendbirdChatSDK.BaseMessage
     public init(message: SendbirdChatSDK.BaseMessage)
@@ -1824,6 +1833,7 @@ extension SendbirdChatSDK.FeedChannelListQuery {
 extension SendbirdChatSDK.FeedChannelListQueryParams : Foundation.NSCopying {
   @objc final public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
 }
+@available(*, deprecated, message: "This property is deprecated in 4.36.0")
 @objc(SBDFeedback) open class Feedback : ObjectiveC.NSObject, Swift.Codable, Foundation.NSCopying {
   @objc final public let id: Swift.Int64
   @objc final public let rating: SendbirdChatSDK.Feedback.Rating
@@ -1856,6 +1866,7 @@ extension SendbirdChatSDK.Feedback {
     case submitted
     case noFeedback
     public init?(rawValue: Swift.Int)
+    @available(*, deprecated, message: "This property is deprecated in 4.36.0")
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -2892,6 +2903,7 @@ public typealias NotificationTemplateListHandler = (_ notificationTemplateList: 
 public typealias GlobalNotificationChannelSettingHandler = (_ globalNotificationChannelSetting: SendbirdChatSDK.GlobalNotificationChannelSetting?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
 public typealias PinnedMessageListHandler = (_ messages: [SendbirdChatSDK.PinnedMessage]?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
 public typealias UIKitConfigurationHandler = (_ uikitConfiguration: SendbirdChatSDK.UIKitConfiguration?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
+@available(*, deprecated, message: "This property is deprecated in 4.36.0")
 public typealias FeedbackHandler = (_ feedback: SendbirdChatSDK.Feedback?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
 public typealias MessageTemplateHandler = (_ messageTemplate: SendbirdChatSDK.MessageTemplate?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
 public typealias MessageTemplateListHandler = (_ messageTemplateList: SendbirdChatSDK.MessageTemplateList?, _ hasMore: Swift.Bool, _ token: Swift.String?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
@@ -3241,7 +3253,8 @@ extension SendbirdChatSDK.MessageCollection : SendbirdChatSDK.ConnectionDelegate
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @objc(SBDMessageForm) open class MessageForm : ObjectiveC.NSObject, Swift.Codable, Foundation.NSCopying {
+@_hasMissingDesignatedInitializers @available(*, deprecated, message: "This method is deprecated in 4.36.0")
+@objc(SBDMessageForm) open class MessageForm : ObjectiveC.NSObject, Swift.Codable, Foundation.NSCopying {
   final public let id: Swift.Int64
   final public let name: Swift.String
   final public let items: [SendbirdChatSDK.MessageFormItem]
@@ -3259,7 +3272,8 @@ extension SendbirdChatSDK.MessageForm {
     @objc get
   }
 }
-@_hasMissingDesignatedInitializers @objc(SBDMessageFormItem) open class MessageFormItem : ObjectiveC.NSObject, Swift.Codable, Foundation.NSCopying {
+@_hasMissingDesignatedInitializers @available(*, deprecated, message: "This method is deprecated in 4.36.0")
+@objc(SBDMessageFormItem) open class MessageFormItem : ObjectiveC.NSObject, Swift.Codable, Foundation.NSCopying {
   final public let id: Swift.Int64
   final public let name: Swift.String
   final public let required: Swift.Bool
@@ -4383,6 +4397,7 @@ extension SendbirdChatSDK.PollRetrievalParams : Swift.Encodable {
 @objc(SBDPollStatus) public enum PollStatus : Swift.Int {
   case open
   case closed
+  case removed
 }
 extension SendbirdChatSDK.PollStatus : Swift.RawRepresentable, Swift.Codable {
   public typealias RawValue = Swift.String
@@ -4439,6 +4454,7 @@ extension SendbirdChatSDK.PollUpdateParams : Swift.Encodable {
   @objc final public let timestamp: Swift.Int64
   @objc final public let messageId: Swift.Int64
   @objc final public let votedOptionIds: [Swift.Int64]
+  @objc final public let voterCount: Swift.Int64
   required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }

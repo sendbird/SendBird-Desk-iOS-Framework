@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		A4awW5w1k/UIu2VPo28pe6meU1I=
+		dKqEUYj3XW/A1umdg9iw+fD81fM=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		vvokI+aXdSn+g+uKJuf6sev27HQ=
+		R0qHspodQ+PICK1Y8EK6rzmCw1I=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vpMVvvs8SnCUrrF+b9pSVZ4vCt8=
+		iIGjP0bp4pZJRVupNmAduaR3YIM=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		vvokI+aXdSn+g+uKJuf6sev27HQ=
+		R0qHspodQ+PICK1Y8EK6rzmCw1I=
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+yzZZQN8gu+3jrKZqFosTf6yMjQ=
+		WaT/8u+Xe3tb8bZ+HIyBgWSUpAA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0qBJugT8ObvClDGggB0lBWjlgaV49N/GAaNOyyRMMxA=
+			1cOH1Uk5Q//TcrYLuObhibMZCv3IaSzlZTUBC/XAaaA=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -113,14 +113,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4SsAH0DjYA0nxQRAEbuWAyB/5Nw7waUhQEeWYcsYdMg=
+			MXj3xfvVT9Q8xfIRAfpKo5tN5WIW7gyxMn16uAU5qpY=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0qBJugT8ObvClDGggB0lBWjlgaV49N/GAaNOyyRMMxA=
+			1cOH1Uk5Q//TcrYLuObhibMZCv3IaSzlZTUBC/XAaaA=
 			</data>
 		</dict>
 		<key>Modules/SendBirdDesk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zAhUsTz42Z5jcVFDnxIVdirOMbvZdDOxuC27GRnHGiU=
+			riR1x+k8GZhI3e7DPJZVNcawzKfSXW612KjNFwfjWo8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
