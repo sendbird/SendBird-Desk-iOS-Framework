@@ -1,5 +1,21 @@
 # Change Log
 
+### v1.1.14 (Feb 5, 2026) with Chat SDK **v4.36.0**
+
+* Updated dependency SDK versions to the latest stable releases
+  * SendbirdChatSDK: v4.36.0
+  
+#### Breaking Changes
+
+- **Completion handler queue changed to main queue**
+  - All completion handlers now execute on the main queue by default
+  - If you need background queue execution, use:
+  ```swift
+  SBDSKMain.setCompletionHandlerDelegateQueue(
+      DispatchQueue(label: "your.background.queue", attributes: .concurrent)
+  )
+  ```
+
 ### v1.1.13 (Dec 18, 2025) with Chat SDK **v4.35.0**
 * Updated dependency SDK versions to the latest stable releases
   * SendbirdChatSDK: v4.35.0
