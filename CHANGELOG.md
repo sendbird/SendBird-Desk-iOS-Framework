@@ -1,5 +1,20 @@
 # Change Log
 
+### v1.2.1 (May 15, 2026) with Chat SDK **v4.39.4**
+
+#### Added
+  - Desk logging is now routed through the shared `SendbirdLogger` (`Logger.desk` / `ProductIdentifier.desk`) and emitted in the unified Sendbird log format.
+  - `LogLevel` ↔ `AuthLogLevel` bidirectional conversion. Note: Desk has no `verbose` level, so `AuthLogLevel.verbose` floors to `LogLevel.debug` when read back through the legacy API.
+  - Local-source build helpers: `generate-project-source.sh` + `project-source.yml`.
+
+##### Deprecated
+  - `SBDSKMain.setSBDSKLogLevel(_:)` — use `SendbirdLogger.setLevel(_:)` or `SendbirdLogger.setLevel(_:for: .desk)` instead. Existing calls are forwarded to a compatibility setter and continue to
+  work.
+
+##### Changed
+  - Internal `debugPrint` / `print` log sites replaced with `Logger.desk` calls gated by `SendbirdLogger.level(for: .desk)`.
+  - Once `SendbirdLogger.setLevel(...)` has been called, `SBDSKMain.setSBDSKLogLevel(_:)` is ignored.
+
 ### v1.2.0 (Apr 9, 2026) with Chat SDK **v4.39.0**
 
 #### Build Environment

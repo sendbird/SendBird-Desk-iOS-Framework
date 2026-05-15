@@ -16,6 +16,113 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdChatSDK",
+        "printedName": "SendbirdChatSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SendbirdChatSDK",
         "printedName": "SendbirdChatSDK",
         "declKind": "Import",
@@ -72,10 +179,215 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "SendbirdChatSDK",
+        "printedName": "SendbirdChatSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdAuthSDK",
+        "printedName": "SendbirdAuthSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdAuthSDK",
+        "printedName": "SendbirdAuthSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "SPIAccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdAuthSDK",
+        "printedName": "SendbirdAuthSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdChatSDK",
+        "printedName": "SendbirdChatSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdChatSDK",
+        "printedName": "SendbirdChatSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk"
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdAuthSDK",
+        "printedName": "SendbirdAuthSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SendbirdChatSDK",
+        "printedName": "SendbirdChatSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
-        "name": "SBDSKRelatedChannel",
-        "printedName": "SBDSKRelatedChannel",
+        "name": "SBDSKAgent",
+        "printedName": "SBDSKAgent",
         "children": [
+          {
+            "kind": "Var",
+            "name": "sendBirdId",
+            "printedName": "sendBirdId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(py)sendBirdId",
+            "mangledName": "$s12SendBirdDesk10SBDSKAgentC04sendB2IdSSSgvp",
+            "moduleName": "SendBirdDesk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(im)sendBirdId",
+                "mangledName": "$s12SendBirdDesk10SBDSKAgentC04sendB2IdSSSgvg",
+                "moduleName": "SendBirdDesk",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "name",
@@ -83,17 +395,27 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(py)name",
-            "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4nameSSvp",
+            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(py)name",
+            "mangledName": "$s12SendBirdDesk10SBDSKAgentC4nameSSSgvp",
             "moduleName": "SendBirdDesk",
             "declAttributes": [
+              "HasInitialValue",
               "HasStorage",
+              "SetterAccess",
               "AccessControl",
               "ObjC",
               "RawDocComment"
@@ -107,86 +429,59 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(im)name",
-                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4nameSSvg",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(im)name",
+                "mangledName": "$s12SendBirdDesk10SBDSKAgentC4nameSSSgvg",
                 "moduleName": "SendBirdDesk",
                 "implicit": true,
                 "declAttributes": [
                   "ObjC"
                 ],
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(im)setName:",
-                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4nameSSvs",
-                "moduleName": "SendBirdDesk",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12SendBirdDesk19SBDSKRelatedChannelC4nameSSvM",
-                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4nameSSvM",
-                "moduleName": "SendBirdDesk",
-                "implicit": true,
-                "accessorKind": "_modify"
               }
             ]
           },
           {
             "kind": "Var",
-            "name": "channelUrl",
-            "printedName": "channelUrl",
+            "name": "profileUrl",
+            "printedName": "profileUrl",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(py)channelUrl",
-            "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvp",
+            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(py)profileUrl",
+            "mangledName": "$s12SendBirdDesk10SBDSKAgentC10profileUrlSSSgvp",
             "moduleName": "SendBirdDesk",
             "declAttributes": [
+              "HasInitialValue",
               "HasStorage",
+              "SetterAccess",
               "AccessControl",
               "ObjC",
               "RawDocComment"
@@ -200,65 +495,28 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(im)channelUrl",
-                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvg",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(im)profileUrl",
+                "mangledName": "$s12SendBirdDesk10SBDSKAgentC10profileUrlSSSgvg",
                 "moduleName": "SendBirdDesk",
                 "implicit": true,
                 "declAttributes": [
                   "ObjC"
                 ],
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(im)setChannelUrl:",
-                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvs",
-                "moduleName": "SendBirdDesk",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvM",
-                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvM",
-                "moduleName": "SendBirdDesk",
-                "implicit": true,
-                "accessorKind": "_modify"
               }
             ]
           },
@@ -269,9 +527,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "SBDSKRelatedChannel",
-                "printedName": "SendBirdDesk.SBDSKRelatedChannel",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel"
+                "name": "SBDSKAgent",
+                "printedName": "SendBirdDesk.SBDSKAgent",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent"
               },
               {
                 "kind": "TypeNominal",
@@ -281,8 +539,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12SendBirdDesk19SBDSKRelatedChannelC4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4fromACs7Decoder_p_tKcfc",
+            "usr": "s:12SendBirdDesk10SBDSKAgentC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12SendBirdDesk10SBDSKAgentC4fromACs7Decoder_p_tKcfc",
             "moduleName": "SendBirdDesk",
             "implicit": true,
             "declAttributes": [
@@ -309,8 +567,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12SendBirdDesk19SBDSKRelatedChannelC6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC6encode2toys7Encoder_p_tKF",
+            "usr": "s:12SendBirdDesk10SBDSKAgentC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12SendBirdDesk10SBDSKAgentC6encode2toys7Encoder_p_tKF",
             "moduleName": "SendBirdDesk",
             "implicit": true,
             "throwing": true,
@@ -318,8 +576,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel",
-        "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC",
+        "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent",
+        "mangledName": "$s12SendBirdDesk10SBDSKAgentC",
         "moduleName": "SendBirdDesk",
         "declAttributes": [
           "AccessControl",
@@ -327,10 +585,54 @@
           "RawDocComment"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -347,10 +649,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -361,63 +663,11 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -1156,45 +1406,10 @@
             "conformances": [
               {
                 "kind": "Conformance",
-                "name": "Decodable",
-                "printedName": "Decodable",
-                "usr": "s:Se",
-                "mangledName": "$sSe"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Equatable",
-                "printedName": "Equatable",
-                "usr": "s:SQ",
-                "mangledName": "$sSQ"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Hashable",
-                "printedName": "Hashable",
-                "usr": "s:SH",
-                "mangledName": "$sSH"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CVarArg",
-                "printedName": "CVarArg",
-                "usr": "s:s7CVarArgP",
-                "mangledName": "$ss7CVarArgP"
+                "name": "_KeyValueCodingAndObserving",
+                "printedName": "_KeyValueCodingAndObserving",
+                "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+                "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
               },
               {
                 "kind": "Conformance",
@@ -1205,10 +1420,24 @@
               },
               {
                 "kind": "Conformance",
-                "name": "_KeyValueCodingAndObserving",
-                "printedName": "_KeyValueCodingAndObserving",
-                "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-                "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+                "name": "CVarArg",
+                "printedName": "CVarArg",
+                "usr": "s:s7CVarArgP",
+                "mangledName": "$ss7CVarArgP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomDebugStringConvertible",
+                "printedName": "CustomDebugStringConvertible",
+                "usr": "s:s28CustomDebugStringConvertibleP",
+                "mangledName": "$ss28CustomDebugStringConvertibleP"
               },
               {
                 "kind": "Conformance",
@@ -1219,10 +1448,31 @@
               },
               {
                 "kind": "Conformance",
-                "name": "CustomDebugStringConvertible",
-                "printedName": "CustomDebugStringConvertible",
-                "usr": "s:s28CustomDebugStringConvertibleP",
-                "mangledName": "$ss28CustomDebugStringConvertibleP"
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
               }
             ]
           }
@@ -1245,45 +1495,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -1294,10 +1509,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -1308,10 +1537,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -1327,43 +1577,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk"
-      },
-      {
-        "kind": "Import",
         "name": "SendbirdChatSDK",
         "printedName": "SendbirdChatSDK",
         "declKind": "Import",
@@ -1371,40 +1584,13 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "SendbirdAuthSDK",
+        "printedName": "SendbirdAuthSDK",
         "declKind": "Import",
         "moduleName": "SendBirdDesk",
         "declAttributes": [
-          "RawDocComment"
+          "SPIAccessControl"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SendbirdChatSDK",
-        "printedName": "SendbirdChatSDK",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk"
       },
       {
         "kind": "TypeDecl",
@@ -1883,38 +2069,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -1925,10 +2083,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -1939,10 +2111,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -1957,183 +2143,224 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
-        "name": "SBDSKTicketPriority",
-        "printedName": "SBDSKTicketPriority",
+        "name": "SBDSKRelatedChannel",
+        "printedName": "SBDSKRelatedChannel",
         "children": [
           {
             "kind": "Var",
-            "name": "low",
-            "printedName": "low",
+            "name": "name",
+            "printedName": "name",
             "children": [
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SendBirdDesk.SBDSKTicketPriority.Type) -> SendBirdDesk.SBDSKTicketPriority",
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(py)name",
+            "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4nameSSvp",
+            "moduleName": "SendBirdDesk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "SBDSKTicketPriority",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(im)name",
+                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4nameSSvg",
+                "moduleName": "SendBirdDesk",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SBDSKTicketPriority",
-                        "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
-                      }
-                    ]
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
-                ]
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(im)setName:",
+                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4nameSSvs",
+                "moduleName": "SendBirdDesk",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SendBirdDesk19SBDSKRelatedChannelC4nameSSvM",
+                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4nameSSvM",
+                "moduleName": "SendBirdDesk",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority@SBDSKTicketPriorityLow",
-            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO3lowyA2CmF",
-            "moduleName": "SendBirdDesk",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 0
+            ]
           },
           {
             "kind": "Var",
-            "name": "medium",
-            "printedName": "medium",
+            "name": "channelUrl",
+            "printedName": "channelUrl",
             "children": [
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SendBirdDesk.SBDSKTicketPriority.Type) -> SendBirdDesk.SBDSKTicketPriority",
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(py)channelUrl",
+            "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvp",
+            "moduleName": "SendBirdDesk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "SBDSKTicketPriority",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(im)channelUrl",
+                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvg",
+                "moduleName": "SendBirdDesk",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SBDSKTicketPriority",
-                        "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
-                      }
-                    ]
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
-                ]
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel(im)setChannelUrl:",
+                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvs",
+                "moduleName": "SendBirdDesk",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvM",
+                "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC10channelUrlSSvM",
+                "moduleName": "SendBirdDesk",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority@SBDSKTicketPriorityMedium",
-            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO6mediumyA2CmF",
-            "moduleName": "SendBirdDesk",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 1
+            ]
           },
           {
-            "kind": "Var",
-            "name": "high",
-            "printedName": "high",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
             "children": [
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SendBirdDesk.SBDSKTicketPriority.Type) -> SendBirdDesk.SBDSKTicketPriority",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SBDSKTicketPriority",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SBDSKTicketPriority",
-                        "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority@SBDSKTicketPriorityHigh",
-            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO4highyA2CmF",
-            "moduleName": "SendBirdDesk",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 2
-          },
-          {
-            "kind": "Var",
-            "name": "urgent",
-            "printedName": "urgent",
-            "children": [
+                "kind": "TypeNominal",
+                "name": "SBDSKRelatedChannel",
+                "printedName": "SendBirdDesk.SBDSKRelatedChannel",
+                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel"
+              },
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SendBirdDesk.SBDSKTicketPriority.Type) -> SendBirdDesk.SBDSKTicketPriority",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SBDSKTicketPriority",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SBDSKTicketPriority",
-                        "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
-                      }
-                    ]
-                  }
-                ]
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
               }
             ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority@SBDSKTicketPriorityUrgent",
-            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO6urgentyA2CmF",
+            "declKind": "Constructor",
+            "usr": "s:12SendBirdDesk19SBDSKRelatedChannelC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC4fromACs7Decoder_p_tKcfc",
             "moduleName": "SendBirdDesk",
+            "implicit": true,
             "declAttributes": [
-              "ObjC"
+              "Required"
             ],
-            "fixedbinaryorder": 3
+            "throwing": true,
+            "init_kind": "Designated"
           },
           {
             "kind": "Function",
@@ -2153,126 +2380,49 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO6encode2toys7Encoder_p_tKF",
+            "usr": "s:12SendBirdDesk19SBDSKRelatedChannelC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC6encode2toys7Encoder_p_tKF",
             "moduleName": "SendBirdDesk",
-            "declAttributes": [
-              "AccessControl"
-            ],
+            "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SBDSKTicketPriority",
-                "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO4fromACs7Decoder_p_tKcfc",
-            "moduleName": "SendBirdDesk",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "SendBirdDesk.SBDSKTicketPriority?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SBDSKTicketPriority",
-                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
-                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO8rawValueACSgSi_tcfc",
-            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO8rawValueACSgSi_tcfc",
-            "moduleName": "SendBirdDesk",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO8rawValueSivp",
-            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO8rawValueSivp",
-            "moduleName": "SendBirdDesk",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO8rawValueSivg",
-                "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO8rawValueSivg",
-                "moduleName": "SendBirdDesk",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
           }
         ],
-        "declKind": "Enum",
-        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority",
-        "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO",
+        "declKind": "Class",
+        "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKRelatedChannel",
+        "mangledName": "$s12SendBirdDesk19SBDSKRelatedChannelC",
         "moduleName": "SendBirdDesk",
         "declAttributes": [
           "AccessControl",
-          "ObjC"
+          "ObjC",
+          "RawDocComment"
         ],
-        "enumRawTypeName": "Int",
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
           {
             "kind": "Conformance",
             "name": "Copyable",
@@ -2282,46 +2432,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -2336,71 +2457,28 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SendbirdChatSDK",
-        "printedName": "SendbirdChatSDK",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SendbirdChatSDK",
-        "printedName": "SendbirdChatSDK",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -7457,6 +7535,48 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -7471,10 +7591,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -7485,52 +7605,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -7546,235 +7624,172 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "SBDSKAgent",
-        "printedName": "SBDSKAgent",
+        "name": "SBDSKTicketPriority",
+        "printedName": "SBDSKTicketPriority",
         "children": [
           {
             "kind": "Var",
-            "name": "sendBirdId",
-            "printedName": "sendBirdId",
+            "name": "low",
+            "printedName": "low",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SendBirdDesk.SBDSKTicketPriority.Type) -> SendBirdDesk.SBDSKTicketPriority",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(py)sendBirdId",
-            "mangledName": "$s12SendBirdDesk10SBDSKAgentC04sendB2IdSSSgvp",
-            "moduleName": "SendBirdDesk",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
+                    "name": "SBDSKTicketPriority",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+                  },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
+                    "name": "Metatype",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "SBDSKTicketPriority",
+                        "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
                       }
-                    ],
-                    "usr": "s:Sq"
+                    ]
                   }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(im)sendBirdId",
-                "mangledName": "$s12SendBirdDesk10SBDSKAgentC04sendB2IdSSSgvg",
-                "moduleName": "SendBirdDesk",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
+                ]
               }
-            ]
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority@SBDSKTicketPriorityLow",
+            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO3lowyA2CmF",
+            "moduleName": "SendBirdDesk",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
           },
           {
             "kind": "Var",
-            "name": "name",
-            "printedName": "name",
+            "name": "medium",
+            "printedName": "medium",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SendBirdDesk.SBDSKTicketPriority.Type) -> SendBirdDesk.SBDSKTicketPriority",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(py)name",
-            "mangledName": "$s12SendBirdDesk10SBDSKAgentC4nameSSSgvp",
-            "moduleName": "SendBirdDesk",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
+                    "name": "SBDSKTicketPriority",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+                  },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
+                    "name": "Metatype",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "SBDSKTicketPriority",
+                        "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
                       }
-                    ],
-                    "usr": "s:Sq"
+                    ]
                   }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(im)name",
-                "mangledName": "$s12SendBirdDesk10SBDSKAgentC4nameSSSgvg",
-                "moduleName": "SendBirdDesk",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
+                ]
               }
-            ]
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority@SBDSKTicketPriorityMedium",
+            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO6mediumyA2CmF",
+            "moduleName": "SendBirdDesk",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
           },
           {
             "kind": "Var",
-            "name": "profileUrl",
-            "printedName": "profileUrl",
+            "name": "high",
+            "printedName": "high",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SendBirdDesk.SBDSKTicketPriority.Type) -> SendBirdDesk.SBDSKTicketPriority",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(py)profileUrl",
-            "mangledName": "$s12SendBirdDesk10SBDSKAgentC10profileUrlSSSgvp",
-            "moduleName": "SendBirdDesk",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
+                    "name": "SBDSKTicketPriority",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+                  },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
+                    "name": "Metatype",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "SBDSKTicketPriority",
+                        "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
                       }
-                    ],
-                    "usr": "s:Sq"
+                    ]
                   }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent(im)profileUrl",
-                "mangledName": "$s12SendBirdDesk10SBDSKAgentC10profileUrlSSSgvg",
-                "moduleName": "SendBirdDesk",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
+                ]
               }
-            ]
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority@SBDSKTicketPriorityHigh",
+            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO4highyA2CmF",
+            "moduleName": "SendBirdDesk",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
           },
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
+            "kind": "Var",
+            "name": "urgent",
+            "printedName": "urgent",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "SBDSKAgent",
-                "printedName": "SendBirdDesk.SBDSKAgent",
-                "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SendBirdDesk.SBDSKTicketPriority.Type) -> SendBirdDesk.SBDSKTicketPriority",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SBDSKTicketPriority",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SBDSKTicketPriority",
+                        "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
-            "declKind": "Constructor",
-            "usr": "s:12SendBirdDesk10SBDSKAgentC4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s12SendBirdDesk10SBDSKAgentC4fromACs7Decoder_p_tKcfc",
+            "declKind": "EnumElement",
+            "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority@SBDSKTicketPriorityUrgent",
+            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO6urgentyA2CmF",
             "moduleName": "SendBirdDesk",
-            "implicit": true,
             "declAttributes": [
-              "Required"
+              "ObjC"
             ],
-            "throwing": true,
-            "init_kind": "Designated"
+            "fixedbinaryorder": 3
           },
           {
             "kind": "Function",
@@ -7794,30 +7809,176 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12SendBirdDesk10SBDSKAgentC6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s12SendBirdDesk10SBDSKAgentC6encode2toys7Encoder_p_tKF",
+            "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO6encode2toys7Encoder_p_tKF",
             "moduleName": "SendBirdDesk",
-            "implicit": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SBDSKTicketPriority",
+                "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SendBirdDesk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SendBirdDesk.SBDSKTicketPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SBDSKTicketPriority",
+                    "printedName": "SendBirdDesk.SBDSKTicketPriority",
+                    "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO8rawValueACSgSi_tcfc",
+            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO8rawValueACSgSi_tcfc",
+            "moduleName": "SendBirdDesk",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO8rawValueSivp",
+            "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO8rawValueSivp",
+            "moduleName": "SendBirdDesk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SendBirdDesk19SBDSKTicketPriorityO8rawValueSivg",
+                "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO8rawValueSivg",
+                "moduleName": "SendBirdDesk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
-        "declKind": "Class",
-        "usr": "c:@M@SendBirdDesk@objc(cs)SBDSKAgent",
-        "mangledName": "$s12SendBirdDesk10SBDSKAgentC",
+        "declKind": "Enum",
+        "usr": "c:@M@SendBirdDesk@E@SBDSKTicketPriority",
+        "mangledName": "$s12SendBirdDesk19SBDSKTicketPriorityO",
         "moduleName": "SendBirdDesk",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjC"
         ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "hasMissingDesignatedInitializers": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
+        "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -7831,69 +7992,6 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -7926,6 +8024,26 @@
       },
       {
         "kind": "Import",
+        "name": "SendbirdAuthSDK",
+        "printedName": "SendbirdAuthSDK",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -7953,6 +8071,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SendBirdDesk"
       },
       {
         "kind": "Import",
@@ -7962,77 +8097,217 @@
         "moduleName": "SendBirdDesk"
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
+        "kind": "TypeDecl",
+        "name": "Logger",
+        "printedName": "Logger",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "desk",
+            "printedName": "desk",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "SendbirdAuthSDK.Logger",
+                "usr": "s:15SendbirdAuthSDK6LoggerV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15SendbirdAuthSDK6LoggerV12SendBirdDeskE4deskACvpZ",
+            "mangledName": "$s15SendbirdAuthSDK6LoggerV12SendBirdDeskE4deskACvpZ",
+            "moduleName": "SendBirdDesk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "SendbirdInternal"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Logger",
+                    "printedName": "SendbirdAuthSDK.Logger",
+                    "usr": "s:15SendbirdAuthSDK6LoggerV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15SendbirdAuthSDK6LoggerV12SendBirdDeskE4deskACvgZ",
+                "mangledName": "$s15SendbirdAuthSDK6LoggerV12SendBirdDeskE4deskACvgZ",
+                "moduleName": "SendBirdDesk",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "spi_group_names": [
+                  "SendbirdInternal"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15SendbirdAuthSDK6LoggerV",
+        "mangledName": "$s15SendbirdAuthSDK6LoggerV",
+        "moduleName": "SendbirdAuthSDK",
         "declAttributes": [
-          "RawDocComment"
+          "SPIAccessControl"
+        ],
+        "spi_group_names": [
+          "SendbirdInternal"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SendbirdChatSDK",
-        "printedName": "SendbirdChatSDK",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SendbirdChatSDK",
-        "printedName": "SendbirdChatSDK",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SendBirdDesk",
-        "declAttributes": [
-          "RawDocComment"
+        "kind": "TypeDecl",
+        "name": "ProductIdentifier",
+        "printedName": "ProductIdentifier",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "desk",
+            "printedName": "desk",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProductIdentifier",
+                "printedName": "SendbirdAuthSDK.ProductIdentifier",
+                "usr": "s:15SendbirdAuthSDK17ProductIdentifierV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15SendbirdAuthSDK17ProductIdentifierV12SendBirdDeskE4deskACvpZ",
+            "mangledName": "$s15SendbirdAuthSDK17ProductIdentifierV12SendBirdDeskE4deskACvpZ",
+            "moduleName": "SendBirdDesk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProductIdentifier",
+                    "printedName": "SendbirdAuthSDK.ProductIdentifier",
+                    "usr": "s:15SendbirdAuthSDK17ProductIdentifierV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15SendbirdAuthSDK17ProductIdentifierV12SendBirdDeskE4deskACvgZ",
+                "mangledName": "$s15SendbirdAuthSDK17ProductIdentifierV12SendBirdDeskE4deskACvgZ",
+                "moduleName": "SendBirdDesk",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15SendbirdAuthSDK17ProductIdentifierV",
+        "mangledName": "$s15SendbirdAuthSDK17ProductIdentifierV",
+        "moduleName": "SendbirdAuthSDK",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
         ]
       }
     ],
@@ -8040,403 +8315,410 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/AuthenticateRequest.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/AuthenticateRequest.swift",
       "kind": "StringLiteral",
       "offset": 221,
       "length": 18,
       "value": "\"\/customers\/auth\/\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/SetCustomerLanguageRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 229,
-      "length": 21,
-      "value": "\"\/customers\/language\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetOpenTicketCountRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 232,
-      "length": 17,
-      "value": "\"\/tickets\/count\/\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/SBDSKRelatedChannel.swift",
-      "kind": "StringLiteral",
-      "offset": 682,
-      "length": 13,
-      "value": "\"channel_url\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 286,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 301,
-      "length": 7,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 318,
-      "length": 4,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/LogLevel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 332,
-      "length": 5,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
-      "kind": "StringLiteral",
-      "offset": 604,
-      "length": 13,
-      "value": "\"faq_file_id\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
-      "kind": "StringLiteral",
-      "offset": 662,
-      "length": 9,
-      "value": "\"results\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
-      "kind": "StringLiteral",
-      "offset": 2777,
-      "length": 11,
-      "value": "\"image_url\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketByChannelURLRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 238,
-      "length": 11,
-      "value": "\"\/tickets\/\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketByChannelURLRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 271,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 169,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 191,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 213,
       "length": 5,
       "value": "\"PUT\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 237,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 263,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 554,
       "length": 20,
       "value": "\"relatedChannelUrls\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 705,
       "length": 13,
       "value": "\"customField\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/Command.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/Command.swift",
       "kind": "StringLiteral",
       "offset": 746,
       "length": 12,
       "value": "\"channelUrl\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Main\/SBDSKMain.swift",
-      "kind": "StringLiteral",
-      "offset": 396,
-      "length": 35,
-      "value": "\"SENDBIRD_DESK_CHANNEL_CUSTOM_TYPE\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 222,
-      "length": 11,
-      "value": "\"\/tickets\/\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 255,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 274,
-      "length": 18,
-      "value": "\"-last_message_at\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
-      "kind": "IntegerLiteral",
-      "offset": 187,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
-      "kind": "IntegerLiteral",
-      "offset": 207,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
-      "kind": "IntegerLiteral",
-      "offset": 225,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
-      "kind": "IntegerLiteral",
-      "offset": 245,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 351,
-      "length": 10,
-      "value": "\"ASSIGNED\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 400,
-      "length": 12,
-      "value": "\"UNASSIGNED\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 450,
-      "length": 11,
-      "value": "\"PROACTIVE\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 496,
-      "length": 8,
-      "value": "\"CLOSED\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 537,
-      "length": 11,
-      "value": "\"CONFIRMED\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 579,
-      "length": 10,
-      "value": "\"DECLINED\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 673,
-      "length": 11,
-      "value": "\"PROCATIVE\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 725,
-      "length": 9,
-      "value": "\"PENDING\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 782,
-      "length": 18,
-      "value": "\"WORK_IN_PROGRESS\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 840,
-      "length": 8,
-      "value": "\"ACTIVE\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 886,
-      "length": 6,
-      "value": "\"IDLE\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 932,
-      "length": 8,
-      "value": "\"CLOSED\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "Dictionary",
-      "offset": 1058,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 2875,
-      "length": 4,
-      "value": "\"id\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 2901,
-      "length": 13,
-      "value": "\"channelName\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 2937,
-      "length": 8,
-      "value": "\"status\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 2969,
-      "length": 9,
-      "value": "\"status2\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
-      "kind": "StringLiteral",
-      "offset": 3005,
-      "length": 12,
-      "value": "\"channelUrl\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
-      "kind": "StringLiteral",
-      "offset": 916,
-      "length": 12,
-      "value": "\"sendbirdId\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
-      "kind": "StringLiteral",
-      "offset": 949,
-      "length": 13,
-      "value": "\"displayName\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/SBDSKAgent.swift",
-      "kind": "StringLiteral",
-      "offset": 989,
-      "length": 19,
-      "value": "\"photoThumbnailUrl\""
-    },
-    {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/CreateTicketRequest.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/CreateTicketRequest.swift",
       "kind": "StringLiteral",
       "offset": 221,
       "length": 11,
       "value": "\"\/tickets\/\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/CreateTicketRequest.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/CreateTicketRequest.swift",
       "kind": "StringLiteral",
       "offset": 260,
       "length": 14,
       "value": "\"SENDBIRD_IOS\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Main\/SendBirdDesk.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/GetOpenTicketCountRequest.swift",
       "kind": "StringLiteral",
-      "offset": 216,
-      "length": 40,
-      "value": "\"SENDBIRD_DESK_TICKET_HANDLER_ID_GLOBAL\""
+      "offset": 232,
+      "length": 17,
+      "value": "\"\/tickets\/count\/\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/Requests\/SetCustomerCustomFieldsRequest.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/GetTicketByChannelURLRequest.swift",
       "kind": "StringLiteral",
-      "offset": 244,
-      "length": 26,
-      "value": "\"\/customers\/custom_fields\""
+      "offset": 238,
+      "length": 11,
+      "value": "\"\/tickets\/\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Client\/SBDSKAPIClient.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/GetTicketByChannelURLRequest.swift",
+      "kind": "IntegerLiteral",
+      "offset": 271,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
       "kind": "StringLiteral",
-      "offset": 219,
+      "offset": 222,
+      "length": 11,
+      "value": "\"\/tickets\/\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
+      "kind": "IntegerLiteral",
+      "offset": 255,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/GetTicketListRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 274,
+      "length": 18,
+      "value": "\"-last_message_at\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/LogLevel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 5,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/LogLevel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 344,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/LogLevel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 361,
+      "length": 4,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/LogLevel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 375,
+      "length": 5,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Common\/OperationWorker.swift",
+      "kind": "StringLiteral",
+      "offset": 187,
+      "length": 35,
+      "value": "\"com.sendbirddesk.worker.isolation\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Extensions\/ProductIdentifier+Desk.swift",
+      "kind": "StringLiteral",
+      "offset": 213,
+      "length": 6,
+      "value": "\"desk\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/SBDSKAPIClient.swift",
+      "kind": "StringLiteral",
+      "offset": 266,
       "length": 12,
       "value": "\"desk401100\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Model\/SBDSKAdminMessage.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/SBDSKAdminMessage.swift",
       "kind": "StringLiteral",
       "offset": 215,
       "length": 41,
       "value": "\"SENDBIRD_DESK_ADMIN_MESSAGE_CUSTOM_TYPE\""
     },
     {
-      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/ios-conductor-workspace\/quito-v2\/desk-ios\/SendBirdDesk\/Common\/OperationWorker.swift",
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/SBDSKAgent.swift",
       "kind": "StringLiteral",
-      "offset": 187,
+      "offset": 916,
+      "length": 12,
+      "value": "\"sendbirdId\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/SBDSKAgent.swift",
+      "kind": "StringLiteral",
+      "offset": 949,
+      "length": 13,
+      "value": "\"displayName\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/SBDSKAgent.swift",
+      "kind": "StringLiteral",
+      "offset": 989,
+      "length": 19,
+      "value": "\"photoThumbnailUrl\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
+      "kind": "StringLiteral",
+      "offset": 604,
+      "length": 13,
+      "value": "\"faq_file_id\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
+      "kind": "StringLiteral",
+      "offset": 662,
+      "length": 9,
+      "value": "\"results\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/SBDSKFAQData.swift",
+      "kind": "StringLiteral",
+      "offset": 2777,
+      "length": 11,
+      "value": "\"image_url\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Main\/SBDSKMain.swift",
+      "kind": "StringLiteral",
+      "offset": 443,
       "length": 35,
-      "value": "\"com.sendbirddesk.worker.isolation\""
+      "value": "\"SENDBIRD_DESK_CHANNEL_CUSTOM_TYPE\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Model\/SBDSKRelatedChannel.swift",
+      "kind": "StringLiteral",
+      "offset": 682,
+      "length": 13,
+      "value": "\"channel_url\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 351,
+      "length": 10,
+      "value": "\"ASSIGNED\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 400,
+      "length": 12,
+      "value": "\"UNASSIGNED\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 450,
+      "length": 11,
+      "value": "\"PROACTIVE\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 496,
+      "length": 8,
+      "value": "\"CLOSED\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 537,
+      "length": 11,
+      "value": "\"CONFIRMED\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 579,
+      "length": 10,
+      "value": "\"DECLINED\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 673,
+      "length": 11,
+      "value": "\"PROCATIVE\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 725,
+      "length": 9,
+      "value": "\"PENDING\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 782,
+      "length": 18,
+      "value": "\"WORK_IN_PROGRESS\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 840,
+      "length": 8,
+      "value": "\"ACTIVE\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 886,
+      "length": 6,
+      "value": "\"IDLE\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 932,
+      "length": 8,
+      "value": "\"CLOSED\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "Dictionary",
+      "offset": 1058,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 2875,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 2901,
+      "length": 13,
+      "value": "\"channelName\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 2937,
+      "length": 8,
+      "value": "\"status\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 2969,
+      "length": 9,
+      "value": "\"status2\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicket.swift",
+      "kind": "StringLiteral",
+      "offset": 3005,
+      "length": 12,
+      "value": "\"channelUrl\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
+      "kind": "IntegerLiteral",
+      "offset": 187,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
+      "kind": "IntegerLiteral",
+      "offset": 207,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
+      "kind": "IntegerLiteral",
+      "offset": 225,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Ticket\/SBDSKTicketPriority.swift",
+      "kind": "IntegerLiteral",
+      "offset": 245,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Main\/SendBirdDesk.swift",
+      "kind": "StringLiteral",
+      "offset": 263,
+      "length": 40,
+      "value": "\"SENDBIRD_DESK_TICKET_HANDLER_ID_GLOBAL\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/SetCustomerCustomFieldsRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 244,
+      "length": 26,
+      "value": "\"\/customers\/custom_fields\""
+    },
+    {
+      "filePath": "\/Users\/damon.park\/conductor\/workspaces\/desk-ios\/amarillo\/SendBirdDesk\/Client\/Requests\/SetCustomerLanguageRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 229,
+      "length": 21,
+      "value": "\"\/customers\/language\""
     }
   ]
 }
