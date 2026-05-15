@@ -47,6 +47,14 @@ extension SendbirdChatSDK.AIAgent {
       @objc get
     }
     @_spi(SendbirdInternal) public var firstResponseAt: Swift.Int64
+    @_spi(SendbirdInternal) public var order: SendbirdChatSDK.GroupChannelListOrder {
+      @_spi(SendbirdInternal) get
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(SendbirdInternal) public var metaDataOrderKeyFilter: Swift.String? {
+      @_spi(SendbirdInternal) get
+    }
+    #endif
     @objc public var aiAgentChannelFilter: SendbirdChatSDK.AIAgentChannelFilter {
       @objc get
     }
@@ -904,6 +912,180 @@ extension SendbirdChatSDK.BaseChannel : SendbirdChatSDK.Serializable {
   @objc optional func channel(_ channel: SendbirdChatSDK.BaseChannel, didUpdateThreadInfo threadInfoUpdateEvent: SendbirdChatSDK.ThreadInfoUpdateEvent)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SBDBaseCollection) open class BaseCollection : ObjectiveC.NSObject {
+  @_spi(SendbirdInternal) public enum LifeCycle : Swift.Int {
+    @_spi(SendbirdInternal) case disposed
+    @_spi(SendbirdInternal) case created
+    @_spi(SendbirdInternal) case initialized
+    @_spi(SendbirdInternal) public var isEnabled: Swift.Bool {
+      @_spi(SendbirdInternal) get
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(SendbirdInternal) public init?(rawValue: Swift.Int)
+    #endif
+    @_spi(SendbirdInternal) public typealias RawValue = Swift.Int
+    @_spi(SendbirdInternal) public var rawValue: Swift.Int {
+      @_spi(SendbirdInternal) get
+    }
+  }
+  @_spi(SendbirdInternal) public enum UpdateAction : Swift.String {
+    @_spi(SendbirdInternal) case add
+    @_spi(SendbirdInternal) case delete
+    @_spi(SendbirdInternal) case update
+    @_spi(SendbirdInternal) case none
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(SendbirdInternal) public init?(rawValue: Swift.String)
+    #endif
+    @_spi(SendbirdInternal) public typealias RawValue = Swift.String
+    @_spi(SendbirdInternal) public var rawValue: Swift.String {
+      @_spi(SendbirdInternal) get
+    }
+  }
+  @_spi(SendbirdInternal) public var collectionId: Swift.String {
+    @_spi(SendbirdInternal) get
+  }
+  @_spi(SendbirdInternal) public var connectionDelegateId: Swift.String
+  @_spi(SendbirdInternal) public var channelDelegateId: Swift.String
+  @_spi(SendbirdInternal) public var lifeCycle: SendbirdChatSDK.BaseCollection.LifeCycle {
+    get
+  }
+  @_spi(SendbirdInternal) public func updateLifeCycle(_ lifeCycle: SendbirdChatSDK.BaseCollection.LifeCycle)
+  @objc deinit
+}
+@_spi(SendbirdInternal) public protocol BaseGroupChannelListQuerying : AnyObject {
+  @_spi(SendbirdInternal) var hasNext: Swift.Bool { get }
+  @_spi(SendbirdInternal) var isLoading: Swift.Bool { get }
+  @_spi(SendbirdInternal) var limit: Swift.UInt { get }
+  @_spi(SendbirdInternal) var order: SendbirdChatSDK.GroupChannelListOrder { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) var metaDataOrderKeyFilter: Swift.String? { get }
+  #endif
+  @_spi(SendbirdInternal) func loadNextPage(completionHandler: @escaping SendbirdChatSDK.GroupChannelListHandler)
+  @_spi(SendbirdInternal) func belongsTo(channel: SendbirdChatSDK.GroupChannel) -> Swift.Bool
+  @_spi(SendbirdInternal) func createChangeLogsParams() -> any SendbirdChatSDK.GroupChannelChangeLogsParamsType
+}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.GroupChannelListQuery : SendbirdChatSDK.BaseGroupChannelListQuerying {
+  @_spi(SendbirdInternal) final public func createChangeLogsParams() -> any SendbirdChatSDK.GroupChannelChangeLogsParamsType
+}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.AIAgent.GroupChannelListQuery : SendbirdChatSDK.BaseGroupChannelListQuerying {
+  @_spi(SendbirdInternal) public func createChangeLogsParams() -> any SendbirdChatSDK.GroupChannelChangeLogsParamsType
+}
+@_spi(SendbirdInternal) @objc public protocol GroupChannelChangeLogsParamsType {
+}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.GroupChannelChangeLogsParams : SendbirdChatSDK.GroupChannelChangeLogsParamsType {
+}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.AIAgent.GroupChannelChangeLogsParams : SendbirdChatSDK.GroupChannelChangeLogsParamsType {
+}
+@objc @_hasMissingDesignatedInitializers open class BaseGroupChannelCollection : SendbirdChatSDK.BaseCollection {
+  public typealias ChannelURL = Swift.String
+  @_spi(SendbirdInternal) public struct BaseChangeLogsSourceState {
+    @_spi(SendbirdInternal) public let token: Swift.String?
+    @_spi(SendbirdInternal) public let defaultTimestamp: Swift.Int64?
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(SendbirdInternal) public init(token: Swift.String?, defaultTimestamp: Swift.Int64?)
+    #endif
+  }
+  @_spi(SendbirdInternal) public struct BaseLoadMoreResult {
+    @_spi(SendbirdInternal) public let pinnedChannels: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public let nonPinnedChannels: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public let hasMore: Swift.Bool
+    @_spi(SendbirdInternal) public let needMoreData: Swift.Bool
+    @_spi(SendbirdInternal) public let defaultTimestamp: Swift.Int64
+    @_spi(SendbirdInternal) public let error: SendbirdChatSDK.SBError?
+    @_spi(SendbirdInternal) public let preMergeNonPinnedChannels: [SendbirdChatSDK.GroupChannel]
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(SendbirdInternal) public init(pinnedChannels: [SendbirdChatSDK.GroupChannel], nonPinnedChannels: [SendbirdChatSDK.GroupChannel], hasMore: Swift.Bool, needMoreData: Swift.Bool, defaultTimestamp: Swift.Int64, error: SendbirdChatSDK.SBError?, preMergeNonPinnedChannels: [SendbirdChatSDK.GroupChannel] = [])
+    #endif
+    @_spi(SendbirdInternal) public var allChannels: [SendbirdChatSDK.GroupChannel] {
+      @_spi(SendbirdInternal) get
+    }
+  }
+  public struct ChannelChangeSet {
+    public let added: [SendbirdChatSDK.GroupChannel]
+    public let updated: [SendbirdChatSDK.GroupChannel]
+    public let deleted: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL]
+    public init(added: [SendbirdChatSDK.GroupChannel], updated: [SendbirdChatSDK.GroupChannel], deleted: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL])
+    public var isEmpty: Swift.Bool {
+      get
+    }
+  }
+  @_spi(SendbirdInternal) public struct BaseCacheClassification {
+    @_spi(SendbirdInternal) public let added: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public let updated: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public let deleted: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL]
+    @_spi(SendbirdInternal) public let deletedChannels: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public init(added: [SendbirdChatSDK.GroupChannel], updated: [SendbirdChatSDK.GroupChannel], deleted: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL], deletedChannels: [SendbirdChatSDK.GroupChannel])
+    @_spi(SendbirdInternal) public var changeSet: SendbirdChatSDK.BaseGroupChannelCollection.ChannelChangeSet {
+      @_spi(SendbirdInternal) get
+    }
+  }
+  @_spi(SendbirdInternal) public struct BaseCacheApplyResult {
+    @_spi(SendbirdInternal) public let changeSet: SendbirdChatSDK.BaseGroupChannelCollection.ChannelChangeSet
+    @_spi(SendbirdInternal) public let pinnedChannels: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public let nonPinnedChannels: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public init(changeSet: SendbirdChatSDK.BaseGroupChannelCollection.ChannelChangeSet, pinnedChannels: [SendbirdChatSDK.GroupChannel], nonPinnedChannels: [SendbirdChatSDK.GroupChannel])
+  }
+  @_spi(SendbirdInternal) @SendbirdChatSDK.Atomic @_projectedValueProperty($baseChannelListCache) public var baseChannelListCache: SendbirdAuthSDK.OrderedSet<SendbirdChatSDK.GroupChannel> {
+    @_spi(SendbirdInternal) get
+    @_spi(SendbirdInternal) set
+    @_spi(SendbirdInternal) _modify
+  }
+  @_spi(SendbirdInternal) public var $baseChannelListCache: SendbirdChatSDK.Atomic<SendbirdAuthSDK.OrderedSet<SendbirdChatSDK.GroupChannel>> {
+    @_spi(SendbirdInternal) get
+  }
+  @_spi(SendbirdInternal) @SendbirdChatSDK.Atomic @_projectedValueProperty($basePinnedChannelCache) public var basePinnedChannelCache: SendbirdAuthSDK.OrderedSet<SendbirdChatSDK.GroupChannel> {
+    @_spi(SendbirdInternal) get
+    @_spi(SendbirdInternal) set
+    @_spi(SendbirdInternal) _modify
+  }
+  @_spi(SendbirdInternal) public var $basePinnedChannelCache: SendbirdChatSDK.Atomic<SendbirdAuthSDK.OrderedSet<SendbirdChatSDK.GroupChannel>> {
+    @_spi(SendbirdInternal) get
+  }
+  @_spi(SendbirdInternal) public var baseHasMore: Swift.Bool {
+    get
+  }
+  @_spi(SendbirdInternal) final public let collectionQueue: Dispatch.DispatchQueue
+  @_spi(SendbirdInternal) final public let channelRepository: SendbirdChatSDK.ChannelRepository
+  @_spi(SendbirdInternal) final public let changeLogsParams: any SendbirdChatSDK.GroupChannelChangeLogsParamsType
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public init(query: any SendbirdChatSDK.BaseGroupChannelListQuerying, pinnedChannelURLs: [Swift.String]? = nil)
+  #endif
+  @_spi(SendbirdInternal) public func startBacksync()
+  @_spi(SendbirdInternal) public func subscribeChangelogs()
+  @_spi(SendbirdInternal) public func unsubscribeChangelogs()
+  @_spi(SendbirdInternal) open func onChangelogsReceived(updatedChannels: [SendbirdChatSDK.GroupChannel], deletedChannelURLs: [Swift.String])
+  @_spi(SendbirdInternal) public func upsertChannelsToManager(_ channels: [SendbirdChatSDK.GroupChannel]) -> [SendbirdChatSDK.GroupChannel]
+  @objc open func dispose()
+  @_spi(SendbirdInternal) public func replaceBaseChannelListCache(with channels: [SendbirdChatSDK.GroupChannel])
+  @_spi(SendbirdInternal) open func didReplaceBaseChannelListCache()
+  @_spi(SendbirdInternal) public func replaceBasePinnedChannelCache(with channels: [SendbirdChatSDK.GroupChannel])
+  @_spi(SendbirdInternal) public func replaceBaseCaches(pinned pinnedChannels: [SendbirdChatSDK.GroupChannel], channelList channels: [SendbirdChatSDK.GroupChannel])
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func replaceBasePaginationBoundaryState(lastNonPinnedChannel: (any SendbirdChatSDK.GroupChannelComparable)?, orderedPinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL], loadedPinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL])
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func evaluateUpdateAction(channel: SendbirdChatSDK.GroupChannel, isCached: Swift.Bool, lastChannel: (any SendbirdChatSDK.GroupChannelComparable)?, hasNext: Swift.Bool, query: any SendbirdChatSDK.BaseGroupChannelListQuerying) -> SendbirdChatSDK.BaseCollection.UpdateAction
+  #endif
+  @_spi(SendbirdInternal) public func evaluateUpdateAction(channel: SendbirdChatSDK.GroupChannel, isCached: Swift.Bool, query: any SendbirdChatSDK.BaseGroupChannelListQuerying) -> SendbirdChatSDK.BaseCollection.UpdateAction
+  @_spi(SendbirdInternal) public func evaluatePinnedUpdateAction(channel: SendbirdChatSDK.GroupChannel, isCached: Swift.Bool) -> SendbirdChatSDK.BaseCollection.UpdateAction
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func shouldAddToView(channel: SendbirdChatSDK.GroupChannel, lastChannel: (any SendbirdChatSDK.GroupChannelComparable)?, hasNext: Swift.Bool, query: any SendbirdChatSDK.BaseGroupChannelListQuerying) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func performBaseLoadMore(loadedNonPinnedChannels: [SendbirdChatSDK.GroupChannel], sortPinnedChannels: (([SendbirdChatSDK.GroupChannel]) -> [SendbirdChatSDK.GroupChannel])? = nil, sortNonPinnedChannels: (([SendbirdChatSDK.GroupChannel]) -> [SendbirdChatSDK.GroupChannel])? = nil, defaultTimestampFallback: Swift.Int64 = 0) -> SendbirdChatSDK.BaseGroupChannelCollection.BaseLoadMoreResult
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func classifyIncomingChannelsForBaseCache(updateChannels: [SendbirdChatSDK.GroupChannel], deleteChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL], query: any SendbirdChatSDK.BaseGroupChannelListQuerying, pinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL], skipEvaluation: Swift.Bool = false, cachedPinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL]? = nil, cachedNonPinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL]? = nil) -> SendbirdChatSDK.BaseGroupChannelCollection.BaseCacheClassification
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func applyBaseCacheChangeSet(_ changeSet: SendbirdChatSDK.BaseGroupChannelCollection.ChannelChangeSet, pinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL], sortPinnedChannels: (([SendbirdChatSDK.GroupChannel]) -> [SendbirdChatSDK.GroupChannel])? = nil, sortNonPinnedChannels: (([SendbirdChatSDK.GroupChannel]) -> [SendbirdChatSDK.GroupChannel])? = nil) -> SendbirdChatSDK.BaseGroupChannelCollection.BaseCacheApplyResult
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func routeBaseChannelChanges(updateChannels: [SendbirdChatSDK.GroupChannel], deleteChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL], query: any SendbirdChatSDK.BaseGroupChannelListQuerying, pinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL], skipEvaluation: Swift.Bool = false, cachedPinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL]? = nil, cachedNonPinnedChannelURLs: [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL]? = nil, sortPinnedChannels: (([SendbirdChatSDK.GroupChannel]) -> [SendbirdChatSDK.GroupChannel])? = nil, sortNonPinnedChannels: (([SendbirdChatSDK.GroupChannel]) -> [SendbirdChatSDK.GroupChannel])? = nil, classificationTransform: ((SendbirdChatSDK.BaseGroupChannelCollection.BaseCacheClassification) -> SendbirdChatSDK.BaseGroupChannelCollection.BaseCacheClassification)? = nil, didApplyBaseCacheResult: (SendbirdChatSDK.BaseGroupChannelCollection.BaseCacheApplyResult) -> Swift.Void) -> SendbirdChatSDK.BaseGroupChannelCollection.ChannelChangeSet?
+  #endif
+  @_spi(SendbirdInternal) public func handleReconnect(onReconnect: @escaping () -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func performBaseChangeLogsRequest(persistedToken: Swift.String?, defaultTimestamp: Swift.Int64?, requestChangeLogs: @escaping (SendbirdChatSDK.BaseGroupChannelCollection.BaseChangeLogsSourceState, @escaping SendbirdChatSDK.ChannelChangeLogsPagerHandler) -> Swift.Void, storeToken: @escaping (Swift.String?) -> Swift.Void, applyChangeLogs: @escaping ([SendbirdChatSDK.GroupChannel], [SendbirdChatSDK.BaseGroupChannelCollection.ChannelURL]) -> Swift.Void, handleError: ((SendbirdChatSDK.SBError) -> Swift.Void)? = nil)
+  #endif
   @objc deinit
 }
 extension SendbirdChatSDK.BaseMessage {
@@ -1419,15 +1601,12 @@ extension SendbirdChatSDK.GroupChannelCollection : SendbirdChatSDK.ConnectionDel
   @objc dynamic open func didSucceedReconnection()
   @objc dynamic open func didConnect(userId: Swift.String)
 }
-@_hasMissingDesignatedInitializers @objc(SBDGroupChannelCollection) open class GroupChannelCollection : SendbirdChatSDK.BaseCollection {
+@_hasMissingDesignatedInitializers @objc(SBDGroupChannelCollection) open class GroupChannelCollection : SendbirdChatSDK.BaseGroupChannelCollection {
   @objc open var channelList: [SendbirdChatSDK.GroupChannel] {
     @objc get
   }
-  @objc @SendbirdChatSDK.Atomic @_projectedValueProperty($hasNext) open var hasNext: Swift.Bool {
+  @objc open var hasNext: Swift.Bool {
     @objc get
-  }
-  open var $hasNext: SendbirdChatSDK.Atomic<Swift.Bool> {
-    get
   }
   @objc open var query: SendbirdChatSDK.GroupChannelListQuery {
     get
@@ -1441,17 +1620,21 @@ extension SendbirdChatSDK.GroupChannelCollection : SendbirdChatSDK.ConnectionDel
   @objc open var isLive: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open var changelogsToken: Swift.String? {
-    get
+    @objc get
   }
+  #endif
   @objc open var defaultTs: Swift.Int64 {
-    get
+    @objc get
   }
   @objc open var needMoreData: Swift.Bool {
-    get
+    @objc get
   }
   @objc open func loadMore(completionHandler: @escaping SendbirdChatSDK.GroupChannelListHandler)
-  @objc open func dispose()
+  @_spi(SendbirdInternal) override public func onChangelogsReceived(updatedChannels: [SendbirdChatSDK.GroupChannel], deletedChannelURLs: [Swift.String])
+  @objc override open func dispose()
+  @_spi(SendbirdInternal) override public func didReplaceBaseChannelListCache()
   @objc deinit
 }
 @objc(SBDGroupChannelCollectionDelegate) public protocol GroupChannelCollectionDelegate {
@@ -1473,6 +1656,68 @@ extension SendbirdChatSDK.GroupChannelCollection : SendbirdChatSDK.ConnectionDel
     @objc get
   }
   @objc deinit
+}
+@_spi(SendbirdInternal) @_hasMissingDesignatedInitializers public class ChannelDataSource {
+  @_spi(SendbirdInternal) @discardableResult
+  public func upsert(channels: [SendbirdChatSDK.GroupChannel], shouldAddToMemCache: Swift.Bool = true) -> [SendbirdChatSDK.GroupChannel]
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func loadGroupChannels(after lastChannel: SendbirdChatSDK.GroupChannel?, query: any SendbirdChatSDK.BaseGroupChannelListQuerying) -> [SendbirdChatSDK.GroupChannel]
+  #endif
+  @_spi(SendbirdInternal) @objc deinit
+}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.ChannelDataSource {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func upsertChangeLogsToken(params: SendbirdChatSDK.GroupChannelChangeLogsParams, token: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func getChangeLogsToken(params: SendbirdChatSDK.GroupChannelChangeLogsParams) -> Swift.String?
+  #endif
+}
+@_spi(SendbirdInternal) @objc @_hasMissingDesignatedInitializers public class ChannelRepository : ObjectiveC.NSObject {
+  @_spi(SendbirdInternal) final public let query: any SendbirdChatSDK.BaseGroupChannelListQuerying
+  @_spi(SendbirdInternal) final public let pinnedChannelURLs: [Swift.String]?
+  @_spi(SendbirdInternal) public var shouldHalt: Swift.Bool
+  @_spi(SendbirdInternal) public func dispose()
+  @_spi(SendbirdInternal) public func load(loadedNonPinnedChannels: [SendbirdChatSDK.GroupChannel]) -> SendbirdChatSDK.ChannelRepository.PaginatedLoadResult
+  @_spi(SendbirdInternal) public struct PaginatedLoadResult {
+    @_spi(SendbirdInternal) public let pinnedChannels: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public let nonPinnedChannels: [SendbirdChatSDK.GroupChannel]
+    @_spi(SendbirdInternal) public let hasMore: Swift.Bool
+    @_spi(SendbirdInternal) public let error: SendbirdChatSDK.SBError?
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(SendbirdInternal) public init(pinnedChannels: [SendbirdChatSDK.GroupChannel], nonPinnedChannels: [SendbirdChatSDK.GroupChannel], hasMore: Swift.Bool, error: SendbirdChatSDK.SBError?)
+    #endif
+  }
+  @_spi(SendbirdInternal) public var resolvedPinnedURLs: Swift.Set<Swift.String> {
+    get
+  }
+  @_spi(SendbirdInternal) public var hasUnresolvedPinnedURLs: Swift.Bool {
+    @_spi(SendbirdInternal) get
+  }
+  @_spi(SendbirdInternal) public var lastPaginationChannel: SendbirdChatSDK.GroupChannel?
+  @_spi(SendbirdInternal) public func loadPinnedChannels(limit: Swift.Int) -> [SendbirdChatSDK.GroupChannel]
+  @_spi(SendbirdInternal) public func refreshPinnedChannels(urls: [Swift.String]) -> [SendbirdChatSDK.GroupChannel]
+  @_spi(SendbirdInternal) @objc deinit
+}
+@_spi(SendbirdInternal) @_hasMissingDesignatedInitializers public class ChannelSyncManager {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public var dataSource: SendbirdChatSDK.ChannelDataSource? {
+    @_spi(SendbirdInternal) get
+  }
+  #endif
+  @_spi(SendbirdInternal) public var isCompleted: Swift.Bool {
+    @_spi(SendbirdInternal) get
+  }
+  @_spi(SendbirdInternal) public func syncedChannelURLs(order: SendbirdChatSDK.GroupChannelListOrder) -> [Swift.String]
+  @_spi(SendbirdInternal) public func subscribeChangelogs(identifier: Swift.String, handler: @escaping SendbirdChatSDK.SubscribedChannelChangeLogsHandler)
+  @_spi(SendbirdInternal) public func removeChangelogsSubscription(identifier: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func startSync(with explicitQuery: (any SendbirdChatSDK.BaseGroupChannelListQuerying)? = nil, completionForTest: SendbirdChatSDK.SBErrorHandler? = nil)
+  #endif
+  @_spi(SendbirdInternal) @objc deinit
+}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.ChannelSyncManager {
+  @_spi(SendbirdInternal) public func getSyncCount(with order: SendbirdChatSDK.GroupChannelListOrder) -> Swift.Int
 }
 @objc(SBDChannelType) public enum ChannelType : Swift.Int {
   case open = 0
@@ -2596,6 +2841,19 @@ extension SendbirdChatSDK.FriendListQueryParams : Foundation.NSCopying {
   @objc final public let jsonPayload: Swift.String
   @objc deinit
 }
+@_spi(SendbirdInternal) public protocol GroupChannelComparable {
+  @_spi(SendbirdInternal) var channelURL: Swift.String { get }
+  @_spi(SendbirdInternal) var name: Swift.String { get }
+  @_spi(SendbirdInternal) var createdAt: Swift.Int64 { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) var lastMessage: SendbirdChatSDK.BaseMessage? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) var rowId: Swift.Int64? { get }
+  #endif
+}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.GroupChannel : SendbirdChatSDK.GroupChannelComparable {
+}
 @objc extension SendbirdChatSDK.GroupChannel {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic open func refresh(completionHandler: SendbirdChatSDK.SBErrorHandler?)
@@ -2938,6 +3196,7 @@ extension SendbirdChatSDK.GroupChannel {
   @objc open var helpdeskInfo: SendbirdChatSDK.HelpdeskInfo? {
     get
   }
+  @_spi(SendbirdInternal) public var rowId: Swift.Int64?
   @objc open func hasMember(_ userId: Swift.String) -> Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
   @objc open func getMember(_ userId: Swift.String) -> SendbirdChatSDK.Member?
@@ -2961,8 +3220,8 @@ extension SendbirdChatSDK.GroupChannel {
   @objc final public var includeEmptyChannel: Swift.Bool
   @objc final public var includeFrozenChannel: Swift.Bool
   @objc final public var includeChatNotification: Swift.Bool
-  @_spi(SendbirdInternal) @objc final public var aiAgentChannelFilter: SendbirdChatSDK.AIAgentChannelFilter
-  @_spi(SendbirdInternal) @objc final public var deskChannelFilter: SendbirdChatSDK.DeskChannelFilter
+  @objc final public var aiAgentChannelFilter: SendbirdChatSDK.AIAgentChannelFilter
+  @objc final public var deskChannelFilter: SendbirdChatSDK.DeskChannelFilter
   @objc(createWithGroupChannelListQuery:) public static func create(query: SendbirdChatSDK.GroupChannelListQuery) -> SendbirdChatSDK.GroupChannelChangeLogsParams
   @objc override dynamic public init()
   @objc deinit
@@ -3140,11 +3399,11 @@ extension SendbirdChatSDK.GroupChannelListQuery {
   @objc final public var channelHiddenStateFilter: SendbirdChatSDK.ChannelHiddenStateFilter {
     @objc get
   }
-  @_spi(SendbirdInternal) @objc final public var aiAgentChannelFilter: SendbirdChatSDK.AIAgentChannelFilter {
-    @_spi(SendbirdInternal) @objc get
+  @objc final public var aiAgentChannelFilter: SendbirdChatSDK.AIAgentChannelFilter {
+    @objc get
   }
-  @_spi(SendbirdInternal) @objc final public var deskChannelFilter: SendbirdChatSDK.DeskChannelFilter {
-    @_spi(SendbirdInternal) @objc get
+  @objc final public var deskChannelFilter: SendbirdChatSDK.DeskChannelFilter {
+    @objc get
   }
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public var searchQuery: Swift.String? {
@@ -3200,8 +3459,8 @@ extension SendbirdChatSDK.GroupChannelListQuery {
   @objc final public var metaDataValuesFilter: [Swift.String]?
   @objc final public var metaDataValueStartsWithFilter: Swift.String?
   @objc final public var channelHiddenStateFilter: SendbirdChatSDK.ChannelHiddenStateFilter
-  @_spi(SendbirdInternal) @objc final public var aiAgentChannelFilter: SendbirdChatSDK.AIAgentChannelFilter
-  @_spi(SendbirdInternal) @objc final public var deskChannelFilter: SendbirdChatSDK.DeskChannelFilter
+  @objc final public var aiAgentChannelFilter: SendbirdChatSDK.AIAgentChannelFilter
+  @objc final public var deskChannelFilter: SendbirdChatSDK.DeskChannelFilter
   @objc final public var searchQuery: Swift.String? {
     get
   }
@@ -3657,6 +3916,7 @@ public typealias MessageTemplateListHandler = (_ messageTemplateList: SendbirdCh
 public typealias ReportCategoryInfoListHandler = (_ reportCategoryInfoList: [SendbirdChatSDK.ReportCategoryInfo]?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
 public typealias MessageDeletionTimestampHandler = (_ deletionTimestamp: Swift.Int64, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
 public typealias ConversationListHandler = (_ conversations: [SendbirdChatSDK.Conversation]?, _ error: SendbirdChatSDK.SBError?) -> Swift.Void
+@_spi(SendbirdInternal) public typealias SubscribedChannelChangeLogsHandler = (_ updatedChannels: [SendbirdChatSDK.GroupChannel], _ deletedChannelURLs: [Swift.String]) -> Swift.Void
 @_hasMissingDesignatedInitializers @objc(SBDHelpdeskInfo) public class HelpdeskInfo : ObjectiveC.NSObject, Swift.Codable {
   @objc public var type: Swift.String {
     get
@@ -3679,7 +3939,12 @@ public typealias ConversationListHandler = (_ conversations: [SendbirdChatSDK.Co
 @objc(SBDInitParams) final public class InitParams : ObjectiveC.NSObject {
   @objc final public var applicationId: Swift.String
   @objc final public var isLocalCachingEnabled: Swift.Bool
-  @objc final public var logLevel: SendbirdChatSDK.LogLevel
+  @available(*, deprecated, message: "Use SendbirdLogger.setLevel(_:for: .chat) instead. If you relied on Chat affecting Auth logs too, also set .auth explicitly.")
+  @objc final public var logLevel: SendbirdChatSDK.LogLevel {
+    @objc get
+    @objc set
+  }
+  @_spi(SendbirdInternal) final public var isLogLevelConfigured: Swift.Bool
   @objc final public var appVersion: Swift.String?
   @objc final public var localCacheConfig: SendbirdChatSDK.LocalCacheConfig?
   @objc final public var needsSynchronous: Swift.Bool
@@ -3775,6 +4040,12 @@ extension SendbirdChatSDK.ChannelMetaCountersUpdateMode : Swift.RawRepresentable
     @_spi(SendbirdInternal) get
   }
   #endif
+}
+extension SendbirdChatSDK.LogLevel {
+  @_spi(SendbirdInternal) public init(authLevel: SendbirdAuthSDK.AuthLogLevel)
+}
+@_spi(SendbirdInternal) extension SendbirdAuthSDK.Logger {
+  @_spi(SendbirdInternal) public static let chat: SendbirdAuthSDK.Logger
 }
 @objc public protocol Mappable {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -4025,6 +4296,9 @@ extension SendbirdChatSDK.MessageCollection : SendbirdChatSDK.GroupChannelDelega
     @objc set
   }
   #endif
+  @_spi(SendbirdInternal) override public var collectionId: Swift.String {
+    @_spi(SendbirdInternal) get
+  }
   @objc open var startingPoint: Swift.Int64 {
     @objc get
   }
@@ -4703,6 +4977,9 @@ extension SendbirdChatSDK.NotificationCollection : SendbirdChatSDK.FeedChannelDe
     @objc set
   }
   #endif
+  @_spi(SendbirdInternal) override public var collectionId: Swift.String {
+    @_spi(SendbirdInternal) get
+  }
   @objc open var startingPoint: Swift.Int64 {
     @objc get
   }
@@ -5620,6 +5897,9 @@ extension SendbirdChatSDK.PreviousMessageListQueryParams : Foundation.NSCopying 
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   #endif
+}
+extension SendbirdAuthSDK.ProductIdentifier {
+  public static let chat: SendbirdAuthSDK.ProductIdentifier
 }
 extension SendbirdChatSDK.PublicGroupChannelListQuery {
   @available(*, unavailable, message: "Use `PublicGroupChannelListQueryParams`'s `setMetaDataFilter(withKey:values)`")
@@ -6545,6 +6825,7 @@ extension SendbirdChatSDK.SendbirdChat {
   @objc(getMembersChangeLogsWithToken:completionHandler:) public static func getMembersChangeLogs(token: Swift.String, completionHandler: @escaping SendbirdChatSDK.MembersChangeLogsHandler)
   @objc(getMembersChangeLogsWithTimestamp:completionHandler:) public static func getMembersChangeLogs(timestamp: Swift.Int64, completionHandler: @escaping SendbirdChatSDK.MembersChangeLogsHandler)
   @objc public static func getLogLevel() -> SendbirdChatSDK.LogLevel
+  @available(*, deprecated, message: "Use SendbirdLogger.setLevel(_:for: .chat) instead. If you relied on Chat affecting Auth logs too, also set .auth explicitly.")
   @objc public static func setLogLevel(_ logLevel: SendbirdChatSDK.LogLevel)
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getMimeType(_ file: Foundation.Data?) -> Swift.String?
@@ -6654,6 +6935,12 @@ extension SendbirdChatSDK.SendbirdChat {
 }
 extension SendbirdChatSDK.SendbirdChat {
   @_spi(SendbirdInternal) public static func updateCustomHost(apiHost: Swift.String, wsHost: Swift.String)
+  @_spi(SendbirdInternal) public static var channelSyncManager: SendbirdChatSDK.ChannelSyncManager {
+    @_spi(SendbirdInternal) get
+  }
+  @_spi(SendbirdInternal) public static var localCachePreference: SendbirdAuthSDK.LocalPreferences {
+    @_spi(SendbirdInternal) get
+  }
 }
 @available(*, deprecated, renamed: "SendbirdAuth.SendbirdSDKInfo", message: "Use SendbirdAuth.SendbirdSDKInfo instead. Deprecated since 4.31.0")
 public struct __SendbirdSDKInfo {
@@ -7374,6 +7661,13 @@ extension SendbirdChatSDK.AIAgent.MessagesFeedbackRating : Swift.Equatable {}
 extension SendbirdChatSDK.AIAgent.MessagesFeedbackRating : Swift.Hashable {}
 extension SendbirdChatSDK.ApplicationUserListQuery : Foundation.NSCopying {}
 extension SendbirdChatSDK.BannedUserListQuery : Foundation.NSCopying {}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.BaseCollection.LifeCycle : Swift.Equatable {}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.BaseCollection.LifeCycle : Swift.Hashable {}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.BaseCollection.LifeCycle : Swift.RawRepresentable {}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.BaseCollection.UpdateAction : Swift.Equatable {}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.BaseCollection.UpdateAction : Swift.Hashable {}
+@_spi(SendbirdInternal) extension SendbirdChatSDK.BaseCollection.UpdateAction : Swift.RawRepresentable {}
+extension SendbirdChatSDK.GroupChannelListQuery : Foundation.NSCopying {}
 extension SendbirdChatSDK.BlockedUserListQuery : Foundation.NSCopying {}
 extension SendbirdChatSDK.CSATSubmitParams.ResolutionStatus : Swift.Equatable {}
 extension SendbirdChatSDK.CSATSubmitParams.ResolutionStatus : Swift.Hashable {}
@@ -7419,7 +7713,6 @@ extension SendbirdChatSDK.FormField.InputType : Swift.Equatable {}
 @available(*, deprecated, message: "This method is deprecated in 4.21.0")
 extension SendbirdChatSDK.FormField.InputType : Swift.Hashable {}
 extension SendbirdChatSDK.FriendListQuery : Foundation.NSCopying {}
-extension SendbirdChatSDK.GroupChannelListQuery : Foundation.NSCopying {}
 extension SendbirdChatSDK.GroupChannelListOrder : Swift.Equatable {}
 extension SendbirdChatSDK.GroupChannelListOrder : Swift.Hashable {}
 extension SendbirdChatSDK.PublicGroupChannelListOrder : Swift.Equatable {}
