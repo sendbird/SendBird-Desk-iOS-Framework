@@ -6687,6 +6687,9 @@ extension SendbirdChatSDK.SendbirdChat {
   @objc public static func getPendingPushToken() -> Foundation.Data?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  @objc(registerDevicePushTokenForMultiDevicePush:completionHandler:) public static func registerDevicePushTokenForMultiDevicePush(_ devToken: Foundation.Data, completionHandler: ((_ registrationStatus: SendbirdChatSDK.PushTokenRegistrationStatus, _ error: SendbirdChatSDK.SBError?) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func registerDevicePushToken(_ devToken: Foundation.Data, unique: Swift.Bool, completionHandler: ((_ registrationStatus: SendbirdChatSDK.PushTokenRegistrationStatus, _ error: SendbirdChatSDK.SBError?) -> Swift.Void)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes

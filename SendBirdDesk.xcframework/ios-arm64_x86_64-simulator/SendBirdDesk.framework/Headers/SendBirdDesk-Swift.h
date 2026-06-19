@@ -371,6 +371,16 @@ extern "C" {
 
 #if defined(__OBJC__)
 
+/// The default Desk API host type used when no custom host is set via <code>SBDSKMain.setApiHost(_:)</code>.
+/// since:
+/// [NEXT_VERSION]
+typedef SWIFT_ENUM_NAMED(NSInteger, SBDSKApiHostType, "ApiHostType", open) {
+/// <code>https://desk-api-{appId}.sendbird.com/sapi</code> (build-type default host).
+  SBDSKApiHostTypeDefault = 0,
+/// <code>https://desk-api-{appId}.app.delight.ai/sapi</code> (region-rehomed host).
+  SBDSKApiHostTypeDelight = 1,
+};
+
 @class NSString;
 /// This class represents an agent who chats with a customer. It is not a subclass of <a href="https://docs.sendbird.com/ref/ios/Classes/SBDUser.html">SBDUser</a> of SendBird, but this class and <a href="https://docs.sendbird.com/ref/ios/Classes/SBDUser.html">SBDUser</a> class share the same identification.
 SWIFT_CLASS("_TtC12SendBirdDesk10SBDSKAgent")
@@ -450,6 +460,29 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 /// returns:
 /// If true, the initialization is successful. This method has to be called after <a href="https://docs.sendbird.com/ref/ios/Classes/SBDMain.html#//api/name/initWithApplicationId:">initializing Sendbird SDK</a>.
 + (BOOL)initializeDesk;
+/// Initializes Sendbird Desk with a specific default API host type.
+/// Use <code>ApiHostType.delight</code> after region rehoming to target the <code>*.app.delight.ai</code> host.
+/// A fully custom host set via <code>setApiHost(_:)</code> still takes priority over the selected type.
+/// Must be called after initializing the Sendbird Chat SDK.
+/// since:
+/// [NEXT_VERSION]
+/// \param apiHostType The default API host type to use when no custom host is set.
+///
+///
+/// returns:
+/// If true, the initialization is successful.
++ (BOOL)initializeDeskWithApiHostType:(enum SBDSKApiHostType)apiHostType;
+/// Sets a fully custom Desk API host.
+/// The value is used <em>as-is</em> as the API base URL — the SDK does not append <code>/sapi</code>, so include
+/// the full path if your endpoint requires it (a trailing <code>/</code> is removed). A custom host overrides
+/// the <code>ApiHostType</code> selected at initialization. Pass <code>nil</code> or an empty string to clear the custom
+/// host and fall back to the <code>ApiHostType</code>-based host.
+/// Must be called before <code>authenticate(...)</code>; it may be called before or after <code>initializeDesk()</code>.
+/// since:
+/// [NEXT_VERSION]
+/// \param apiHost The custom Desk API base URL, or <code>nil</code>/empty to reset to the default host.
+///
++ (void)setApiHost:(NSString * _Nullable)apiHost;
 /// Returns the version of Sendbird Desk.
 ///
 /// returns:
@@ -1174,6 +1207,16 @@ extern "C" {
 
 #if defined(__OBJC__)
 
+/// The default Desk API host type used when no custom host is set via <code>SBDSKMain.setApiHost(_:)</code>.
+/// since:
+/// [NEXT_VERSION]
+typedef SWIFT_ENUM_NAMED(NSInteger, SBDSKApiHostType, "ApiHostType", open) {
+/// <code>https://desk-api-{appId}.sendbird.com/sapi</code> (build-type default host).
+  SBDSKApiHostTypeDefault = 0,
+/// <code>https://desk-api-{appId}.app.delight.ai/sapi</code> (region-rehomed host).
+  SBDSKApiHostTypeDelight = 1,
+};
+
 @class NSString;
 /// This class represents an agent who chats with a customer. It is not a subclass of <a href="https://docs.sendbird.com/ref/ios/Classes/SBDUser.html">SBDUser</a> of SendBird, but this class and <a href="https://docs.sendbird.com/ref/ios/Classes/SBDUser.html">SBDUser</a> class share the same identification.
 SWIFT_CLASS("_TtC12SendBirdDesk10SBDSKAgent")
@@ -1253,6 +1296,29 @@ SWIFT_CLASS("_TtC12SendBirdDesk9SBDSKMain")
 /// returns:
 /// If true, the initialization is successful. This method has to be called after <a href="https://docs.sendbird.com/ref/ios/Classes/SBDMain.html#//api/name/initWithApplicationId:">initializing Sendbird SDK</a>.
 + (BOOL)initializeDesk;
+/// Initializes Sendbird Desk with a specific default API host type.
+/// Use <code>ApiHostType.delight</code> after region rehoming to target the <code>*.app.delight.ai</code> host.
+/// A fully custom host set via <code>setApiHost(_:)</code> still takes priority over the selected type.
+/// Must be called after initializing the Sendbird Chat SDK.
+/// since:
+/// [NEXT_VERSION]
+/// \param apiHostType The default API host type to use when no custom host is set.
+///
+///
+/// returns:
+/// If true, the initialization is successful.
++ (BOOL)initializeDeskWithApiHostType:(enum SBDSKApiHostType)apiHostType;
+/// Sets a fully custom Desk API host.
+/// The value is used <em>as-is</em> as the API base URL — the SDK does not append <code>/sapi</code>, so include
+/// the full path if your endpoint requires it (a trailing <code>/</code> is removed). A custom host overrides
+/// the <code>ApiHostType</code> selected at initialization. Pass <code>nil</code> or an empty string to clear the custom
+/// host and fall back to the <code>ApiHostType</code>-based host.
+/// Must be called before <code>authenticate(...)</code>; it may be called before or after <code>initializeDesk()</code>.
+/// since:
+/// [NEXT_VERSION]
+/// \param apiHost The custom Desk API base URL, or <code>nil</code>/empty to reset to the default host.
+///
++ (void)setApiHost:(NSString * _Nullable)apiHost;
 /// Returns the version of Sendbird Desk.
 ///
 /// returns:

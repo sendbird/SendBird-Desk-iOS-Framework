@@ -1,5 +1,11 @@
 # Change Log
 
+### v1.2.2 (Jun 19, 2026) with Chat SDK **v4.39.5**
+
+#### Added
+  - `ApiHostType` (`.default`, `.delight`) and `initializeDesk(apiHostType:)` to switch the API host at init time.
+  - `setApiHost(_:)` to set a fully custom API host. Pass `nil` or empty to revert.
+
 ### v1.2.1 (May 15, 2026) with Chat SDK **v4.39.4**
 
 #### Added

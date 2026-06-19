@@ -9,6 +9,7 @@ import Foundation
 import Foundation/*.Data*/
 import MobileCoreServices
 import Network
+import OSLog
 import Swift
 import SystemConfiguration
 import UIKit.UIDevice
@@ -599,6 +600,20 @@ extension SendbirdAuthSDK.SwiftProtobuf.AsyncMessageSequence.AsyncIterator : Swi
   }
 }
 @_spi(SendbirdInternal) public typealias AuthData = (authToken: Swift.String, authTokenType: SendbirdAuthSDK.InternalAuthTokenType)
+@_spi(SendbirdInternal) final public class AuthDependencies {
+  @_spi(SendbirdInternal) public static let registry: SendbirdAuthSDK.DependencyRegistry<SendbirdAuthSDK.AuthDependencies>
+  @_spi(SendbirdInternal) final public let dependencyKey: Swift.String
+  @_spi(SendbirdInternal) final public let service: SendbirdAuthSDK.QueueService
+  @_spi(SendbirdInternal) final public let config: SendbirdAuthSDK.SendbirdConfiguration
+  @_spi(SendbirdInternal) final public let stateData: SendbirdAuthSDK.ConnectionStateData
+  @_spi(SendbirdInternal) final public let requestQueue: SendbirdAuthSDK.RequestQueue
+  @_spi(SendbirdInternal) final public let deviceConnectionManager: SendbirdAuthSDK.DeviceConnectionManager
+  @_spi(SendbirdInternal) final public let statManager: SendbirdAuthSDK.StatManager
+  @_spi(SendbirdInternal) final public let commonSharedData: SendbirdAuthSDK.CommonSharedData
+  @_spi(SendbirdInternal) final public let decoder: Foundation.JSONDecoder
+  @_spi(SendbirdInternal) public init(dependencyKey: Swift.String, service: SendbirdAuthSDK.QueueService, config: SendbirdAuthSDK.SendbirdConfiguration, stateData: SendbirdAuthSDK.ConnectionStateData, requestQueue: SendbirdAuthSDK.RequestQueue, deviceConnectionManager: SendbirdAuthSDK.DeviceConnectionManager, statManager: SendbirdAuthSDK.StatManager, commonSharedData: SendbirdAuthSDK.CommonSharedData, decoder: Foundation.JSONDecoder)
+  @_spi(SendbirdInternal) @objc deinit
+}
 @_spi(SendbirdInternal) @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class AuthError : Foundation.NSError, @unchecked Swift.Sendable {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) @objc public static func error(withDictionary dict: [Swift.String : Any]) -> SendbirdAuthSDK.AuthError?
@@ -727,11 +742,10 @@ public enum AuthLogLevel : Swift.Int, Swift.Comparable, Swift.Codable {
   @_spi(SendbirdInternal) public var localUpdatedAt: Swift.Int64 {
     @_spi(SendbirdInternal) get
   }
+  @_spi(SendbirdInternal) final public let instanceKey: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) @SendbirdAuthSDK.DependencyWrapper public var dependency: (any SendbirdAuthSDK.Dependency)? {
+  @_spi(SendbirdInternal) public var deps: SendbirdAuthSDK.AuthDependencies? {
     @_spi(SendbirdInternal) get
-    @_spi(SendbirdInternal) set
-    @_spi(SendbirdInternal) _modify
   }
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
@@ -745,7 +759,7 @@ public enum AuthLogLevel : Swift.Int, Swift.Comparable, Swift.Codable {
   }
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public init(dependency: (any SendbirdAuthSDK.Dependency)?, userId: Swift.String = "", nickname: Swift.String = "", profileURL: Swift.String? = nil, connectionStatus: SendbirdAuthSDK.AuthUserConnectionStatus = .online, lastSeenAt: Swift.Int64 = 0, metaData: [Swift.String : Swift.String] = [:], isActive: Swift.Bool = true, discoveryKey: Swift.String? = nil, friendName: Swift.String = "", prefLangauges: [Swift.String] = [], requireAuth: Swift.Bool = false, isBot: Swift.Bool = false, localUpdatedAt: Swift.Int64 = -1)
+  @_spi(SendbirdInternal) public init(instanceKey: Swift.String, userId: Swift.String = "", nickname: Swift.String = "", profileURL: Swift.String? = nil, connectionStatus: SendbirdAuthSDK.AuthUserConnectionStatus = .online, lastSeenAt: Swift.Int64 = 0, metaData: [Swift.String : Swift.String] = [:], isActive: Swift.Bool = true, discoveryKey: Swift.String? = nil, friendName: Swift.String = "", prefLangauges: [Swift.String] = [], requireAuth: Swift.Bool = false, isBot: Swift.Bool = false, localUpdatedAt: Swift.Int64 = -1)
   #endif
   @_spi(SendbirdInternal) required public init(from decoder: any Swift.Decoder) throws
   @_spi(SendbirdInternal) public func encode(to encoder: any Swift.Encoder) throws
@@ -1366,7 +1380,7 @@ extension Swift.Collection {
     @_spi(SendbirdInternal) get
   }
 }
-@_spi(SendbirdInternal) public class CommandRouter : SendbirdAuthSDK.Injectable {
+@_spi(SendbirdInternal) public class CommandRouter {
   @_spi(SendbirdInternal) public var routerConfig: SendbirdAuthSDK.CommandRouterConfiguration {
     get
   }
@@ -1389,15 +1403,12 @@ extension Swift.Collection {
   @_spi(SendbirdInternal) public var parsingStrategy: ((Swift.String) throws -> (any SendbirdAuthSDK.Command)?)?
   @_spi(SendbirdInternal) weak public var requestHeaderDataSource: (any SendbirdAuthSDK.RequestHeaderDataSource)?
   @_spi(SendbirdInternal) public var headerInterceptor: (any SendbirdAuthSDK.APIHeaderInterceptor)?
-  @_spi(SendbirdInternal) public init(routerConfig: SendbirdAuthSDK.CommandRouterConfiguration, webSocketManager: SendbirdAuthSDK.WebSocketManager, httpClient: any SendbirdAuthSDK.HTTPClientInterface, eventDispatcher: SendbirdAuthSDK.EventDispatcher)
+  @_spi(SendbirdInternal) public init(instanceKey: Swift.String, routerConfig: SendbirdAuthSDK.CommandRouterConfiguration, webSocketManager: SendbirdAuthSDK.WebSocketManager, httpClient: any SendbirdAuthSDK.HTTPClientInterface, eventDispatcher: SendbirdAuthSDK.EventDispatcher)
   @_spi(SendbirdInternal) @objc deinit
   @_spi(SendbirdInternal) public func didReceiveEnvelope(_ envelope: SendbirdAuthSDK.WSEnvelopeFrame)
   @_spi(SendbirdInternal) public func createAPIHeaders<R>(for request: R) -> [Swift.String : Swift.String] where R : SendbirdAuthSDK.APIRequestable
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public func send<R>(request: R, sessionKey: Swift.String?, wsEventDeduplicationRules: [SendbirdAuthSDK.WSEventDeduplicationRule]? = nil, progressHandler: SendbirdAuthSDK.MultiProgressHandler? = nil, completion: R.CommandHandler?) where R : SendbirdAuthSDK.APIRequestable
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func resolve(with dependency: (any SendbirdAuthSDK.Dependency)?)
   #endif
 }
 @_spi(SendbirdInternal) extension SendbirdAuthSDK.CommandRouter {
@@ -1430,11 +1441,12 @@ extension Swift.Collection {
     get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public init(eKey: Swift.String?)
+  @_spi(SendbirdInternal) public init(eKey: Swift.String? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public func update(eKey: Swift.String?)
   #endif
+  @_spi(SendbirdInternal) public static let empty: SendbirdAuthSDK.CommonSharedData
   @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) extension SendbirdAuthSDK.SendbirdAuthMain {
@@ -1460,25 +1472,25 @@ extension Swift.Collection {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(loginEvent: SendbirdAuthSDK.LoginEvent, sessionKey: Swift.String, isReconnected: Swift.Bool, loginHandlers: [SendbirdAuthSDK.AuthUserHandler?] = [], reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?)
   #endif
-  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
-  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
-  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
+  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
+  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
   #endif
-  @_spi(SendbirdInternal) public func didReceiveBUSY(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
+  @_spi(SendbirdInternal) public func didReceiveBUSY(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
   @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) public class ConnectingState : SendbirdAuthSDK.ConnectionStatable {
@@ -1489,26 +1501,26 @@ extension Swift.Collection {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, loginHandlers: [SendbirdAuthSDK.AuthUserHandler?], retryCount: Swift.Int = 0)
   #endif
-  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
-  @_spi(SendbirdInternal) public func didSocketOpen(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
-  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
-  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
+  @_spi(SendbirdInternal) public func didSocketOpen(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
+  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
   #endif
-  @_spi(SendbirdInternal) public func didReceiveLOGI(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.LoginEvent)
-  @_spi(SendbirdInternal) public func didReceiveBUSY(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
+  @_spi(SendbirdInternal) public func didReceiveLOGI(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.LoginEvent)
+  @_spi(SendbirdInternal) public func didReceiveBUSY(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
   @_spi(SendbirdInternal) @objc deinit
 }
@@ -1549,27 +1561,27 @@ extension Swift.Collection {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) var reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger? { get }
   #endif
-  @_spi(SendbirdInternal) func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
-  @_spi(SendbirdInternal) func didEnterBackground(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) func didEnterBackground(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
-  @_spi(SendbirdInternal) func didSocketOpen(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
-  @_spi(SendbirdInternal) func didSocketClose(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
+  @_spi(SendbirdInternal) func didSocketOpen(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) func didSocketClose(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) func didSocketFail(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
+  @_spi(SendbirdInternal) func didSocketFail(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
   #endif
-  @_spi(SendbirdInternal) func didReceiveLOGI(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.LoginEvent)
-  @_spi(SendbirdInternal) func didReceiveBUSY(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
+  @_spi(SendbirdInternal) func didReceiveLOGI(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.LoginEvent)
+  @_spi(SendbirdInternal) func didReceiveBUSY(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
 }
 @_spi(SendbirdInternal) extension SendbirdAuthSDK.ConnectionStatable {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1578,16 +1590,16 @@ extension Swift.Collection {
   }
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
-  @_spi(SendbirdInternal) public func didSocketOpen(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
-  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
-  @_spi(SendbirdInternal) public func didReceiveLOGI(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.LoginEvent)
-  @_spi(SendbirdInternal) public func didReceiveBUSY(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
+  @_spi(SendbirdInternal) public func didSocketOpen(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
+  @_spi(SendbirdInternal) public func didReceiveLOGI(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.LoginEvent)
+  @_spi(SendbirdInternal) public func didReceiveBUSY(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
+  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
   #endif
-  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
 }
 @_spi(SendbirdInternal) public protocol ConnectionStateEventable : SendbirdAuthSDK.InternalEvent {
 }
@@ -2026,6 +2038,17 @@ extension Foundation.Data {
 }
 @_spi(SendbirdInternal) public struct DecoderInfoKey {
   @_spi(SendbirdInternal) public static let dependency: Swift.CodingUserInfoKey
+  @_spi(SendbirdInternal) public static let instanceKey: Swift.CodingUserInfoKey
+}
+extension Foundation.JSONDecoder {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func updateInstanceKey(_ instanceKey: Swift.String?)
+  #endif
+}
+extension Swift.Decoder {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) public func extractInstanceKey() -> Swift.String?
+  #endif
 }
 @_spi(SendbirdInternal) public protocol DefaultRecordStatRepresentable : SendbirdAuthSDK.BaseStatType {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -2096,23 +2119,23 @@ extension Foundation.Data {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(busyEvent: SendbirdAuthSDK.BusyEvent, loginHandlers: [SendbirdAuthSDK.AuthUserHandler?])
   #endif
-  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
-  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
-  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
+  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
+  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
   #endif
   @_spi(SendbirdInternal) @objc deinit
 }
@@ -2120,15 +2143,19 @@ extension Foundation.Data {
   @_spi(SendbirdInternal) public static let session: Swift.String
   @_spi(SendbirdInternal) public static let authenticate: Swift.String
 }
-@_spi(SendbirdInternal) @propertyWrapper public struct DependencyWrapper<T> {
-  @_spi(SendbirdInternal) public var isResolved: Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public var wrappedValue: T? {
-    @_spi(SendbirdInternal) get
-    @_spi(SendbirdInternal) set
-  }
-  #endif
+@_spi(SendbirdInternal) final public class DependencyRegistry<T> where T : AnyObject {
   @_spi(SendbirdInternal) public init()
+  @_spi(SendbirdInternal) final public func register(key: Swift.String, _ value: T)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) final public func lookup(_ key: Swift.String) -> T?
+  #endif
+  @_spi(SendbirdInternal) final public func remove(_ key: Swift.String)
+  @_spi(SendbirdInternal) final public func remove(_ key: Swift.String, ifValueIs value: T)
+  @_spi(SendbirdInternal) final public func aliveValues() -> [(key: Swift.String, value: T)]
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) final public func latestAlive() -> (key: Swift.String, value: T)?
+  #endif
+  @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) public class DeviceConnectionManager {
   @_spi(SendbirdInternal) @SendbirdAuthSDK.InternalAtomic @_projectedValueProperty($broadcaster) public var broadcaster: SendbirdAuthSDK.ConnectionEventBroadcaster {
@@ -2216,6 +2243,16 @@ extension Foundation.Data {
   @_spi(SendbirdInternal) public func didReceiveSBCommandEvent(command _: any SendbirdAuthSDK.SBCommand) async
   @_spi(SendbirdInternal) public func didReceiveInternalEvent(command: any SendbirdAuthSDK.InternalEvent)
 }
+@_spi(SendbirdInternal) public protocol DeviceConnectionManagerDependency : AnyObject {
+  @_spi(SendbirdInternal) var isForeground: Swift.Bool { get }
+  @_spi(SendbirdInternal) var isOnline: Swift.Bool { get }
+  @_spi(SendbirdInternal) var isOffline: Swift.Bool { get }
+  @_spi(SendbirdInternal) var broadcaster: SendbirdAuthSDK.ConnectionEventBroadcaster { get }
+  @_spi(SendbirdInternal) var internalBroadcaster: SendbirdAuthSDK.InternalConnectionEventBroadcaster { get }
+  @_spi(SendbirdInternal) var networkBroadcaster: SendbirdAuthSDK.NetworkEventBroadcaster { get }
+}
+@_spi(SendbirdInternal) extension SendbirdAuthSDK.DeviceConnectionManager : SendbirdAuthSDK.DeviceConnectionManagerDependency {
+}
 @_spi(SendbirdInternal) extension Swift.Dictionary {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(data: Foundation.Data?) throws
@@ -2258,16 +2295,6 @@ extension Foundation.Data {
   @_spi(SendbirdInternal) public var keyStrategy: Foundation.JSONEncoder.KeyEncodingStrategy {
     @_spi(SendbirdInternal) get
   }
-}
-@_spi(SendbirdInternal) extension Foundation.JSONDecoder {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func updateAuthDependency(_ dependency: (any SendbirdAuthSDK.Dependency)?)
-  #endif
-}
-@_spi(SendbirdInternal) extension Swift.Decoder {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func extractAuthDependency() -> (any SendbirdAuthSDK.Dependency)?
-  #endif
 }
 @_spi(InternalProtobuf) extension SendbirdAuthSDK.SwiftProtobuf {
   @_spi(InternalProtobuf) @preconcurrency public protocol Enum : Swift.Hashable, Swift.RawRepresentable, Swift.Sendable {
@@ -2745,20 +2772,20 @@ extension Foundation.Data {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(completionHandler: SendbirdAuthSDK.VoidHandler? = nil)
   #endif
-  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler? = nil)
+  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
-  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
+  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
   @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) public typealias ExternalStatHandler = (_ statType: SendbirdAuthSDK.StatType, _ data: [Swift.String : SendbirdAuthSDK.AnyCodable]?, _ timestamp: Swift.Int64, _ statId: Swift.String?, _ includeRuntimeId: Swift.Bool) -> (any SendbirdAuthSDK.BaseStatType)?
@@ -3269,7 +3296,7 @@ extension Swift.Duration {
   @_spi(SendbirdInternal) public func resetSession()
   @_spi(SendbirdInternal) @objc deinit
 }
-@_spi(SendbirdInternal) public protocol HTTPClientInterface : ObjectiveC.NSObject, SendbirdAuthSDK.Injectable {
+@_spi(SendbirdInternal) public protocol HTTPClientInterface : ObjectiveC.NSObject {
   @_spi(SendbirdInternal) var routerConfig: SendbirdAuthSDK.CommandRouterConfiguration { get set }
   @_spi(SendbirdInternal) func prefetch()
   @_spi(SendbirdInternal) func send<R>(request: R, headers: [Swift.String : Swift.String]) async throws -> R.ResultType where R : SendbirdAuthSDK.APIRequestable
@@ -3311,7 +3338,7 @@ extension Swift.Duration {
     @_spi(SendbirdInternal) get
     @_spi(SendbirdInternal) set
   }
-  @_spi(SendbirdInternal) public init(routerConfig: SendbirdAuthSDK.CommandRouterConfiguration)
+  @_spi(SendbirdInternal) public init(instanceKey: Swift.String, routerConfig: SendbirdAuthSDK.CommandRouterConfiguration)
   @_spi(SendbirdInternal) public func getBackgroundURLSessionConfig() -> Foundation.URLSessionConfiguration
   @_spi(SendbirdInternal) public func createBackgroundURLSession() -> Foundation.URLSession
   @_spi(SendbirdInternal) public func send<R>(request: R, headers: [Swift.String : Swift.String] = [:]) async throws -> R.ResultType where R : SendbirdAuthSDK.APIRequestable
@@ -3340,9 +3367,6 @@ extension Swift.Duration {
   @_spi(SendbirdInternal) @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   #endif
   @_spi(SendbirdInternal) @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func resolve(with dependency: (any SendbirdAuthSDK.Dependency)?)
-  #endif
   @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) @_hasMissingDesignatedInitializers public class URLBackgroundTask {
@@ -3369,40 +3393,26 @@ extension Swift.Duration {
 @_spi(SendbirdInternal) public typealias BoolHandler = (Swift.Bool, SendbirdAuthSDK.AuthError?) -> Swift.Void
 @_spi(SendbirdInternal) public typealias TimerHandler = (SendbirdAuthSDK.SBTimer) -> Swift.Void
 @_spi(SendbirdInternal) public typealias ErrorHandler = ((any Swift.Error)?) -> Swift.Void
-@_spi(SendbirdInternal) @propertyWrapper public struct ImmutableDependencyWrapper<T> {
-  @_spi(SendbirdInternal) public init()
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public var wrappedValue: T? {
-    @_spi(SendbirdInternal) get
-    @_spi(SendbirdInternal) set
-  }
-  #endif
-}
 @_spi(SendbirdInternal) public class InitializedState : SendbirdAuthSDK.ConnectionStatable {
-  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   @_spi(SendbirdInternal) public init()
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: [SendbirdAuthSDK.AuthUserHandler?])
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: [SendbirdAuthSDK.AuthUserHandler?])
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
-  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   @_spi(SendbirdInternal) @objc deinit
-}
-@_spi(SendbirdInternal) public protocol Injectable {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) func resolve(with dependency: (any SendbirdAuthSDK.Dependency)?)
-  #endif
 }
 @_spi(InternalProtobuf) extension SendbirdAuthSDK.SwiftProtobuf {
   @_spi(InternalProtobuf) public enum Internal {
@@ -3443,21 +3453,21 @@ extension Swift.Duration {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(error: SendbirdAuthSDK.AuthError?, task: SendbirdAuthSDK.ReconnectionTask?, shouldRetry: Swift.Bool, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?, busyEventWrapper: SendbirdAuthSDK.BusyEventWrapper? = nil, completionHandler: SendbirdAuthSDK.VoidHandler? = nil)
   #endif
-  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
-  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
-  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
+  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
   @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) public protocol InternalEvent : SendbirdAuthSDK.Command {
@@ -3485,6 +3495,7 @@ extension Swift.Duration {
   @_spi(SendbirdInternal) public var sessionProvider: (any SendbirdAuthSDK.SessionProvider)?
   @_spi(SendbirdInternal) public var headerInterceptor: (any SendbirdAuthSDK.APIHeaderInterceptor)?
   @_spi(SendbirdInternal) public var canRefreshSession: Swift.Bool
+  @_spi(SendbirdInternal) public var dependencyKeySuffix: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(applicationId: Swift.String, isLocalCachingEnabled: Swift.Bool, logLevel: SendbirdAuthSDK.AuthLogLevel = .none, appVersion: Swift.String? = nil, mainSDKInfo: SendbirdAuthSDK.SendbirdSDKInfo? = nil, exceptionParser: any SendbirdAuthSDK.APIExceptionParser = DefaultExceptionParser(), sessionProvider: (any SendbirdAuthSDK.SessionProvider)? = nil, canRefreshSession: Swift.Bool = true)
   #endif
@@ -3982,19 +3993,19 @@ extension Swift.Duration {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(error: SendbirdAuthSDK.AuthError? = nil, userId: Swift.String, disconnectHandler: SendbirdAuthSDK.VoidHandler? = nil)
   #endif
-  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
-  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
+  @_spi(SendbirdInternal) public func didSocketClose(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, code: SendbirdAuthSDK.ChatWebSocketStatusCode)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
   @_spi(SendbirdInternal) @objc deinit
 }
@@ -4693,25 +4704,25 @@ extension Foundation.NSNotification.Name {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(task: SendbirdAuthSDK.ReconnectionTask?, loginHandlers: [SendbirdAuthSDK.AuthUserHandler?] = [], reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?, retryCount: Swift.Int)
   #endif
-  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func process(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
+  @_spi(SendbirdInternal) public func connect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, loginKey: SendbirdAuthSDK.LoginKey, sessionKey: Swift.String?, userHandler: SendbirdAuthSDK.AuthUserHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler? = nil)
+  @_spi(SendbirdInternal) public func disconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
+  @_spi(SendbirdInternal) public func disconnectWebSocket(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, completionHandler: SendbirdAuthSDK.VoidHandler?)
   #endif
-  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
-  @_spi(SendbirdInternal) public func didSocketOpen(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didEnterBackground(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
+  @_spi(SendbirdInternal) public func didSocketOpen(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
+  @_spi(SendbirdInternal) public func didSocketFail(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, error: SendbirdAuthSDK.AuthError?)
   #endif
-  @_spi(SendbirdInternal) public func didReceiveLOGI(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.LoginEvent)
-  @_spi(SendbirdInternal) public func didReceiveBUSY(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
+  @_spi(SendbirdInternal) public func didReceiveLOGI(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.LoginEvent)
+  @_spi(SendbirdInternal) public func didReceiveBUSY(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, command: SendbirdAuthSDK.BusyEvent)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
+  @_spi(SendbirdInternal) public func reconnect(context: any SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource, sessionKey: Swift.String?, reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
   @_spi(SendbirdInternal) @objc deinit
 }
@@ -4952,10 +4963,7 @@ extension Foundation.NSNotification.Name {
   #endif
   @_spi(SendbirdInternal) func send<R>(request: R) where R : SendbirdAuthSDK.WSRequestable
 }
-@_spi(SendbirdInternal) public class RequestQueue : SendbirdAuthSDK.RequestQueueSendable, SendbirdAuthSDK.Injectable {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func resolve(with dependency: (any SendbirdAuthSDK.Dependency)?)
-  #endif
+@_spi(SendbirdInternal) public class RequestQueue : SendbirdAuthSDK.RequestQueueSendable {
   @_spi(SendbirdInternal) public struct CodingInfoKey {
     @_spi(SendbirdInternal) public static let isApi: Swift.CodingUserInfoKey
   }
@@ -4978,18 +4986,8 @@ extension Foundation.NSNotification.Name {
   @_spi(SendbirdInternal) public var $connectionState: SendbirdAuthSDK.InternalAtomic<any SendbirdAuthSDK.ConnectionStateEventable> {
     @_spi(SendbirdInternal) get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public var stateData: SendbirdAuthSDK.ConnectionStateData? {
-    @_spi(SendbirdInternal) get
-  }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public var deviceConnectionManager: SendbirdAuthSDK.DeviceConnectionManager? {
-    @_spi(SendbirdInternal) get
-  }
-  #endif
   @_spi(SendbirdInternal) public typealias QueuedRequestHandler = () -> SendbirdAuthSDK.RequestQueue.ProcessResult
-  @_spi(SendbirdInternal) public init(commandRouter: SendbirdAuthSDK.CommandRouter, sessionValidator: any SendbirdAuthSDK.SessionValidator)
+  @_spi(SendbirdInternal) public init(instanceKey: Swift.String, commandRouter: SendbirdAuthSDK.CommandRouter, sessionValidator: any SendbirdAuthSDK.SessionValidator)
   @_spi(SendbirdInternal) public func updateConfig(_ config: SendbirdAuthSDK.CommandRouterConfiguration)
   @_spi(SendbirdInternal) public func isConnected() -> Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
@@ -5136,16 +5134,6 @@ extension Swift.Result {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public func handleError(_ error: SendbirdAuthSDK.AuthError?, handler: Any?)
   #endif
-}
-@_spi(SendbirdInternal) public protocol Dependency : AnyObject {
-  @_spi(SendbirdInternal) var service: SendbirdAuthSDK.QueueService { get }
-  @_spi(SendbirdInternal) var config: SendbirdAuthSDK.SendbirdConfiguration { get }
-  @_spi(SendbirdInternal) var stateData: SendbirdAuthSDK.ConnectionStateData { get }
-  @_spi(SendbirdInternal) var requestQueue: SendbirdAuthSDK.RequestQueue { get }
-  @_spi(SendbirdInternal) var deviceConnectionManager: SendbirdAuthSDK.DeviceConnectionManager { get }
-  @_spi(SendbirdInternal) var statManager: SendbirdAuthSDK.StatManager { get }
-  @_spi(SendbirdInternal) var commonSharedData: SendbirdAuthSDK.CommonSharedData { get }
-  @_spi(SendbirdInternal) var decoder: Foundation.JSONDecoder { get }
 }
 @_spi(SendbirdInternal) public protocol SBCommand : SendbirdAuthSDK.Command, Swift.Decodable {
   @_spi(SendbirdInternal) var cmd: SendbirdAuthSDK.CommandType { get }
@@ -5418,7 +5406,7 @@ extension Swift.Result {
   #endif
   @_spi(SendbirdInternal) @objc deinit
 }
-@_spi(SendbirdInternal) public class SendbirdAuthMain : SendbirdAuthSDK.RequestHeaderDataSource, SendbirdAuthSDK.Dependency {
+@_spi(SendbirdInternal) public class SendbirdAuthMain : SendbirdAuthSDK.RequestHeaderDataSource {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public var sessionDelegate: (any SendbirdAuthSDK.AuthSessionDelegate)? {
     @_spi(SendbirdInternal) get
@@ -5443,6 +5431,7 @@ extension Swift.Result {
   @_spi(SendbirdInternal) final public let routerConfig: SendbirdAuthSDK.CommandRouterConfiguration
   @_spi(SendbirdInternal) final public let sessionHandler: SendbirdAuthSDK.SessionEventBroadcaster
   @_spi(SendbirdInternal) final public let decoder: Foundation.JSONDecoder
+  @_spi(SendbirdInternal) final public let dependencies: SendbirdAuthSDK.AuthDependencies
   @_spi(SendbirdInternal) final public let isLocalCachingEnabled: Swift.Bool
   @_spi(SendbirdInternal) final public let applicationId: Swift.String
   @_spi(SendbirdInternal) public var sessionProvider: any SendbirdAuthSDK.SessionProvider {
@@ -5477,12 +5466,11 @@ extension Swift.Result {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public init(params: SendbirdAuthSDK.InternalInitParams, statAPIClient: (any SendbirdAuthSDK.StatAPIClientable)? = nil, webSocketEngine: (any SendbirdAuthSDK.ChatWebSocketEngine)? = nil, httpClient: (any SendbirdAuthSDK.HTTPClientInterface)? = nil, customRouterConfig: SendbirdAuthSDK.CommandRouterConfiguration? = nil, customSendbirdConfig: SendbirdAuthSDK.SendbirdConfiguration? = nil)
   #endif
+  @_spi(SendbirdInternal) @objc deinit
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public func addExternalParsingStrategy(for cmdType: Swift.String, identifier: Swift.String, strategy: @escaping (Swift.String) -> (any SendbirdAuthSDK.Command)?)
   #endif
   @_spi(SendbirdInternal) public func removeExternalParsingStrategy(for cmdType: Swift.String, identifier: Swift.String)
-  @_spi(SendbirdInternal) public func resolveDependency(with dependency: some Dependency)
-  @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) extension SendbirdAuthSDK.SendbirdAuthMain : SendbirdAuthSDK.EventDelegate {
   @_spi(SendbirdInternal) public func didReceiveSBCommandEvent(command: any SendbirdAuthSDK.SBCommand) async
@@ -5623,6 +5611,7 @@ extension Swift.Result {
   @_spi(SendbirdInternal) public var typingIndicatorInvalidateTimeoutSec: Foundation.TimeInterval
   @_spi(SendbirdInternal) public var isWsEnvelopeEnabled: Swift.Bool
   @_spi(SendbirdInternal) public init()
+  @_spi(SendbirdInternal) public static let empty: SendbirdAuthSDK.SendbirdConfiguration
   @_spi(SendbirdInternal) @objc deinit
 }
 @_hasMissingDesignatedInitializers public class SendbirdLogger {
@@ -5789,6 +5778,7 @@ extension Swift.Result {
   }
   @_spi(SendbirdInternal) public var sessionKey: Swift.String?
   @_spi(SendbirdInternal) public init(applicationId: Swift.String)
+  @_spi(SendbirdInternal) public static let empty: SendbirdAuthSDK.SessionData
   @_spi(SendbirdInternal) public func clear()
   @_spi(SendbirdInternal) public func update(with loginEvent: SendbirdAuthSDK.LoginEvent)
   @_spi(SendbirdInternal) @discardableResult
@@ -5845,7 +5835,7 @@ extension Swift.Result {
     @_spi(SendbirdInternal) public static func == (a: SendbirdAuthSDK.SessionManager.Credential, b: SendbirdAuthSDK.SessionManager.Credential) -> Swift.Bool
   }
 }
-@_spi(SendbirdInternal) public class SessionManager : SendbirdAuthSDK.Injectable, SendbirdAuthSDK.SessionObserver {
+@_spi(SendbirdInternal) public class SessionManager : SendbirdAuthSDK.SessionObserver {
   @_spi(SendbirdInternal) public enum SessionState {
     @_spi(SendbirdInternal) case connected
     @_spi(SendbirdInternal) case refreshing
@@ -5919,7 +5909,7 @@ extension Swift.Result {
   #endif
   @_spi(SendbirdInternal) public var authenticateQueue: Dispatch.DispatchQueue
   @_spi(SendbirdInternal) public var isAuthenticating: Swift.Bool
-  @_spi(SendbirdInternal) public init(applicationId: Swift.String, userId: Swift.String, router: SendbirdAuthSDK.CommandRouter, sessionHandler: SendbirdAuthSDK.SessionEventBroadcaster, isLocalCachingEnabled: Swift.Bool, localCachePreference: SendbirdAuthSDK.LocalPreferences, config: SendbirdAuthSDK.SendbirdConfiguration, sessionProvider: any SendbirdAuthSDK.SessionProvider = PersistentSessionProvider.shared, canRefreshSession: Swift.Bool = true)
+  @_spi(SendbirdInternal) public init(instanceKey: Swift.String, applicationId: Swift.String, userId: Swift.String, router: SendbirdAuthSDK.CommandRouter, sessionHandler: SendbirdAuthSDK.SessionEventBroadcaster, isLocalCachingEnabled: Swift.Bool, localCachePreference: SendbirdAuthSDK.LocalPreferences, config: SendbirdAuthSDK.SendbirdConfiguration, sessionProvider: any SendbirdAuthSDK.SessionProvider = PersistentSessionProvider.shared, canRefreshSession: Swift.Bool = true)
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) public func sessionDidChange(_ session: SendbirdAuthSDK.Session?)
   #endif
@@ -5937,9 +5927,6 @@ extension Swift.Result {
   public func reconnect(reconnectedBy: SendbirdAuthSDK.ReconnectingTrigger?) -> Swift.Bool
   #endif
   @_spi(SendbirdInternal) public func logout()
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func resolve(with dependency: (any SendbirdAuthSDK.Dependency)?)
-  #endif
   @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) extension SendbirdAuthSDK.SessionManager : SendbirdAuthSDK.EventDelegate {
@@ -6145,7 +6132,7 @@ extension Swift.Result {
     @_spi(SendbirdInternal) get
   }
 }
-@_spi(SendbirdInternal) final public class StatManager : SendbirdAuthSDK.Injectable {
+@_spi(SendbirdInternal) final public class StatManager {
   @_spi(SendbirdInternal) public enum State {
     @_spi(SendbirdInternal) case pending
     @_spi(SendbirdInternal) case enabled
@@ -6235,9 +6222,6 @@ extension Swift.Result {
   @_spi(SendbirdInternal) final public func disable(completion: SendbirdAuthSDK.VoidHandler? = nil)
   #endif
   @_spi(SendbirdInternal) final public func getDeviceId() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) final public func resolve(with dependency: (any SendbirdAuthSDK.Dependency)?)
-  #endif
   @_spi(SendbirdInternal) @objc deinit
 }
 @_spi(SendbirdInternal) extension SendbirdAuthSDK.StatManager : SendbirdAuthSDK.EventDelegate {
@@ -6264,6 +6248,17 @@ extension Swift.Result {
   @_spi(SendbirdInternal) func statManager(_ statCollector: any SendbirdAuthSDK.StatCollectorContract, newState: SendbirdAuthSDK.StatManager.State)
   @_spi(SendbirdInternal) func isStatManagerUploadable() -> Swift.Bool
   @_spi(SendbirdInternal) func statManager(_ statCollector: any SendbirdAuthSDK.StatCollectorContract, didSentStats: [any SendbirdAuthSDK.BaseStatType])
+}
+@_spi(SendbirdInternal) public protocol StatManagerDependency : AnyObject {
+  @_spi(SendbirdInternal) var isLocalCachingEnabled: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(SendbirdInternal) func append<RecordStatType>(_ stat: RecordStatType, fromAuth: Swift.Bool?, completion: SendbirdAuthSDK.VoidHandler?) where RecordStatType : SendbirdAuthSDK.BaseStatType
+  #endif
+}
+@_spi(SendbirdInternal) extension SendbirdAuthSDK.StatManagerDependency {
+  @_spi(SendbirdInternal) public func append<RecordStatType>(_ stat: RecordStatType) where RecordStatType : SendbirdAuthSDK.BaseStatType
+}
+@_spi(SendbirdInternal) extension SendbirdAuthSDK.StatManager : SendbirdAuthSDK.StatManagerDependency {
 }
 @_spi(SendbirdInternal) public protocol StatStorage {
   associatedtype Key : Swift.Decodable, Swift.Encodable, Swift.Hashable
@@ -6614,7 +6609,7 @@ extension Swift.Dictionary {
   @_spi(SendbirdInternal) case completed(T)
 }
 @_spi(SendbirdInternal) public typealias ConnectionContext = SendbirdAuthSDK.WebSocketContext
-@_spi(SendbirdInternal) public typealias WebSocketContext = SendbirdAuthSDK.Injectable & SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource
+@_spi(SendbirdInternal) public typealias WebSocketContext = SendbirdAuthSDK.WebSocketActionable & SendbirdAuthSDK.WebSocketDataSource
 @_spi(SendbirdInternal) public protocol WebSocketDataSource : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(SendbirdInternal) var configForWebSocket: SendbirdAuthSDK.SendbirdConfiguration? { get }
@@ -6709,13 +6704,10 @@ extension Swift.Dictionary {
   @_spi(SendbirdInternal) final public let queue: SendbirdAuthSDK.SafeSerialQueue
   @_spi(SendbirdInternal) public func makeStream() async -> _Concurrency.AsyncStream<SendbirdAuthSDK.WebsocketManagerEvent>
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public init(userId: Swift.String, queue: SendbirdAuthSDK.SafeSerialQueue, eventDispatcher: SendbirdAuthSDK.EventDispatcher, requestHeaderDataSource: (any SendbirdAuthSDK.RequestHeaderDataSource)?, routerConfig: SendbirdAuthSDK.CommandRouterConfiguration, sendbirdConfig: SendbirdAuthSDK.SendbirdConfiguration, webSocketEngine: (any SendbirdAuthSDK.ChatWebSocketEngine)?)
+  @_spi(SendbirdInternal) public init(instanceKey: Swift.String, userId: Swift.String, queue: SendbirdAuthSDK.SafeSerialQueue, eventDispatcher: SendbirdAuthSDK.EventDispatcher, requestHeaderDataSource: (any SendbirdAuthSDK.RequestHeaderDataSource)?, routerConfig: SendbirdAuthSDK.CommandRouterConfiguration, sendbirdConfig: SendbirdAuthSDK.SendbirdConfiguration, webSocketEngine: (any SendbirdAuthSDK.ChatWebSocketEngine)?)
   #endif
   @_spi(SendbirdInternal) weak public var requestHeaderDataSource: (any SendbirdAuthSDK.RequestHeaderDataSource)?
   @_spi(SendbirdInternal) public func createWebSocketURL(userId: Swift.String) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(SendbirdInternal) public func resolve(with dependency: (any SendbirdAuthSDK.Dependency)?)
-  #endif
   @_spi(SendbirdInternal) public typealias T = SendbirdAuthSDK.WebsocketManagerEvent
   @_spi(SendbirdInternal) @objc deinit
 }
